@@ -1,0 +1,15 @@
+.portfolioWrapper {
+    width: 100%;
+    height: 1080px;
+
+    &.dark {
+        background-image: url("../pngs/portfolio-backgr-black.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
+        &.light {
+        }
+
+}

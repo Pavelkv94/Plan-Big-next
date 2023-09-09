@@ -1,0 +1,45 @@
+.titleWrapper {
+  height: 80px;
+  min-width: 400px;
+//   border: 1px solid red;
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+  .titleMain {
+    position: absolute;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(0, 237, 255, 1);
+    text-shadow: 0px 0px 5px #00edff;
+
+    &.right {
+        top: 14px;
+    }
+
+    &.left {
+        top: 14px;
+        left: 50px;
+    }
+  }
+
+  .titleDublicate {
+    position: absolute;
+
+    font-weight: 700;
+    font-size: 55px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 255, 255, 0.123);
+
+    &.right {
+        left: 10px;
+       
+    }
+
+    &.left {
+        top: 0px;
+        left: 0px;
+    }
+  }
+}

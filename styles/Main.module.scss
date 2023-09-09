@@ -1,0 +1,241 @@
+.mainWrapper {
+  width: 100%;
+  height: 1080px;
+
+  &.dark {
+    background-image: url("../pngs/main-back-black1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+    &.light {
+      background-image: url("../pngs/main-back-light.png");
+    }
+
+  .mainContent {
+    border: 1px solid rgba(0, 175, 220, 0);
+    width: 1280px;
+    height: 1080px;
+    margin: 0 auto;
+
+    .themeSwitcherWrapper {
+      width: 100%;
+      height: 50px;
+      margin-top: 100px;
+      margin-bottom: 72px;
+
+      .themeSwitcher {
+        float: right;
+        width: 120px;
+        height: 48px;
+        border-radius: 5px;
+        position: relative;
+
+        &.dark {
+          border: 1px solid white;
+          background: linear-gradient(rgba(0, 74, 183, 1), rgba(0, 175, 220, 1));
+          .toggler {
+            border: 1px solid white;
+            background-color: rgba(0, 237, 255, 1);
+
+            .togglerBox {
+              background: rgba(0, 237, 255, 1);
+              box-shadow: 0px 2.8466668128967285px 6.3541669845581055px 1.2708333730697632px rgba(0, 43, 49, 0.15) inset;
+            }
+          }
+        }
+
+        &.light {
+          border: 2px solid black;
+          background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%), linear-gradient(116.7deg, #9cbcf9 19.98%, #00edff 91.97%);
+
+          .toggler {
+            border: 1px solid black;
+            background-color: white;
+
+            .togglerBox {
+              background: white;
+              box-shadow: 0px 2.8466668128967285px 6.3541669845581055px 1.2708333730697632px rgba(0, 43, 49, 0.15) inset;
+            }
+          }
+        }
+
+        .toggler {
+          width: 34px;
+          height: 32px;
+          border-radius: 5px;
+          margin: 7px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .togglerBox {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .mainInfo {
+    display: flex;
+    .textInfo {
+      margin-top: 80px;
+
+      &.dark {
+        .preTitle,
+        h1 {
+          color: white;
+        }
+      }
+
+      &.light {
+        .preTitle,
+        h1 {
+          color: black;
+        }
+      }
+
+      .preTitle {
+        font-size: 14px;
+        margin: 0;
+        line-height: 54px;
+      }
+
+      h1 {
+        font-size: 48px;
+        line-height: 54px;
+        width: 600px;
+        margin: 0;
+      }
+      section {
+        width: 220px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+        margin: 20px 0 30px 0;
+
+        .textItem {
+          width: 204px;
+          height: 37px;
+          position: relative;
+
+
+          &.dark {
+            background: url("../pngs//main-info-item-back.png");
+            p {
+              color: rgba(0, 237, 255, 1);
+              
+            }
+          }
+
+          &.light {
+            background: url("../pngs//main-info-item-back-light.png");
+
+            p {
+              color: rgba(0, 138, 238, 1);
+              
+            }
+          }
+
+          p {
+            margin: 0;
+            top: 4px;
+            right: 12px;
+            position: absolute;
+            font-size: 14px;
+          }
+
+          &:nth-child(2) p, &:nth-child(4) p,  {
+           position: relative;
+           left: 60px;
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        width: 414px;
+        align-items: center;
+        justify-content: space-between;
+
+        &.dark {
+          div {
+            box-shadow: 0px 4.3917107582092285px 2.1958553791046143px 0px rgba(0, 0, 0, 0.25);
+          }
+
+          button {
+            border: 1px solid rgba(0, 237, 255, 0.7);
+            background: rgba(1, 44, 113, 1);
+            color: white;
+            box-shadow: 0px 1.0979276895523071px 8.783421516418457px 0px rgba(255, 255, 255, 1) inset;
+
+            &:hover {
+              color: rgba(0, 237, 255, 1);
+              font-weight: 600;
+            }
+          }
+        }
+
+        &.light {
+          button {
+            border: 1px solid black;
+            background: #efefef;
+            font-weight: 500;
+            color: black;
+
+            &:hover {
+              background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%);
+            }
+          }
+        }
+
+        div {
+          margin: 0 5px;
+          width: 192px;
+          height: 50px;
+
+          button {
+            font-family: "Tektur", cursive;
+            width: 192px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .showInfo {
+      .testWrap {
+        width: 664px;
+        height: 580px;
+        position: relative;
+        .testMain {
+          top: 0;
+          right: -40px;
+          position: absolute;
+          width: 664px;
+          height: 385px;
+          background-image: url("../pngs/test-main.png");
+          z-index: 2;
+        }
+        .testLight {
+          position: absolute;
+          bottom: -14px;
+          right: 40px;
+          width: 430px;
+          height: 368px;
+          background-image: url("../pngs/Backlight.png");
+        }
+      }
+    }
+  }
+}
