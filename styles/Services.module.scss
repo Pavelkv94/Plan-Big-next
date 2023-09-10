@@ -1,0 +1,47 @@
+.servicesWrapper {
+  width: 100%;
+  height: 1080px;
+  min-width: 1200px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.dark {
+    background-image: url("../pngs/Services-back-black.png");
+  }
+
+  &.light {
+    background-color: white;
+  }
+
+  .servicesContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .title {
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
+    
+    .gamepad {
+        width: 1300px;
+        height: 695px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.dark {
+            background-image: url("../pngs/services-gamepad-black.png");
+
+        }
+
+        &.light {
+            background-image: url("../pngs/services-gamepad-light.png");
+
+        }
+    }
+  }
+}

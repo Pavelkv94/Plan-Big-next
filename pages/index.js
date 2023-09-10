@@ -5,6 +5,9 @@ import HeaderNavMenu from "../components/HeaderNavMenu";
 import Main from "../components/Main";
 import VideoMaking from "../components/VideoMaking";
 import Portfolio from "../components/Portfolio";
+import Reasons from "../components/Reasons";
+import Services from "../components/Services";
+import Consultation from "../components/Consultation";
 
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
@@ -24,6 +27,9 @@ const Index = () => {
         <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme}/>
         <VideoMaking isDarkTheme={isDarkTheme} />
         <Portfolio isDarkTheme={isDarkTheme} />
+        <Services isDarkTheme={isDarkTheme} />
+        <Consultation isDarkTheme={isDarkTheme} />
+        <Reasons isDarkTheme={isDarkTheme} />
 
       </div>
     </>

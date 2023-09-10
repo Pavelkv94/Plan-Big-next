@@ -1,0 +1,19 @@
+.reasonsWrapper {
+  width: 100%;
+  height: 1080px;
+  min-width: 1200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.dark {
+    background-image: url("../pngs/reasons-back-black.png");
+  }
+
+  &.light {
+    background-image: url("../pngs/reasons-back-light.png");
+  }
+
+  .reasonsContent {
+  }
+}

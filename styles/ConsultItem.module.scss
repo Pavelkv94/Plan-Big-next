@@ -1,0 +1,29 @@
+.consultItem {
+  width: 400px;
+  height: 64px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  cursor: pointer;
+
+  p {
+    margin: 0 0 0 22px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(144, 163, 171, 1);
+  }
+
+  .check {
+    width: 13px;
+    height: 13px;
+    border: 1px solid black;
+    margin-right: 16px;
+
+    &.checked {
+      background: linear-gradient(180deg, #6997ff 0%, #62e4f7 100%);
+    }
+  }
+}

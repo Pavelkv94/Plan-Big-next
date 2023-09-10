@@ -1,0 +1,131 @@
+.consultationWrapper {
+  width: 100%;
+  height: 694px;
+  min-width: 1200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.dark {
+    background-image: url("../pngs/consult-back-black.png");
+  }
+
+  &.light {
+    background-image: url("../pngs/consult-back-light.png");
+  }
+
+  .consultationContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2,
+    h3 {
+      color: white;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin: 70px 0 10px 0;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    section {
+      width: 1280px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 46px;
+
+      .subtitle {
+        color: white;
+        margin-bottom: 18px;
+        h4 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 22px;
+          font-weight: 600;
+          margin: 0 0 4px 0;
+        }
+        p {
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+
+      .tasks {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+      }
+
+      .policy {
+        p {
+          color: white;
+
+          a {
+            color: white;
+          }
+        }
+      }
+      .sendMail {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: white;
+        margin-top: 40px;
+
+        .sendMailItem {
+          width: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          label {
+            font-family: "Montserrat", sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+          }
+
+          input {
+            width: 372px;
+            height: 60px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            padding-left: 22px;
+          }
+
+          button {
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            width: 400px;
+            height: 64px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+
+            &.dark {
+                background-color: rgba(122, 214, 251, 1);
+
+            }
+
+            &.light {
+                background: linear-gradient(137.83deg, #0076E4 -38%, #7ABFFF 21.36%, #C1FDFE 80.72%, #98FCFE 140.08%);
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
