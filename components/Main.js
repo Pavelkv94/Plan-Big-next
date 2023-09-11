@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Main.module.scss";
+import VideoPlayer from "./VideoPlayer";
 
 const Main = ({ isDarkTheme, toggleTheme }) => {
   const [position, setPosition] = useState(194); // Initial position
@@ -37,9 +38,8 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
             </div>
           </div>
           <div className={styles.showInfo}>
-            <div  className={styles.testWrap}>
-            <div className={styles.testMain}></div>
-            {/* {isDarkTheme && <div className={styles.testLight}></div>} */}
+            <div className={styles.testMain}>
+              {/* <VideoPlayer src="/mp4/Showreel.mp4" width={"620px"} height={"325px"} style={{position: "absolute", right: 0, bottom: 0}}/> */}
             </div>
 
           </div>

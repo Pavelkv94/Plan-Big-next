@@ -10,9 +10,9 @@
     background-position: center;
   }
 
-    &.light {
-      background-image: url("../pngs/main-back-light.png");
-    }
+  &.light {
+    background-image: url("../pngs/main-back-light.png");
+  }
 
   .mainContent {
     border: 1px solid rgba(0, 175, 220, 0);
@@ -126,12 +126,10 @@
           height: 37px;
           position: relative;
 
-
           &.dark {
             background: url("../pngs//main-info-item-back.png");
             p {
               color: rgba(0, 237, 255, 1);
-              
             }
           }
 
@@ -140,7 +138,6 @@
 
             p {
               color: rgba(0, 138, 238, 1);
-              
             }
           }
 
@@ -152,9 +149,10 @@
             font-size: 14px;
           }
 
-          &:nth-child(2) p, &:nth-child(4) p,  {
-           position: relative;
-           left: 60px;
+          &:nth-child(2) p,
+          &:nth-child(4) p {
+            position: relative;
+            left: 60px;
           }
         }
       }
@@ -215,27 +213,19 @@
     }
 
     .showInfo {
-      .testWrap {
+      width: 664px;
+      height: 580px;
+      position: relative;
+
+      .testMain {
+        top: 0;
+        right: -40px;
+        position: absolute;
         width: 664px;
-        height: 580px;
-        position: relative;
-        .testMain {
-          top: 0;
-          right: -40px;
-          position: absolute;
-          width: 664px;
-          height: 385px;
-          background-image: url("../pngs/test-main.png");
-          z-index: 2;
-        }
-        .testLight {
-          position: absolute;
-          bottom: -14px;
-          right: 40px;
-          width: 430px;
-          height: 368px;
-          background-image: url("../pngs/Backlight.png");
-        }
+        height: 385px;
+        background-image: url("../pngs/test-main.png");
+        z-index: 2;
+
       }
     }
   }

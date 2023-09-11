@@ -1,0 +1,68 @@
+.reason {
+  width: 526px;
+  height: 128px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+  position: relative;
+
+  &.dark {
+    background-image: url("../pngs/reason-back-black.png");
+
+    h4 {
+      color: rgba(0, 237, 255, 1);
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  &.light {
+    background-image: url("../pngs/reason-back-light.png");
+
+    h4 {
+      color: black;
+    }
+
+    p {
+      color: rgba(67, 67, 67, 1);
+    }
+  }
+
+  h4 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 30px 0 0 84px;
+    font-size: 30px;
+    font-weight: 30px;
+    font-weight: 600;
+    line-height: 32.6px;
+    width: 300px;
+  }
+
+  .arrows {
+    right: 0;
+    top: 40px;
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 30px;
+    border: 1px solid red;
+    margin-right: 50px;
+  }
+
+  p {
+    position: absolute;
+    top: 100px;
+    margin: 0 0 0 84px;
+    width: 380px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 13px;
+    transition: 0.5s;
+  }
+}
