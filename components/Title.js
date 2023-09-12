@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../styles/Title.module.scss";
 
-const Title = ({ isDarkTheme, text, right = false, mainTitle, width }) => {
+const Title = ({ isDarkTheme, text, right = false, mainTitle, width, left }) => {
   return mainTitle ? (
     <div className={`${styles.mainTitleWrapper} ${isDarkTheme ? styles.dark : styles.light}`} style={{minWidth: width}}>
-      <p className={styles.mainTitleMain}>{text}</p>
+      <p className={styles.mainTitleMain} style={{left: left}}>{text}</p>
       <p className={styles.mainTitleDublicate}>{text}</p>
     </div>
   ) : (

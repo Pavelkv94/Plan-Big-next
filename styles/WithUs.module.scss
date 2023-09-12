@@ -1,0 +1,35 @@
+.withUsWrapper {
+    width: 100%;
+    height: 1080px;
+    min-width: 1200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+  &.dark {
+    background-image: url("../pngs/withUs-back-black.png");
+  }
+
+  &.light {
+    background-color: white;
+  }
+
+    .withUsContent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .title {
+            margin-top: 100px;
+            margin-bottom: 110px;
+          }
+
+          .sliderWindow {
+            width: 1280px;
+            height: 478px;
+          }
+
+          
+    }
+}

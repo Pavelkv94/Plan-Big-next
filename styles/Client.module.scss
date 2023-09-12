@@ -1,0 +1,24 @@
+.clientWrapper {
+    width: 230px;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.dark {
+        background-image: url("../pngs/client-black.png");
+
+      }
+    
+      &.light {
+        background-image: url("../pngs/client-light.png");
+      }
+
+
+      img {
+        max-width: 170px;
+      }
+}

@@ -8,6 +8,8 @@ import Portfolio from "../components/Portfolio";
 import Reasons from "../components/Reasons";
 import Services from "../components/Services";
 import Consultation from "../components/Consultation";
+import WithUs from "../components/WithUs";
+import Clients from "../components/Clients";
 
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
@@ -30,6 +32,8 @@ const Index = () => {
         <Services isDarkTheme={isDarkTheme} />
         <Consultation isDarkTheme={isDarkTheme} />
         <Reasons isDarkTheme={isDarkTheme} />
+        <WithUs isDarkTheme={isDarkTheme} />
+        <Clients isDarkTheme={isDarkTheme} />
 
       </div>
     </>

@@ -11,7 +11,7 @@ const Reasons = ({ isDarkTheme }) => {
     <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.reasonsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"700px"} />
+          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"700px"} left={"36px"}/>
         </div>
         <section className={styles.reasonsWrap}>
           <div className={styles.leftContent}>
@@ -72,14 +72,7 @@ const Reasons = ({ isDarkTheme }) => {
           </div>
         </section>
 
-        <div className={styles.container}>
-          <div className={styles.arrowContainer}>
-            <div className={styles.shimmeringArrow}></div>
-            <div className={styles.shimmeringArrow}></div>
-            <div className={styles.shimmeringArrow}></div>
-          </div>
-        </div>
-        <div className={styles.arrow}></div>
+       
       </div>
     </div>
   );

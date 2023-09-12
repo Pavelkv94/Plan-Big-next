@@ -50,8 +50,11 @@
     cursor: pointer;
     width: 20px;
     height: 30px;
-    border: 1px solid red;
     margin-right: 50px;
+    transition: transform 0.3s ease;
+    svg {
+      transition: 1s;
+    }
   }
 
   p {
@@ -63,6 +66,5 @@
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     line-height: 13px;
-    transition: 0.5s;
   }
 }
