@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styles from "../styles/WorkStages.module.scss";
+import Title from "./Title";
 
 const WorkStages = ({ isDarkTheme }) => {
   return (
-    <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
-      <div className={styles.reasonsContent}>
+    <div className={`${styles.workStagesWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+      <div className={styles.workStagesContent}>
+      <div className={styles.title}>
+          <Title isDarkTheme={isDarkTheme} text="ЭТАПЫ РАБОТЫ" mainTitle width={"430px"} left={"26px"} />
+        </div>
       </div>
     </div>
   );
