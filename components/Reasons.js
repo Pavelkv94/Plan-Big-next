@@ -8,7 +8,7 @@ import Reason from "./Reason";
 
 const Reasons = ({ isDarkTheme }) => {
   return (
-    <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="adv">
       <div className={styles.reasonsContent}>
         <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"700px"} left={"36px"}/>

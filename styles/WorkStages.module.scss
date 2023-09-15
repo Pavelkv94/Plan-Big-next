@@ -23,5 +23,24 @@
       margin-top: 100px;
       margin-bottom: 70px;
     }
+
+    .stages {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.dark {
+        width: 1320px;
+        height: 737px;
+        background-image: url("../pngs/workStages-black.png");
+
+      }
+    
+      &.light {
+        width: 1350px;
+        height: 740px;
+        background-image: url("../pngs/workStages-light.png");
+      }
+    }
   }
 }

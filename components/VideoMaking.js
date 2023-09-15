@@ -6,7 +6,7 @@ import Title from "./Title";
 
 const VideoMaking = ({ isDarkTheme }) => {
   return (
-    <div className={`${styles.videoMakingWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.videoMakingWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="onas">
       <div className={styles.videoMakingContent}>
         <div className={styles.videoMakingTitleBlockWrap}>
           <div className={`${styles.videoMakingTitleBlock} ${isDarkTheme ? styles.dark : styles.light}`}>

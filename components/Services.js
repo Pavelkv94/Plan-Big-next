@@ -4,7 +4,7 @@ import Title from "./Title";
 
 const Services = ({ isDarkTheme }) => {
   return (
-    <div className={`${styles.servicesWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.servicesWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="services">
       <div className={styles.servicesContent}>
         <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="ВИДЫ УСЛУГ" mainTitle width={"345px"} />

@@ -6,6 +6,7 @@ const VideoPlayer = ({width, height, src, style}) => {
   const videoRef = useRef(null);
 
   const handlePlayPause = () => {
+    console.log(videoRef);
     if (videoRef.current) {
       const video = videoRef.current;
       if (video.paused) {
@@ -20,14 +21,19 @@ const VideoPlayer = ({width, height, src, style}) => {
 
   return (
     <div style={{...style, width, height}} className={styles.videoPlayer}>
-      <video controls width={width} height={height}>
+      <video width={width} height={height} ref={videoRef}>
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {!isPlaying && (
+      {!isPlaying ? (
+        <div className={styles.pauseWrapper}>
         <button className={styles.playButton} onClick={handlePlayPause}>
-          Play
+          <div className={styles.play}></div>
         </button>
+        </div>
+      ) : (
+        <div className={styles.playWrapper} onClick={handlePlayPause}>
+          </div>
       )}
     </div>
   );

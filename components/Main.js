@@ -11,7 +11,7 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
   };
 
   return (
-    <div className={`${styles.mainWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.mainWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="main">
       <div className={styles.mainContent}>
         <div className={styles.themeSwitcherWrapper}>
           <div className={`${styles.themeSwitcher} ${isDarkTheme ? styles.dark : styles.light}`}>

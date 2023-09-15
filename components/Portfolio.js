@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Portfolio.module.scss";
 import Title from "./Title";
+import VideoSimpleBlock from "./VideoSimpleBlock";
 
 const Portfolio = ({ isDarkTheme }) => {
   const [tab, setTab] = useState(1);
@@ -14,8 +15,11 @@ const Portfolio = ({ isDarkTheme }) => {
     { title: "СТОРИТЕЙЛ \n ВИДЕО", key: 6 },
   ];
 
+
+  const videos = [1,2,3,4,5,6];
+
   return (
-    <div className={`${styles.portfolioWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.portfolioWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="portfolio">
       <div className={styles.portfolioContent}>
         <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="ПОРТФОЛИО" mainTitle />
@@ -28,7 +32,10 @@ const Portfolio = ({ isDarkTheme }) => {
               </div>
             ))}
           </div>
-          <div className={styles.tabsContent}></div>
+          <div className={styles.tabsContent}>
+            {videos.map((el, i) => <VideoSimpleBlock isDarkTheme={isDarkTheme} key={i}/>)}
+            
+          </div>
         </section>
       </div>
     </div>

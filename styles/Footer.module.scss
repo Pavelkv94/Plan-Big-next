@@ -19,20 +19,171 @@
     margin: 100px auto;
     width: 1280px;
     height: 250px;
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-columns: 210px 160px 245px 280px;
+    justify-content: space-between;
 
-    border: 1px solid red;
-
+    h4 {
+      margin: 0 0 32px 0;
+      color: white;
+      font-family: Montserrat;
+      font-size: 27px;
+      font-weight: 600;
+      letter-spacing: 0em;
+      text-align: left;
+    }
     .logo {
       width: 210px;
     }
     .navigation {
       width: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+
+      a {
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+      }
     }
     .services {
       width: 245px;
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      span {
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+      }
     }
     .contacts {
-      width: 300px;
+      width: 280px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+
+      .phone {
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 1.1427342891693115px;
+        text-align: left;
+
+        .copy,
+        .whats,
+        .teleg {
+          cursor: pointer;
+        }
+        .copy {
+          margin-left: 8px;
+          position: relative;
+
+          span {
+            position: absolute;
+            top: -30px;
+            left: -10px;
+            font-size: 14px;
+            transition: 1s;
+          }
+        }
+        .whats {
+          margin: 0 10px 0 20px;
+        }
+      }
+      .email {
+        margin-top: 14px;
+        display: flex;
+        span {
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: 0em;
+          text-align: center;
+        }
+        .copy {
+          margin-left: 8px;
+          cursor: pointer;
+          position: relative;
+
+          span {
+            position: absolute;
+            top: 30px;
+            left: -10px;
+            font-size: 14px;
+            transition: 1s;
+          }
+        }
+      }
+      .address {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.dark {
+          div {
+            box-shadow: 0px 4.3917107582092285px 2.1958553791046143px 0px rgba(0, 0, 0, 0.25);
+          }
+
+          button {
+            border: 1px solid rgba(0, 237, 255, 0.7);
+            background: rgba(1, 44, 113, 1);
+            color: white;
+            box-shadow: 0px 1.0979276895523071px 8.783421516418457px 0px rgba(255, 255, 255, 1) inset;
+
+            &:hover {
+              color: rgba(0, 237, 255, 1);
+              font-weight: 600;
+            }
+          }
+        }
+
+        &.light {
+          button {
+            border: 1px solid black;
+            background: #efefef;
+            font-weight: 500;
+            color: black;
+            background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%);
+          }
+        }
+
+        div {
+          margin: 40px 0 0 0;
+          width: 192px;
+          height: 50px;
+
+          button {
+            font-family: "Tektur", cursive;
+            width: 192px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

@@ -86,9 +86,11 @@
         }
       }
       .tabsContent {
-        height: 844px;
-        border: 1px solid green;
+        padding-top: 80px;
+        height: 764px;
         width: 1560px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
   }

@@ -5,7 +5,7 @@ import WithUsItem from "./WithUsItem";
 
 const WithUs = ({ isDarkTheme }) => {
   return (
-    <div className={`${styles.withUsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.withUsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="feedback">
       <div className={styles.withUsContent}>
         <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="C НАМИ ПРОСТО И ЭФФЕКТИВНО" mainTitle width={"860px"} left={"50px"} />
