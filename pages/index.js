@@ -14,6 +14,7 @@ import WorkStages from "../components/WorkStages";
 import Footer from "../components/Footer";
 import AppContainer from "../components/AppContainer";
 
+
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
@@ -28,9 +29,8 @@ const Index = () => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
       </Head>
       <div className="app-wrapper">
-        <AppContainer isDarkTheme={true} toggleTheme={toggleTheme}/>
-        {/* <HeaderNavMenu isDarkTheme={isDarkTheme}/>
-        <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme}/>
+        <HeaderNavMenu isDarkTheme={isDarkTheme} />
+        <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
         <VideoMaking isDarkTheme={isDarkTheme} />
         <Portfolio isDarkTheme={isDarkTheme} />
         <Services isDarkTheme={isDarkTheme} />
@@ -39,8 +39,7 @@ const Index = () => {
         <WithUs isDarkTheme={isDarkTheme} />
         <Clients isDarkTheme={isDarkTheme} />
         <WorkStages isDarkTheme={isDarkTheme} />
-        <Footer isDarkTheme={isDarkTheme} /> */}
-
+        <Footer isDarkTheme={isDarkTheme} />
       </div>
     </>
   );

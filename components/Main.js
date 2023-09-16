@@ -15,11 +15,11 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
     <div className={`${styles.mainWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="main">
       <div className={styles.mainContent}>
         <div className={styles.themeSwitcherWrapper}>
-          <Link href={isDarkTheme ? "/a" : "/"}><div className={`${styles.themeSwitcher} ${isDarkTheme ? styles.dark : styles.light}`}>
+          <div className={`${styles.themeSwitcher} ${isDarkTheme ? styles.dark : styles.light}`}>
             <div onClick={switchTheme} className={styles.toggler} style={{ transform: `translateX(${position}%)`, transition: "transform 0.3s ease" }}>
               <div className={styles.togglerBox}></div>
             </div>
-          </div></Link>
+          </div>
         </div>
 
         <div className={styles.mainInfo}>

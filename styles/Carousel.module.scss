@@ -1,0 +1,35 @@
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  padding: 0;
+  scroll-snap-type: mandatory;
+
+  .carouselItem {
+    font-size: 50px;
+    width: "1150px";
+    height: "max-content";
+    flex-shrink: 0;
+    color: "#fff";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.controlls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  .dots {
+    display: flex;
+    margin: 0 30px;
+  }
+
+  .arrow {
+    cursor: pointer;
+    position: relative;
+
+  }
+}

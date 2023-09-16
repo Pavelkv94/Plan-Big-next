@@ -6,7 +6,7 @@ import WhatsApp from "../svgs/whatsapp.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const HeaderNavMenu = ({ isDarkTheme }) => {
-  console.log(isDarkTheme);
+
   return (
     <div className={`${styles.headerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.content}>
