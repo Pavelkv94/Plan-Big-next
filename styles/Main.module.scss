@@ -30,10 +30,10 @@
         float: right;
         width: 120px;
         height: 48px;
-        border-radius: 5px;
+        border-radius: 6px;
         position: relative;
 
-        &.dark {
+        &.light {
           border: 1px solid white;
           background: linear-gradient(rgba(0, 74, 183, 1), rgba(0, 175, 220, 1));
           .toggler {
@@ -47,8 +47,8 @@
           }
         }
 
-        &.light {
-          border: 2px solid black;
+        &.dark {
+          border: 2px solid white;
           background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%), linear-gradient(116.7deg, #9cbcf9 19.98%, #00edff 91.97%);
 
           .toggler {

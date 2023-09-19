@@ -14,19 +14,19 @@ const Reason = ({ isDarkTheme, title, text }) => {
 
     const [arrowAnim, setArrowAnim] = useState(1);
 
-    useEffect(() => {
-      let timeout = setInterval(() => {
-        arrowAnim === 1 ? setArrowAnim(2) : arrowAnim === 2 ? setArrowAnim(3) : setArrowAnim(1);
-      }, 1000)
+    // useEffect(() => {
+    //   let timeout = setInterval(() => {
+    //     arrowAnim === 1 ? setArrowAnim(2) : arrowAnim === 2 ? setArrowAnim(3) : setArrowAnim(1);
+    //   }, 1000)
 
-      return () => clearInterval(timeout);
-    }, [arrowAnim]);
+    //   return () => clearInterval(timeout);
+    // }, [arrowAnim]);
 
     const handleSetArrow = () => {
       if(isDarkTheme) {
-        return arrowAnim === 1 ? <ArrowBlack1 /> : arrowAnim === 2 ? <ArrowBlack2 /> : <ArrowBlack3 />
+        return arrowAnim === 1 ? <ArrowBlack1 className="arrow-black"/> : arrowAnim === 2 ? <ArrowBlack2 /> : <ArrowBlack3 />
       } else {
-        return arrowAnim === 1 ? <ArrowLight1 /> : arrowAnim === 2 ? <ArrowLight2 /> : <ArrowLight3 />
+        return arrowAnim === 1 ? <ArrowLight1 className="arrow-light"/> : arrowAnim === 2 ? <ArrowLight2 /> : <ArrowLight3 />
       }
     };
    

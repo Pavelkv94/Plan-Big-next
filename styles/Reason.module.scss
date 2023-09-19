@@ -53,7 +53,34 @@
     margin-right: 50px;
     transition: transform 0.3s ease;
     svg {
-      transition: 1s;
+
+      path {
+
+        animation: changeBackgroundColor 1s linear infinite;
+      }
+
+      @keyframes changeBackgroundColor {
+        0% {
+          fill: #00EDFF;
+        }
+        25% {
+            fill: linear-gradient(37.16deg, #00EDFF -1105.48%, #00C2FF 917.66%);
+        }
+        50% {
+            fill: linear-gradient(37.16deg, #00EDFF -1105.48%, #0075FF 917.66%);
+        }
+        75% {
+          fill: #0029FF;
+
+      }
+        100% {
+            fill: linear-gradient(37.16deg, #00EDFF -1105.48%, #0075FF 917.66%);
+
+        }
+    }
+
+    
+    
     }
   }
 

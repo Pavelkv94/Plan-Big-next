@@ -177,6 +177,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4PX;
+        font-size: 16px;
     }
 
     section {
@@ -185,7 +186,9 @@
         row-gap: 12px;
         column-gap: 15PX;
         align-items: center;
+        
         p {
+          font-size: 16px;
             margin: 0;
             font-family: "Montserrat", sans-serif;
 

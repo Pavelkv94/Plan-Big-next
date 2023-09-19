@@ -25,10 +25,42 @@
             margin-bottom: 110px;
           }
 
-          .sliderWindow {
-            width: 1280px;
-            height: 478px;
+          .slider {
+            width: 1400px;
+            height: 574px;
           }
+
+          .carousel {
+            display: flex;
+            overflow-x: hidden;
+            padding: 0;
+            scroll-snap-type: mandatory;
+          
+            .carouselItem {
+              font-size: 50px;
+              width: 1400px;
+              height: max-content;
+              flex-shrink: 0;
+              color: "#fff";
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          
+          .controlls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -300px;
+          
+            .arrow {
+              cursor: pointer;
+              position: relative;
+          
+            }
+          }
+          
 
           
     }

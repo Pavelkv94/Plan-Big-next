@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import styles from "../styles/Clients.module.scss";
 import Title from "./Title";
 import Client from "./Client";
-import { useSnapCarousel } from "react-snap-carousel";
 import Carousel from "./Carousel";
 
 const Clients = ({ isDarkTheme }) => {
-  const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
   const data = [
     { img: "/png/clients/1. Сбер-PhotoRoom 2.png" },
@@ -25,13 +23,6 @@ const Clients = ({ isDarkTheme }) => {
     { img: "/png/clients/14. МИСиС-PhotoRoom 2.png" },
     { img: "/png/clients/image 96 (1).png" },
   ];
-
-  const carouselStyles = {
-    display: "flex",
-    justifyContent: "center", // Horizontally center the elements
-    alignItems: "center", // Vertically center the elements
-    height: "500px", // Set the height of the carousel container
-  };
 
   const firstSlide = <div className={styles.sliderWindow}>
   {data.map((el, i) => (
