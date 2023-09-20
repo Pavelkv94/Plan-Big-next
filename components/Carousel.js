@@ -2,6 +2,8 @@ import { useSnapCarousel } from "react-snap-carousel";
 import CustomDot from "./CustomDot";
 import LeftArrow from "../svgs/arrow-client-left-black.svg";
 import RightArrow from "../svgs/arrow-client-right-black.svg";
+import LeftArrowLight from "../svgs/arrow-client-left-light.svg";
+import RightArrowLight from "../svgs/arrow-client-right-light.svg";
 import styles from "../styles/Carousel.module.scss";
 
 const Carousel = ({ array, isDarkTheme }) => {
@@ -18,7 +20,7 @@ const Carousel = ({ array, isDarkTheme }) => {
       </ul>
       <div className={styles.controlls}>
         <div onClick={() => prev()} className={styles.arrow}>
-          <LeftArrow />
+          {isDarkTheme ? <LeftArrow /> : <LeftArrowLight />}
           {isDarkTheme && <div className={styles.test}></div>}
         </div>
 
@@ -28,7 +30,7 @@ const Carousel = ({ array, isDarkTheme }) => {
           ))}
         </div>
         <div onClick={() => next()} className={styles.arrow}>
-          <RightArrow />
+          {isDarkTheme ? <RightArrow /> : <RightArrowLight />}
           {isDarkTheme && <div className={styles.test}></div>}
         </div>
       </div>

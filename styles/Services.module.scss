@@ -20,28 +20,336 @@
     flex-direction: column;
     align-items: center;
 
-
     .title {
-        margin-top: 140px;
-        margin-bottom: 40px;
+      margin-top: 140px;
+      margin-bottom: 40px;
     }
-    
+
     .gamepad {
-        width: 1300px;
-        height: 695px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+      width: 1300px;
+      height: 695px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
 
+      &.dark {
+        background-image: url("../pngs/services-gamepad-black.png");
+        .gameButton {
+          position: relative;
+          &.active {
+            p {
+              font-weight: 600;
+              color: #00edff;
+            }
+          }
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            margin: 0;
+            z-index: 3;
+            position: relative;
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
+
+          .eclipse0 {
+            position: absolute;
+            width: 700px;
+            height: 180px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game0-black.png");
+            top: -70px;
+            left: -140px;
+          }
+          .eclipse1 {
+            position: absolute;
+            width: 235px;
+            height: 306px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game1-black.png");
+            top: -160px;
+            left: -50px;
+          }
+
+          .eclipse2 {
+            position: absolute;
+            width: 258px;
+            height: 324px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game2-black.png");
+            top: -160px;
+            left: -50px;
+          }
+
+          .eclipse3 {
+            position: absolute;
+            width: 700px;
+            height: 180px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game0-black.png");
+            top: -70px;
+            left: -230px;
+          }
+
+          .eclipse4 {
+            position: absolute;
+            width: 258px;
+            height: 324px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game4-black.png");
+            top: -160px;
+            left: -66px;
+          }
+
+          .eclipse5 {
+            position: absolute;
+            width: 235px;
+            height: 306px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game5-black.png");
+            top: -148px;
+            left: -36px;
+          }
+        }
+      }
+
+      &.light {
+        background-image: url("../pngs/services-gamepad-light.png");
+
+        .gameButton {
+          position: relative;
+          &.active {
+            p {
+              font-weight: 600;
+            }
+          }
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #383838;
+            cursor: pointer;
+            margin: 0;
+          }
+        }
+      }
+
+      .gameButton {
+        position: absolute;
+        width: 400px;
+
+        &:nth-child(1) {
+          top: 52px;
+          left: 440px;
+        }
+
+        &:nth-child(2) {
+          top: 160px;
+          left: 1040px;
+          width: 150px;
+        }
+
+        &:nth-child(3) {
+          top: 400px;
+          left: 1040px;
+          width: 150px;
+        }
+
+        &:nth-child(4) {
+          top: 470px;
+          left: 540px;
+          width: 180px;
+        }
+
+        &:nth-child(5) {
+          top: 300px;
+          left: 120px;
+          width: 140px;
+        }
+
+        &:nth-child(6) {
+          top: -26px;
+          left: 120px;
+          width: 140px;
+        }
+      }
+
+      .gamepadContent {
+        position: absolute;
+        width: 700px;
+        height: 400px;
+        left: 304px;
+        top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &.dark {
-            background-image: url("../pngs/services-gamepad-black.png");
-
+          h3, .descrItem,
+          .priceItem {
+            color: white;
+          }
         }
 
         &.light {
-            background-image: url("../pngs/services-gamepad-light.png");
-
+          h3, .descrItem,
+          .priceItem {
+            color: #383838;
+          }
         }
+
+        h3 {
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 17px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin: 20px 0;
+        }
+        .wrapper {
+          display: flex;
+          justify-content: space-between;
+          height: 270px;
+          margin-top: 16px;
+          .example {
+            width: 265px;
+            height: 214px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .videoWrapper {
+              width: 265px;
+              height: 147px;
+              position: relative;
+
+              .screen {
+                position: absolute;
+                width: 265px;
+                height: 147px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+              
+                &.screen0 {
+                  background-image: url("../pngs/gameFirst.png");
+                }
+                &.screen1 {
+                  background-image: url("../pngs/gameSecond.png");
+                }
+                &.screen2 {
+                  background-image: url("../pngs/gameThird.png");
+                }
+                &.screen3 {
+                  background-image: url("../pngs/gameThird.png");
+                }
+                &.screen4 {
+                  background-image: url("../pngs/gameFive.png");
+                }
+                &.screen5 {
+                  background-image: url("../pngs/gameSix.png");
+                }
+
+                .playBtn {
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 100%;
+                  background-color: #FFFFFF40;
+                  position: relative;
+                  cursor: pointer;
+                  
+                  .triangle {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-left: 7px solid rgba(0, 237, 255, 1);
+                    top: 8px;
+                    left: 12px;
+                  }
+                }
+              }
+            }
+          }
+
+          .descriptionWrapper {
+            width: 418px;
+
+            h3 {
+              text-align: left;
+              margin-left: 70px;
+            }
+            .descrItem {
+              font-family: "Montserrat", sans-serif;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 0em;
+              text-align: left;
+              margin: 7px 0 7px 50px;
+              display: flex;
+
+              p {
+                margin: 0;
+              }
+
+              svg {
+                margin-top: 7px;
+                margin-right: 16px;
+              }
+            }
+          }
+        }
+        .price {
+          height: 115px;
+          h3 {
+            margin-left: 70px;
+            text-align: left;
+          }
+
+          .priceItem {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin: 7px 0 7px 70px;
+          }
+        }
+      }
     }
   }
 }

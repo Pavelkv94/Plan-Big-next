@@ -5,8 +5,8 @@ import WithUsItem from "./WithUsItem";
 import { useSnapCarousel } from "react-snap-carousel";
 import LeftArrow from "../svgs/arrow-client-left-black.svg";
 import RightArrow from "../svgs/arrow-client-right-black.svg";
-import CustomDot from "./CustomDot";
-import Client from "./Client";
+import LeftArrowLight from "../svgs/arrow-client-left-light.svg";
+import RightArrowLight from "../svgs/arrow-client-right-light.svg";
 
 const WithUs = ({ isDarkTheme }) => {
   const item = (
@@ -54,13 +54,13 @@ const Slider = ({ array, isDarkTheme }) => {
       </ul>
       <div className={styles.controlls}>
         <div onClick={() => prev()} className={styles.arrow}>
-          {activePageIndex !== 0 && <LeftArrow />}
-          {isDarkTheme && <div className={styles.test}></div>}
+          {activePageIndex !== 0 && (isDarkTheme ? <LeftArrow /> : <LeftArrowLight />)}
+          {activePageIndex !== 0 && isDarkTheme && <div className={styles.test}></div>}
         </div>
 
         <div onClick={() => next()} className={styles.arrow}>
-          {activePageIndex !== pages.length - 1 && <RightArrow />}
-          {isDarkTheme && <div className={styles.test}></div>}
+          {activePageIndex !== pages.length - 1 && (isDarkTheme ? <RightArrow /> : <RightArrowLight />)}
+          {activePageIndex !== pages.length - 1 && isDarkTheme && <div className={styles.test}></div>}
         </div>
       </div>
     </>

@@ -37,14 +37,14 @@ const VideoMaking = ({ isDarkTheme }) => {
             </div>
         </div>
 
-        <div className={styles.playBlock}>
+        <div className={`${styles.playBlock} ${isDarkTheme ? styles.dark : styles.light}`}>
         <div className={`${styles.playButton} ${isDarkTheme ? styles.dark : styles.light}`}>
           { isDarkTheme ? <PlaySvg /> : <PlayLightSvg/> }
         </div>
-        {/* <p className={styles.playDescript}>Видео на основе 2D анимации</p> */}
-        {/* <p className={styles.playDescript}>Видео на основе 3D анимации</p> */}
-        {/* <p className={styles.playDescript}>Рекламные <br />видео</p> */}
-        {/* <p className={styles.playDescript}>Презентационные <br />видео</p> */}
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 2D анимации</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 3D анимации</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Рекламные <br />видео</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Презентационные <br />видео</p>
         </div>
        
       </div>

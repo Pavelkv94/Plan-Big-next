@@ -58,6 +58,14 @@
               cursor: pointer;
               position: relative;
           
+              .test {
+                position: absolute;
+                width: 48px;
+                border: 1px solid #00edff;
+                top: 11px;
+                left: 2px;
+                box-shadow: 0 0 15px #00edff;
+              }
             }
           }
           

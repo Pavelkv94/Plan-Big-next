@@ -7,7 +7,7 @@
   background-position: center;
 
   &.dark {
-    background-image: url("../pngs/videomaking-backg-dark.png");
+    background-image: url("../pngs/videomaking-backg-dark2.png");
   }
 
   &.light {
@@ -34,15 +34,12 @@
 
         &.dark {
           background-image: url("../pngs/video-title-dark.png");
-
         }
         &.light {
           background-image: url("../pngs/video-title-light.png");
           margin-top: 100px;
-
         }
         .divider {
-
           margin: 0 75px;
 
           &.dark {
@@ -50,7 +47,6 @@
             width: 2.7px;
             background-color: #00edff;
             box-shadow: 0px 0px 8px #00edff;
-  
           }
 
           &.light {
@@ -139,8 +135,19 @@
 
     .playBlock {
       position: relative;
-      width: 100%;
-      height: 500px;
+      width: 1560px;
+      height: 496px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+      background-image: url("../pngs/video-frame-black.png");
+      &.dark {
+        background-image: url("../pngs/video-frame-black.png");
+      }
+      &.light {
+        background-image: url("../pngs/video-frame-light.png");
+      }
 
       .playButton {
         position: absolute;
@@ -153,7 +160,7 @@
         }
 
         &.light {
-          left: 43%;
+          left: 40%;
 
           @media screen and (max-width: 1750px) {
             left: 42%;
@@ -172,33 +179,98 @@
 
       p.playDescript {
         margin: 0;
-        color: rgba(0, 237, 255, 1);
         text-shadow: 0px 0px 5px #00edff;
         font-size: 28px;
         width: 280px;
         text-align: center;
         font-weight: 600;
         position: absolute;
+        transition: 0.5s;
 
-        // &:last-child {
-        //     left: 75%;
-        //     top: 60%;
-        // }
+        &.dark {
+          color: rgba(0, 237, 255, 1);
 
-        // &:nth-child(2) {
-        //     left: 300px;
-        //     top: 120px;
-        // }
+          &:last-child {
+            left: 1240px;
+            top: 260px;
+            &:hover {
+              font-size: 30px;
+            }
+          }
+  
+          &:nth-child(2) {
+            left: 310px;
+            top: 80px;
+            &:hover {
+              font-size: 30px;
+              width: 300px;
+  
+            }
+          }
+  
+          &:nth-child(3) {
+            left: 40px;
+            top: 280px;
+            &:hover {
+              font-size: 30px;
+              width: 300px;
+  
+            }
+          }
+  
+          &:nth-child(4) {
+            left: 960px;
+            top: 80px;
+            &:hover {
+              font-size: 30px;
+            }
+          }
 
-        // &:nth-child(3) {
-        //     left: 20px;
-        //     top: 300px;
-        // }
+        }
 
-        // &:nth-child(4) {
-        //     left: 950px;
-        //     top: 120px;
-        // }
+        &.light {
+          color: #383838;
+          text-shadow: none;
+
+          &:last-child {
+            left: 1160px;
+            top: 240px;
+            &:hover {
+              font-size: 30px;
+            }
+          }
+  
+          &:nth-child(2) {
+            left: 350px;
+            top: 40px;
+            &:hover {
+              font-size: 30px;
+              width: 300px;
+  
+            }
+          }
+  
+          &:nth-child(3) {
+            left: 120px;
+            top: 240px;
+            &:hover {
+              font-size: 30px;
+              width: 300px;
+  
+            }
+          }
+  
+          &:nth-child(4) {
+            left: 920px;
+            top: 40px;
+            &:hover {
+              font-size: 30px;
+            }
+          }
+          
+        }
+
+        
       }
     }
   }
