@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Portfolio.module.scss";
 import Title from "./Title";
-import VideoSimpleBlock from "./VideoSimpleBlock";
+import VideoPlayer from "./VideoPlayer";
 
 const Portfolio = ({ isDarkTheme }) => {
   const [tab, setTab] = useState(1);
@@ -33,7 +33,12 @@ const Portfolio = ({ isDarkTheme }) => {
             ))}
           </div>
           <div className={styles.tabsContent}>
-            {videos.map((el, i) => <VideoSimpleBlock isDarkTheme={isDarkTheme} key={i}/>)}
+            {videos.map((el, i) => <VideoPlayer
+              width={isDarkTheme ? "500px" : "500px"}
+              height={isDarkTheme ? "280px" : "300px"}
+              isDarkTheme={isDarkTheme}
+              src={"https://www.youtube.com/embed/P1kYDn62P2s?si=ylA-2JiBeS20lwL5&modestbranding=1&autoplay=1"}
+            />)}
             
           </div>
         </section>

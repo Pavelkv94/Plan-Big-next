@@ -1,76 +1,55 @@
 import React, { useRef, useState } from "react";
 import styles from "../styles/VideoPlayer.module.scss";
 
-const VideoPlayer = ({ width, height, src, style, big }) => {
+const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
-  const handlePlayPause = () => {
-    console.log(videoRef);
-    if (videoRef.current) {
-      const video = videoRef.current;
-      if (video.paused) {
-        video.play();
-        setIsPlaying(true);
-      } else {
-        video.pause();
-        setIsPlaying(false);
-      }
-    }
+  const playVideo = () => {
+    setIsPlaying(true);
+    videoRef.current.src = src;
   };
 
   return big ? (
-    <div style={{ ...style, width, height }} className={styles.videoPlayer}>
-      {/* <iframe
-        width="400"
-        height="250"
-        src="https://www.youtube.com/embed/j5VKEayaTEc?si=OMEWLvv_Bl02LkuB?modestbranding=1&autoplay=0"
+    <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.big} ${isDarkTheme ? styles.dark : styles.light}`}>
+      {!isPlaying && (
+        <div className={styles.screen}>
+          <div className={styles.pulse}></div>
+          <div className={styles.playBtn} onClick={playVideo}>
+            <div className={styles.triangle}></div>
+          </div>
+        </div>
+      )}
+      <iframe
+        ref={videoRef}
+        width={isDarkTheme ? "598" : "628"}
+        height={isDarkTheme ? "296" : "332"}
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-      ></iframe> */}
-      {/* <video width={width} height={height} ref={videoRef}>
-      <source src={src} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    {!isPlaying ? (
-      <div className={styles.pauseWrapper}>
-      <button className={styles.playButton} onClick={handlePlayPause}>
-        <div className={styles.play}></div>
-      </button>
-      </div>
-    ) : (
-      <div className={styles.playWrapper} onClick={handlePlayPause}>
-        </div>
-    )} */}
+      ></iframe>
     </div>
   ) : (
-    <div style={{ ...style, width, height }} className={styles.videoPlayer}>
-      {/* <iframe
-        width="400"
-        height="250"
-        src="https://www.youtube.com/embed/j5VKEayaTEc?si=OMEWLvv_Bl02LkuB?modestbranding=1&autoplay=0"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe> */}
-      {/* <video width={width} height={height} ref={videoRef}>
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {!isPlaying ? (
-        <div className={styles.pauseWrapper}>
-        <button className={styles.playButton} onClick={handlePlayPause}>
-          <div className={styles.play}></div>
-        </button>
+    <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.little} ${isDarkTheme ? styles.dark : styles.light}`}>
+    {!isPlaying && (
+      <div className={styles.screen}>
+        <div className={styles.playBtn} onClick={playVideo}>
+          <div className={styles.triangle}></div>
         </div>
-      ) : (
-        <div className={styles.playWrapper} onClick={handlePlayPause}>
-          </div>
-      )} */}
-    </div>
+      </div>
+    )}
+
+    <iframe
+      ref={videoRef}
+      width={isDarkTheme ? "401" : "420"}
+      height={isDarkTheme ? "199" : "220"}
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
   );
 };
 

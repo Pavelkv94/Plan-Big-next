@@ -33,11 +33,11 @@ const Footer = ({ isDarkTheme }) => {
             О нас
           </Link>
 
-          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500}>
+          <Link to="services" spy={true} smooth={true} offset={-50} duration={500}>
             Услуги
           </Link>
 
-          <Link to="services" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
             Портфолио
           </Link>
 
@@ -51,11 +51,11 @@ const Footer = ({ isDarkTheme }) => {
         </div>
         <div className={styles.services}>
           <h4>Услуги</h4>
-          <span>2D анимация</span>
-          <span>3D анимация</span>
-          <span>Рекламные ролики</span>
-          <span>Видеообзоры продукции</span>
-          <span>Cторитейл видео</span>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>2D анимация</Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>3D анимация</Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>Рекламные ролики</Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>Видеообзоры продукции</Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>Cторитейл видео</Link>
         </div>
         <div className={styles.contacts}>
           <h4>Контакты</h4>

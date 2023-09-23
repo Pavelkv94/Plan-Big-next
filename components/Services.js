@@ -49,7 +49,7 @@ const Services = ({ isDarkTheme }) => {
   const gameContents = [
     {
       id: 0,
-      videoUrl: "https://www.youtube.com/embed/BIiffcdLp7Y?si=w1DtQXWpUGceuQ-b&modestbranding=1&autoplay=1",
+      videoUrl: "https://www.youtube.com/embed/BIiffcdLp7Y?si=w1DtQXWpUGceuQ-b&modestbranding=1&autoplay=1&controls=0",
       descr: ["Рассказать и показать компанию", "Сформировать имидж в глазах ЦА", "Донести ключевые сообщения и преимущества", "Представить компанию на мероприятиях"],
       price: ["Оптимальная подача – от 200 000 до 1 000 000 рублей", "Эффектная/премиум подача – от 1 000 000 до 5 000 000 рублей"],
       screenUrl: "../pngs/gameFirst.png"
@@ -163,7 +163,7 @@ const ContentServices = ({ service, isDarkTheme, isPlaying, setIsPlaying, withPl
             {!isPlaying && (
               <div className={`${styles.screen} ${styles[`screen${service.id}`]}`}>
                 <div className={styles.playBtn} onClick={playVideo}>
-                  <div class={styles.triangle}></div>
+                  <div className={styles.triangle}></div>
                 </div>
               </div>
             )}
@@ -174,7 +174,7 @@ const ContentServices = ({ service, isDarkTheme, isPlaying, setIsPlaying, withPl
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>

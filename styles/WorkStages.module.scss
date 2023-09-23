@@ -4,10 +4,7 @@
   min-width: 1560px;
 
   &.dark {
-    background-image: url("../pngs/workStages-back-black.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #001137;
   }
 
   &.light {
