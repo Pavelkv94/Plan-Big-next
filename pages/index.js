@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Head from "next/head";
 import { ThemeContext } from "../components/ThemeContext";
 import HeaderNavMenu from "../components/HeaderNavMenu";
@@ -12,11 +12,14 @@ import WithUs from "../components/WithUs";
 import Clients from "../components/Clients";
 import WorkStages from "../components/WorkStages";
 import Footer from "../components/Footer";
-import AppContainer from "../components/AppContainer";
+import Modal from "../components/Modal";
 
 
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
+  const [openModal, setOpenModal] = useState(false);
+
+  const onCloseModal = () => setOpenModal(false);
 
   return (
     <>
@@ -29,7 +32,7 @@ const Index = () => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
       </Head>
       <div className="app-wrapper">
-        <HeaderNavMenu isDarkTheme={isDarkTheme} />
+        <HeaderNavMenu isDarkTheme={isDarkTheme} setOpenModal={setOpenModal}/>
         <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
         <VideoMaking isDarkTheme={isDarkTheme} />
         <Portfolio isDarkTheme={isDarkTheme} />
@@ -40,6 +43,7 @@ const Index = () => {
         <Clients isDarkTheme={isDarkTheme} />
         <WorkStages isDarkTheme={isDarkTheme} />
         <Footer isDarkTheme={isDarkTheme} />
+        {openModal && <Modal onCloseModal={onCloseModal}/>}
       </div>
     </>
   );

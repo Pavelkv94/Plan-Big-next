@@ -25,7 +25,7 @@ const Carousel = ({ array, isDarkTheme }) => {
         </div>
 
         <div className={styles.dots}>
-          {pages.map((_, i) => (
+          {array.map((_, i) => (
             <CustomDot isDarkTheme={isDarkTheme} onClick={() => goTo(i)} isSelected={i === activePageIndex} key={i} />
           ))}
         </div>

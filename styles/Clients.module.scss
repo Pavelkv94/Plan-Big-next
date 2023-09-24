@@ -3,6 +3,9 @@
     height: 1080px;
     min-width: 1560px;
 
+    ul {
+      margin-bottom: 100px;
+    }
     &.dark {
         background-image: url("../pngs/clients-back-black.png");
         background-size: cover;
@@ -35,6 +38,9 @@
 
           .carousel {
           width: 1150px;
+
           }
+
+
     }
 }

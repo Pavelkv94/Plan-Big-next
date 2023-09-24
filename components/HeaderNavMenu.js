@@ -5,7 +5,7 @@ import Telegram from "../svgs/telegram.svg";
 import WhatsApp from "../svgs/whatsapp.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const HeaderNavMenu = ({ isDarkTheme }) => {
+const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
 
   return (
     <div className={`${styles.headerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
@@ -41,7 +41,7 @@ const HeaderNavMenu = ({ isDarkTheme }) => {
               </Link>
             </nav>
           </div>
-          <div className={`${styles.calculate} ${isDarkTheme ? styles.dark : styles.light}`}>
+          <div className={`${styles.calculate} ${isDarkTheme ? styles.dark : styles.light}`} onClick={() => setOpenModal(true)}>
             <p>РАССЧИТАТЬ КП</p>
           </div>
           <div className={styles.contacts}>

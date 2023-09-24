@@ -5,8 +5,7 @@ import Client from "./Client";
 import Carousel from "./Carousel";
 
 const Clients = ({ isDarkTheme }) => {
-
-  const data = [
+  const clients1 = [
     { img: "/png/clients/1. Сбер-PhotoRoom 2.png" },
     { img: "/png/clients/4. undp-PhotoRoom 2.png" },
     { img: "/png/clients/5. Правительство Москвы-PhotoRoom 4.png" },
@@ -24,16 +23,63 @@ const Clients = ({ isDarkTheme }) => {
     { img: "/png/clients/image 96 (1).png" },
   ];
 
-  const firstSlide = <div className={styles.sliderWindow}>
-  {data.map((el, i) => (
-    <Client key={i} img={el.img} isDarkTheme={isDarkTheme} />
-  ))}
-</div>;
-  const secondSlide = <div className={styles.sliderWindow}>
-  {data.map((el, i) => (
-    <Client key={i} img={el.img} isDarkTheme={isDarkTheme} />
-  ))}
-</div>;
+  const clients2 = [
+    { img: "/png/clients/2 10.png" },
+    { img: "/png/clients/28 1.png" },
+    { img: "/png/clients/9 1.png" },
+    { img: "/png/clients/22 1.png" },
+    { img: "/png/clients/21 1.png" },
+    { img: "/png/clients/18 1.png" },
+    { img: "/png/clients/7 1.png" },
+    { img: "/png/clients/24 1.png" },
+    { img: "/png/clients/26 1.png" },
+    { img: "/png/clients/29 1.png" },
+    { img: "/png/clients/15 1.png" },
+    { img: "/png/clients/11 1.png" },
+    { img: "/png/clients/8 1.png" },
+    { img: "/png/clients/10 1.png" },
+    { img: "/png/clients/4 1.png" },
+  ];
+
+  const clients3 = [
+    { img: "/png/clients/9 2.png" },
+    { img: "/png/clients/27 2.png" },
+    { img: "/png/clients/12 2.png" },
+    { img: "/png/clients/4 2.png" },
+    { img: "/png/clients/8 2.png" },
+    { img: "/png/clients/13 1.png" },
+    { img: "/png/clients/28 2.png" },
+    { img: "/png/clients/11 2.png" },
+    { img: "/png/clients/16 2.png" },
+    { img: "/png/clients/14 2.png" },
+    { img: "/png/clients/15 2.png" },
+    { img: "/png/clients/25 2.png" },
+    { img: "/png/clients/10 2.png" },
+    { img: "/png/clients/29 2.png" },
+    { img: "/png/clients/26 2.png" },
+  ];
+
+  const firstSlide = (
+    <div className={styles.sliderWindow}>
+      {clients1.map((el, i) => (
+        <Client key={i} img={el.img} isDarkTheme={isDarkTheme} />
+      ))}
+    </div>
+  );
+  const secondSlide = (
+    <div className={styles.sliderWindow}>
+      {clients2.map((el, i) => (
+        <Client key={i} img={el.img} isDarkTheme={isDarkTheme} />
+      ))}
+    </div>
+  );
+  const thirdSlide = (
+    <div className={styles.sliderWindow}>
+      {clients3.map((el, i) => (
+        <Client key={i} img={el.img} isDarkTheme={isDarkTheme} />
+      ))}
+    </div>
+  );
 
   return (
     <div className={`${styles.clientsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
@@ -42,12 +88,8 @@ const Clients = ({ isDarkTheme }) => {
           <Title isDarkTheme={isDarkTheme} text="НАМ ДОВЕРЯЮТ" mainTitle width={"430px"} left={"30px"} />
         </div>
         <div className={styles.carousel}>
-          <Carousel array={[firstSlide, secondSlide]} isDarkTheme={isDarkTheme} />
-         
-
-         
+          <Carousel array={[firstSlide, secondSlide, thirdSlide]} isDarkTheme={isDarkTheme} />
         </div>
-       
       </div>
     </div>
   );

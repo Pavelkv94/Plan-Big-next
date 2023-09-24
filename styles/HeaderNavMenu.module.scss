@@ -86,7 +86,7 @@
         justify-content: center;
         margin-left: 20px;
         cursor: pointer;
-
+         
         &.dark {
           background-image: url("../pngs/calculate-dark.png");
         }
@@ -99,6 +99,8 @@
           margin: 0;
           font-weight: 700;
           font-size: 12px;
+          cursor: pointer;
+
         }
       }
     }

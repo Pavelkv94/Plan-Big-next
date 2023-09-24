@@ -2,21 +2,198 @@ import React, { useState } from "react";
 import styles from "../styles/Portfolio.module.scss";
 import Title from "./Title";
 import VideoPlayer from "./VideoPlayer";
+import Carousel from "./Carousel";
+
+const videos = [
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+  [
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+    {
+      elements: [
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+        { id: 1, src: "blabla" },
+      ],
+    },
+  ],
+];
 
 const Portfolio = ({ isDarkTheme }) => {
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(0);
 
   const tabs = [
-    { title: "2D \n АНИМАЦИЯ", key: 1 },
-    { title: "3D \n АНИМАЦИЯ", key: 2 },
-    { title: "РЕКЛАМНЫЕ \n РОЛИКИ", key: 3 },
-    { title: "ВИДЕООБЗОРЫ \n ПРОДУКЦИИ", key: 4 },
-    { title: "ПРЕЗЕНТАЦИОННЫЕ \n РОЛИКИ", key: 5 },
-    { title: "СТОРИТЕЙЛ \n ВИДЕО", key: 6 },
+    { title: "2D \n АНИМАЦИЯ", key: 0 },
+    { title: "3D \n АНИМАЦИЯ", key: 1 },
+    { title: "РЕКЛАМНЫЕ \n РОЛИКИ", key: 2 },
+    { title: "ВИДЕООБЗОРЫ \n ПРОДУКЦИИ", key: 3 },
+    { title: "ПРЕЗЕНТАЦИОННЫЕ \n РОЛИКИ", key: 4 },
+    { title: "СТОРИТЕЙЛ \n ВИДЕО", key: 5 },
   ];
 
+  const tabContent = (videos, tabNum) => {
+    const slides = videos[tabNum].map((el, i) => (
+      <div className={styles.tabsContent} key={i}>
+        {el.elements.map((el, i) => (
+          <VideoPlayer
+            key={i}
+            width={isDarkTheme ? "500px" : "500px"}
+            height={isDarkTheme ? "280px" : "300px"}
+            isDarkTheme={isDarkTheme}
+            src={"https://www.youtube.com/embed/P1kYDn62P2s?si=ylA-2JiBeS20lwL5&modestbranding=1&autoplay=1"}
+          />
+        ))}
+      </div>
+    ));
 
-  const videos = [1,2,3,4,5,6];
+    return (
+      <div style={{ width: "1560px" }}>
+        <Carousel array={slides} isDarkTheme={isDarkTheme} />
+      </div>
+    );
+  };
 
   return (
     <div className={`${styles.portfolioWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="portfolio">
@@ -32,15 +209,7 @@ const Portfolio = ({ isDarkTheme }) => {
               </div>
             ))}
           </div>
-          <div className={styles.tabsContent}>
-            {videos.map((el, i) => <VideoPlayer
-              width={isDarkTheme ? "500px" : "500px"}
-              height={isDarkTheme ? "280px" : "300px"}
-              isDarkTheme={isDarkTheme}
-              src={"https://www.youtube.com/embed/P1kYDn62P2s?si=ylA-2JiBeS20lwL5&modestbranding=1&autoplay=1"}
-            />)}
-            
-          </div>
+          {tabContent(videos, tab)}
         </section>
       </div>
     </div>

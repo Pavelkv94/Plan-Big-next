@@ -25,9 +25,9 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
         width={isDarkTheme ? "598" : "628"}
         height={isDarkTheme ? "296" : "332"}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </div>
   ) : (
@@ -45,9 +45,9 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
       width={isDarkTheme ? "401" : "420"}
       height={isDarkTheme ? "199" : "220"}
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   </div>
   );
