@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../styles/Reasons.module.scss";
 import Title from "./Title";
 import LogoBlack from "../svgs/reasons-logo-black.svg";
-import LogoLight from "../svgs/reasons-logo-light.svg";
 
 import Reason from "./Reason";
 
@@ -43,7 +42,7 @@ const Reasons = ({ isDarkTheme }) => {
             </div>
           ) : (
             <div className={styles.playContentLight}>
-              <LogoLight />
+              <img src="/png/playLight.webp" width={390} height={371}/>
             </div>
           )}
 

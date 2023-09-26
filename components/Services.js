@@ -52,7 +52,7 @@ const Services = ({ isDarkTheme }) => {
       videoUrl: "https://www.youtube.com/embed/BIiffcdLp7Y?si=w1DtQXWpUGceuQ-b&modestbranding=1&autoplay=1&controls=0",
       descr: ["Рассказать и показать компанию", "Сформировать имидж в глазах ЦА", "Донести ключевые сообщения и преимущества", "Представить компанию на мероприятиях"],
       price: ["Оптимальная подача – от 200 000 до 1 000 000 рублей", "Эффектная/премиум подача – от 1 000 000 до 5 000 000 рублей"],
-      screenUrl: "../pngs/gameFirst.png"
+      screenUrl: "../pngs/gameFirst.webp"
     },
     {
       id: 1,

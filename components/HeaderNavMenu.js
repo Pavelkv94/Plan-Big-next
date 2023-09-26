@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/HeaderNavMenu.module.scss";
 import LogoBlack from "../svgs/logo-black.svg";
 import Telegram from "../svgs/telegram.svg";
-import WhatsApp from "../svgs/whatsapp.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
@@ -50,7 +49,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
           </div>
         </div>
         <div className={styles.messengers}>
-          <WhatsApp />
+          <img src="/png/whatsapp.webp" width={22} height={23}/>
           <Telegram />
         </div>
       </div>

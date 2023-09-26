@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/VideoMaking.module.scss";
 import PlaySvg from "../svgs/play.svg";
-import PlayLightSvg from "../svgs/play-light.svg";
 import Title from "./Title";
 
 const VideoMaking = ({ isDarkTheme }) => {
@@ -39,7 +38,7 @@ const VideoMaking = ({ isDarkTheme }) => {
 
         <div className={`${styles.playBlock} ${isDarkTheme ? styles.dark : styles.light}`}>
         <div className={`${styles.playButton} ${isDarkTheme ? styles.dark : styles.light}`}>
-          { isDarkTheme ? <PlaySvg /> : <PlayLightSvg/> }
+          { isDarkTheme ? <PlaySvg /> : <img src="/png/playLight.webp" width={310} height={295}/> }
         </div>
         <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 2D анимации</p>
         <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 3D анимации</p>

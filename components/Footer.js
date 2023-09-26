@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Footer.module.scss";
-import LogoLight from "../svgs/footer-logo-light.svg";
 import LogoBlack from "../svgs/footer-logo-black.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 import CopyIcon from "../svgs/copy.svg";
 import Telegram from "../svgs/telegram.svg";
-import WhatsApp from "../svgs/whatsapp.svg";
 
 const Footer = ({ isDarkTheme }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -23,7 +21,7 @@ const Footer = ({ isDarkTheme }) => {
   return (
     <div className={`${styles.footerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.footerContent}>
-        <div className={styles.logo}>{isDarkTheme ? <LogoBlack /> : <LogoLight />}</div>
+        <div className={styles.logo}>{isDarkTheme ? <LogoBlack /> : <img src="/png/logo light.webp" width={239} height={33}/>}</div>
         <div className={styles.navigation}>
           <h4>Навигация</h4>
           <Link to="main" spy={true} smooth={true} offset={-50} duration={500}>
@@ -66,7 +64,7 @@ const Footer = ({ isDarkTheme }) => {
               <CopyIcon />
             </div>
             <div className={styles.whats}>
-              <WhatsApp />
+              <img src="/png/whatsapp.webp" width={22} height={23}/>
             </div>
             <div className={styles.teleg}>
               <Telegram />
