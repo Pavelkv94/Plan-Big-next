@@ -7,11 +7,11 @@
   background-position: center;
 
   &.dark {
-    background-image: url("../pngs/videomaking-backg-dark2.png");
+    background-image: url("../pngs/videomaking-backg-dark2.webp");
   }
 
   &.light {
-    background-image: url("../pngs/videomaking-backg-light.png");
+    background-image: url("../pngs/videomaking-backg-light.webp");
   }
 
   .videoMakingContent {
@@ -33,10 +33,10 @@
         justify-content: center;
 
         &.dark {
-          background-image: url("../pngs/video-title-dark.png");
+          background-image: url("../pngs/video-title-dark.webp");
         }
         &.light {
-          background-image: url("../pngs/video-title-light.png");
+          background-image: url("../pngs/video-title-light.webp");
           margin-top: 100px;
         }
         .divider {
@@ -83,7 +83,7 @@
         justify-content: center;
 
         &.dark {
-          background-image: url("../pngs/video-making-circle.png");
+          background-image: url("../pngs/video-making-circle.webp");
           p {
             &:first-child {
               color: rgba(0, 237, 255, 1);
@@ -95,7 +95,7 @@
         }
 
         &.light {
-          background-image: url("../pngs/video-making-circle-light.png");
+          background-image: url("../pngs/video-making-circle-light.webp");
           .circleText p {
             color: black;
           }
@@ -141,12 +141,12 @@
       background-repeat: no-repeat;
       background-position: center;
       margin: 0 auto;
-      background-image: url("../pngs/video-frame-black.png");
+
       &.dark {
-        background-image: url("../pngs/video-frame-black.png");
+        background-image: url("../pngs/video-frame-black.webp");
       }
       &.light {
-        background-image: url("../pngs/video-frame-light.png");
+        background-image: url("../pngs/video-frame-light.webp");
       }
 
       .playButton {

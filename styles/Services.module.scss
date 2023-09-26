@@ -8,7 +8,7 @@
   background-position: center;
 
   &.dark {
-    background-image: url("../pngs/Services-back-black.png");
+    background-image: url("../pngs/Services-back-black.webp");
   }
 
   &.light {
@@ -34,7 +34,7 @@
       position: relative;
 
       &.dark {
-        background-image: url("../pngs/services-gamepad-black.png");
+        background-image: url("../pngs/services-gamepad-black.webp");
         .gameButton {
           position: relative;
           &.active {
@@ -141,7 +141,7 @@
       }
 
       &.light {
-        background-image: url("../pngs/services-gamepad-light1.png");
+        background-image: url("../pngs/services-gamepad-light1.webp");
 
         .gameButton {
           position: relative;
