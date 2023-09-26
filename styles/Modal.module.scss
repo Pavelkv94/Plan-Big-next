@@ -81,7 +81,7 @@
         width: 227px;
         height: 55px;
         margin-top: 15px;
-        background-image: url("../pngs/Button.png");
+        background-image: url("../pngs/Button.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -91,7 +91,7 @@
         cursor: pointer;
 
         &:hover {
-          background-image: url("../pngs/Button-hover.png");
+          background-image: url("../pngs/Button-hover.webp");
 
           span {
             color: white;

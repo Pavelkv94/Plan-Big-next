@@ -4,14 +4,14 @@
   min-width: 1560px;
 
   &.dark {
-    background-image: url("../pngs/main-back-black1.png");
+    background-image: url("../pngs/main-back-black2.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &.light {
-    background-image: url("../pngs/main-back-light.png");
+    background-image: url("../pngs/main-back-light.webp");
   }
 
   .mainContent {
@@ -184,14 +184,14 @@
           position: relative;
 
           &.dark {
-            background: url("../pngs//main-info-item-back.png");
+            background: url("../pngs//main-info-item-back.webp");
             p {
               color: rgba(0, 237, 255, 1);
             }
           }
 
           &.light {
-            background: url("../pngs//main-info-item-back-light.png");
+            background: url("../pngs//main-info-item-back-light.webp");
 
             p {
               color: rgba(0, 138, 238, 1);
