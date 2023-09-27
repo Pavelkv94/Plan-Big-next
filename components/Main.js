@@ -52,6 +52,7 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
             </div>
           </div>
           <div className={styles.showInfo}>
+            {isDarkTheme && <p className={styles.showreelP}>SHOWREEL</p>}
             <VideoPlayer
               width={"745px"}
               height={"475px"}

@@ -275,6 +275,20 @@
       position: relative;
       left: 70px;
       top: -50px;
+
+      .showreelP {
+        position: absolute;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        top: 40px;
+        left: 260px;
+        z-index: 2;
+      }
     }
   }
 }

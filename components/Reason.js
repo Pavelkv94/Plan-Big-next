@@ -36,11 +36,11 @@ const Reason = ({ isDarkTheme, title, text }) => {
         <div className={styles.arrows} onClick={handleClick}>
         {handleSetArrow()}
         </div>
-        <p style={{opacity: height === "200px" ? 1 : 0, transition: height === "200px" ? "0.8s" : "0.4s"}}>
+        <p style={{opacity: height === "200px" ? 1 : 0, }} className={styles[height === "200px" ? "full" : "notFull"]}>
             {text}
         </p>
     </section>
   );
 };
-
+//transition: height === "200px" ? "0.2s" : "0.8s"
 export default Reason;

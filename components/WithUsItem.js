@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styles from "../styles/WithUsItem.module.scss";
+import Lupa from "../svgs/lupa.svg";
 
-const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, widthTime, widthMoney, widthDiff }) => {
+const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, widthTime, widthMoney, widthDiff, ind, setOpen, setImgUrl, imgUrl }) => {
   return (
     <div className={`${styles.withUssliderItem} ${isDarkTheme ? styles.dark : styles.light}`}>
-      <h3>{title}</h3>
+      <div className={`${styles.photo} ${styles[`photo-item${ind}`]}`}></div>
+      <h3 style={{fontSize: ind === 9 ? "30px" : "36px"}}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <div className={styles.job}>
         <p>{jobTitle}</p>
@@ -20,7 +22,7 @@ const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, wid
           <div className={styles.indicator}>
             <div style={{ width: widthTime }}></div>
           </div>
-          <p>срок</p>
+          <p>срочность</p>
           <div className={styles.indicator}>
             <div style={{ width: widthMoney }}></div>
           </div>
@@ -30,6 +32,15 @@ const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, wid
           </div>
           <p>сложность</p>
         </section>
+      </div>
+
+      <div className={`${styles.approv} ${styles[`approv-item${ind}`]}`} onClick={() => {
+        setImgUrl(imgUrl); setOpen(true);
+      }}>
+        <div className={styles.shadow}>
+          {" "}
+          <Lupa />
+        </div>
       </div>
     </div>
   );

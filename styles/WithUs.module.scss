@@ -1,11 +1,10 @@
 .withUsWrapper {
-    width: 100%;
-    height: 1080px;
-    min-width: 1560px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
+  width: 100%;
+  height: 1080px;
+  min-width: 1560px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &.dark {
     background-image: url("../pngs/withUs-back-black.webp");
@@ -15,61 +14,73 @@
     background-color: white;
   }
 
-    .withUsContent {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+  .withUsContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-        .title {
-            margin-top: 100px;
-            margin-bottom: 110px;
-          }
-
-          .slider {
-            width: 1400px;
-            height: 574px;
-          }
-
-          .carousel {
-            display: flex;
-            overflow-x: hidden;
-            padding: 0;
-            scroll-snap-type: mandatory;
-          
-            .carouselItem {
-              font-size: 50px;
-              width: 1400px;
-              height: max-content;
-              flex-shrink: 0;
-              color: "#fff";
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
-          
-          .controlls {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: -300px;
-          
-            .arrow {
-              cursor: pointer;
-              position: relative;
-          
-              .test {
-                position: absolute;
-                width: 48px;
-                border: 1px solid #00edff;
-                top: 11px;
-                left: 2px;
-                box-shadow: 0 0 15px #00edff;
-              }
-            }
-          }
-          
-
-          
+    .title {
+      margin-top: 100px;
+      margin-bottom: 110px;
     }
+
+    .slider {
+      width: 1400px;
+      height: 574px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      padding: 0;
+      scroll-snap-type: mandatory;
+
+      .carouselItem {
+        font-size: 50px;
+        width: 1400px;
+        height: max-content;
+        flex-shrink: 0;
+        color: "#fff";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .controlls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -300px;
+
+      .arrow {
+        cursor: pointer;
+        position: relative;
+
+        .test {
+          position: absolute;
+          width: 48px;
+          border: 1px solid #00edff;
+          top: 11px;
+          left: 2px;
+          box-shadow: 0 0 15px #00edff;
+        }
+      }
+    }
+  }
+
+  .approvement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid red;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 }

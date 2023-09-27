@@ -4,7 +4,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.5s;
+  transition: 0.3s;
   position: relative;
 
   &.dark {
@@ -12,6 +12,8 @@
 
     h4 {
       color: rgba(0, 237, 255, 1);
+      margin: 30px 0 0 84px;
+
     }
 
     p {
@@ -24,6 +26,8 @@
 
     h4 {
       color: black;
+      margin: 25px 0 0 84px;
+
     }
 
     p {
@@ -35,7 +39,6 @@
     top: 0;
     left: 0;
     position: absolute;
-    margin: 30px 0 0 84px;
     font-size: 30px;
     font-weight: 30px;
     font-weight: 600;
@@ -93,5 +96,15 @@
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     line-height: 13px;
+
+    &.full {
+      transition: 1.5s;
+
+    }
+
+    &.notFull {
+      transition: 0.1s;
+
+    }
   }
 }

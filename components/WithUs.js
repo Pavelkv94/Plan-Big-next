@@ -7,22 +7,29 @@ import LeftArrow from "../svgs/arrow-client-left-black.svg";
 import RightArrow from "../svgs/arrow-client-right-black.svg";
 import LeftArrowLight from "../svgs/arrow-client-left-light.svg";
 import RightArrowLight from "../svgs/arrow-client-right-light.svg";
+import { feedbacks } from "./contants";
 
 const WithUs = ({ isDarkTheme }) => {
-  const item = (
+  const [open, setOpen] = useState(false);
+  const [imgUrl, setImgUrl] = useState("");
+
+  const items = feedbacks.map((el, i) => (
     <WithUsItem
+      key={i}
       isDarkTheme={isDarkTheme}
-      title={"НАЗВАНИЕ КОМПАНИИ"}
-      description={
-        "От имени АО «НИИАС» РЖД выражаю благодарность Вашей креативной команде за высокий профессионализм в создании видеопродукции в рамках комплексных проектов цифровой трансформации железнодорожной отрасли."
-      }
+      title={el.title}
+      description={el.text}
       jobTitle={"Ген. директор "}
-      jobContact={"Иванов И.И."}
-      widthTime={200}
-      widthMoney={220}
-      widthDiff={170}
+      jobContact={el.director}
+      widthTime={250 * el.urgent}
+      widthMoney={250 * el.money}
+      widthDiff={250 * el.difficult}
+      ind={i + 1}
+      imgUrl={el.imgUrl}
+      setOpen={setOpen}
+      setImgUrl={setImgUrl}
     />
-  );
+  ));
 
   return (
     <div className={`${styles.withUsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="feedback">
@@ -31,9 +38,10 @@ const WithUs = ({ isDarkTheme }) => {
           <Title isDarkTheme={isDarkTheme} text="C НАМИ ПРОСТО И ЭФФЕКТИВНО" mainTitle width={"860px"} left={"50px"} />
         </div>
         <div className={styles.slider}>
-          <Slider array={[item, item, item]} isDarkTheme={isDarkTheme} />
+          <Slider array={items} isDarkTheme={isDarkTheme} />
         </div>
       </div>
+      {open && <Approvement imgUrl={imgUrl} setOpen={setOpen}/>}
     </div>
   );
 };
@@ -64,5 +72,13 @@ const Slider = ({ array, isDarkTheme }) => {
         </div>
       </div>
     </>
+  );
+};
+
+const Approvement = ({ imgUrl, setOpen }) => {
+  return (
+    <div className={styles.approvement} onClick={() => setOpen(false)}>
+      <img src={imgUrl} width={500} onClick={e => e.stopPropagation()}/>
+    </div>
   );
 };
