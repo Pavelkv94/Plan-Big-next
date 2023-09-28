@@ -190,7 +190,7 @@ const Portfolio = ({ isDarkTheme }) => {
 
     return (
       <div style={{ width: "1560px" }}>
-        <Carousel array={slides} isDarkTheme={isDarkTheme} />
+        <Carousel array={slides} isDarkTheme={isDarkTheme} portfolio/>
       </div>
     );
   };

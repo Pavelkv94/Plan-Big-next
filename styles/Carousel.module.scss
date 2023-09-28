@@ -20,7 +20,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   // margin-top: 100px;
+
+  .test1 {
+    width: 177px;
+    height: 177px;
+    position: absolute;
+    top: -80px;
+    left: 390px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../pngs/Ellipse 169.png");
+  }
+  .test2 {
+    width: 177px;
+    height: 177px;
+    position: absolute;
+    top: -80px;
+    left: 580px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../pngs/Ellipse 169.png");
+  }
 
   .dots {
     display: flex;
@@ -30,14 +56,19 @@
   .arrow {
     cursor: pointer;
     position: relative;
+    z-index: 3;
+    transition: 0.5s;
 
-    .test {
-      position: absolute;
-      width: 48px;
-      border: 1px solid #00edff;
-      top: 11px;
-      left: 2px;
-      box-shadow: 0 0 15px #00edff;
+
+    &.left:hover {
+      transform: scale(1.2) translate(-6px, 0);
+      transition: 0.5s;
     }
+
+    &.right:hover {
+      transform: scale(1.2) translate(6px, 0);
+      transition: 0.5s;
+    }
+
   }
 }

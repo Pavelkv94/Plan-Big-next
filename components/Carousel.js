@@ -6,7 +6,7 @@ import LeftArrowLight from "../svgs/arrow-client-left-light.svg";
 import RightArrowLight from "../svgs/arrow-client-right-light.svg";
 import styles from "../styles/Carousel.module.scss";
 
-const Carousel = ({ array, isDarkTheme }) => {
+const Carousel = ({ array, isDarkTheme, portfolio }) => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
   return (
@@ -19,20 +19,21 @@ const Carousel = ({ array, isDarkTheme }) => {
         ))}
       </ul>
       <div className={styles.controlls}>
-        <div onClick={() => prev()} className={styles.arrow}>
+        <div onClick={() => prev()} className={`${styles.arrow} ${styles.left}`}>
           {isDarkTheme ? <LeftArrow /> : <LeftArrowLight />}
-          {isDarkTheme && <div className={styles.test}></div>}
         </div>
+        {isDarkTheme && <div className={styles.test1} style={portfolio ? {left: "790px"} : {}}></div>}
+
 
         <div className={styles.dots}>
           {array.map((_, i) => (
             <CustomDot isDarkTheme={isDarkTheme} onClick={() => goTo(i)} isSelected={i === activePageIndex} key={i} />
           ))}
         </div>
-        <div onClick={() => next()} className={styles.arrow}>
+        <div onClick={() => next()} className={`${styles.arrow} ${styles.right}`}>
           {isDarkTheme ? <RightArrow /> : <RightArrowLight />}
-          {isDarkTheme && <div className={styles.test}></div>}
         </div>
+        {isDarkTheme && <div className={styles.test2} style={portfolio ? {left: "600px"} : {}}></div>}
       </div>
     </>
   );

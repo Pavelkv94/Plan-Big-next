@@ -61,15 +61,16 @@ const Slider = ({ array, isDarkTheme }) => {
         ))}
       </ul>
       <div className={styles.controlls}>
-        <div onClick={() => prev()} className={styles.arrow}>
+        <div onClick={() => prev()} className={`${styles.arrow} ${styles.left}`}>
           {activePageIndex !== 0 && (isDarkTheme ? <LeftArrow /> : <LeftArrowLight />)}
-          {activePageIndex !== 0 && isDarkTheme && <div className={styles.test}></div>}
         </div>
+        {activePageIndex !== 0 && isDarkTheme && <div className={styles.test1}></div>}
 
-        <div onClick={() => next()} className={styles.arrow}>
+        <div onClick={() => next()} className={`${styles.arrow} ${styles.right}`}>
           {activePageIndex !== pages.length - 1 && (isDarkTheme ? <RightArrow /> : <RightArrowLight />)}
-          {activePageIndex !== pages.length - 1 && isDarkTheme && <div className={styles.test}></div>}
         </div>
+        {activePageIndex !== pages.length - 1 && isDarkTheme && <div className={styles.test2}></div>}
+
       </div>
     </>
   );

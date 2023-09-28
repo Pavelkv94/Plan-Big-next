@@ -47,6 +47,31 @@
       }
     }
 
+    .test1 {
+      width: 177px;
+      height: 177px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../pngs/Ellipse 169.png");
+    }
+    .test2 {
+      width: 177px;
+      height: 177px;
+      position: absolute;
+      top: -80px;
+      left: 580px;
+      z-index: 1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../pngs/Ellipse 169.png");
+    }
+
     .controlls {
       display: flex;
       align-items: center;
@@ -57,13 +82,17 @@
         cursor: pointer;
         position: relative;
 
-        .test {
-          position: absolute;
-          width: 48px;
-          border: 1px solid #00edff;
-          top: 11px;
-          left: 2px;
-          box-shadow: 0 0 15px #00edff;
+        z-index: 3;
+        transition: 0.5s;
+
+        &.left:hover {
+          transform: scale(1.2) translate(-6px, 0);
+          transition: 0.5s;
+        }
+
+        &.right:hover {
+          transform: scale(1.2) translate(6px, 0);
+          transition: 0.5s;
         }
       }
     }
