@@ -39,7 +39,7 @@
           position: relative;
           &.active {
             p {
-              font-weight: 600;
+              font-weight: 700;
               color: #00edff;
             }
           }
@@ -147,7 +147,7 @@
           position: relative;
           &.active {
             p {
-              font-weight: 600;
+              font-weight: 700;
             }
           }
           p {
@@ -160,6 +160,83 @@
             color: #383838;
             cursor: pointer;
             margin: 0;
+          }
+
+          .eclipse0 {
+            position: absolute;
+            width: 700px;
+            height: 180px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game0-light.webp");
+            top: -30px;
+            left: -140px;
+          }
+          .eclipse1 {
+            position: absolute;
+            width: 235px;
+            height: 306px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game1-light.webp");
+            top: -150px;
+            left: -90px;
+          }
+
+          .eclipse2 {
+            position: absolute;
+            width: 258px;
+            height: 324px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game2-light.webp");
+            top: -160px;
+            left: -110px;
+          }
+
+          .eclipse3 {
+            position: absolute;
+            width: 700px;
+            height: 180px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game3-light.webp");
+            top: -100px;
+            left: -230px;
+          }
+
+          .eclipse4 {
+            position: absolute;
+            width: 258px;
+            height: 324px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game4-light.webp");
+            top: -150px;
+            left: -6px;
+          }
+
+          .eclipse5 {
+            position: absolute;
+            width: 235px;
+            height: 306px;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../pngs/eclipse-game5-light.webp");
+            top: -148px;
+            left: 4px;
           }
         }
       }
@@ -264,22 +341,22 @@
                 background-position: center;
               
                 &.screen0 {
-                  background-image: url("../pngs/gameFirst.webp");
+                  background-image: url("../pngs/present screen.webp");
                 }
                 &.screen1 {
-                  background-image: url("../pngs/gameSecond.webp");
+                  background-image: url("../pngs/adv screen.webp");
                 }
                 &.screen2 {
-                  background-image: url("../pngs/gameThird.webp");
+                  background-image: url("../pngs/story1 screen.webp");
                 }
                 &.screen3 {
-                  background-image: url("../pngs/gameThird.webp");
+                  background-image: url("../pngs/video screen.webp");
                 }
                 &.screen4 {
-                  background-image: url("../pngs/gameFive.webp");
+                  background-image: url("../pngs/3d screen.webp");
                 }
                 &.screen5 {
-                  background-image: url("../pngs/gameSix.webp");
+                  background-image: url("../pngs/2d screen.webp");
                 }
 
                 .playBtn {

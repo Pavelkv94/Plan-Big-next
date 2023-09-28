@@ -5,7 +5,6 @@ import Telegram from "../svgs/telegram.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
-
   return (
     <div className={`${styles.headerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.content}>
@@ -49,8 +48,15 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
           </div>
         </div>
         <div className={styles.messengers}>
-          <img src="/png/whatsapp.webp" width={22} height={23}/>
-          <Telegram />
+          <a
+            href="https://api.whatsapp.com/send?phone=79660132196&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D1%81%D0%B5%D1%82%D0%B8%D0%BB(%D0%B0)%20%D0%92%D0%B0%D1%88%20%D1%81%D0%B0%D0%B9%D1%82%20plan-big.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+            target="_blank"
+          >
+            <img src="/png/whatsapp.webp" width={22} height={23} />
+          </a>
+          <a href="https://t.me/Agency_Video" target="_blank">
+            <Telegram />
+          </a>
         </div>
       </div>
     </div>
