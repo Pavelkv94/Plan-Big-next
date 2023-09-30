@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "../styles/VideoPlayer.module.scss";
 
-const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
+const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -9,7 +9,7 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
     setIsPlaying(true);
     videoRef.current.src = src;
   };
-
+console.log(itemId);
   return big ? (
     <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.big} ${isDarkTheme ? styles.dark : styles.light}`}>
       {!isPlaying && (
@@ -33,7 +33,7 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme }) => {
   ) : (
     <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.little} ${isDarkTheme ? styles.dark : styles.light}`}>
     {!isPlaying && (
-      <div className={styles.screen}>
+      <div className={`${styles.screen} ${styles[`screenItem${itemId}`]}`}>
         <div className={styles.playBtn} onClick={playVideo}>
           <div className={styles.triangle}></div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Main.module.scss";
 import VideoPlayer from "./VideoPlayer";
-import Link from "next/link";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Main = ({ isDarkTheme, toggleTheme }) => {
   const [position, setPosition] = useState(194); // Initial position
@@ -44,10 +44,16 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
 
             <div className={`${styles.actions} ${isDarkTheme ? styles.dark : styles.light}`}>
               <div>
-                <button style={isDarkTheme ? {} : { background: "linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%)" }}>ОСТАВИТЬ ЗАЯВКУ</button>
+                <Link to="order" spy={true} smooth={true} offset={-50} duration={500}>
+                  <button style={isDarkTheme ? {} : { background: "linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%)" }}>
+                    ОСТАВИТЬ ЗАЯВКУ
+                  </button>
+                </Link>
               </div>
               <div>
-                <button>СМОТРЕТЬ ПОРТФОЛИО</button>
+                <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500}>
+                  <button>СМОТРЕТЬ ПОРТФОЛИО</button>
+                </Link>
               </div>
             </div>
           </div>

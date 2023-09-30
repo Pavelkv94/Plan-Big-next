@@ -15,7 +15,7 @@ const Consultation = ({ isDarkTheme }) => {
   const [items, setItems] = useState(consultItems);
 
   return (
-    <div className={`${styles.consultationWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
+    <div className={`${styles.consultationWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="order">
       <div className={styles.consultationContent}>
         <h2>ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</h2>
         <h3>ЗАПОЛНИТЕ КОРОТКУЮ ФОРМУ НИЖЕ И МЫ ВАМ ПЕРЕЗВОНИМ</h3>

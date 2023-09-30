@@ -9,6 +9,7 @@ import styles from "../styles/Carousel.module.scss";
 const Carousel = ({ array, isDarkTheme, portfolio }) => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
+  console.log(activePageIndex);
   return (
     <>
       <ul ref={scrollRef} className={styles.carousel}>

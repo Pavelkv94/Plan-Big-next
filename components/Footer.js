@@ -109,7 +109,9 @@ const Footer = ({ isDarkTheme }) => {
           <div className={styles.address}>Москва, Крутицкая набережная, 1</div>
           <div className={`${styles.actions} ${isDarkTheme ? styles.dark : styles.light}`}>
             <div>
+            <Link to="order" spy={true} smooth={true} offset={-50} duration={500}>
               <button>ОСТАВИТЬ ЗАЯВКУ</button>
+            </Link>
             </div>
           </div>
         </div>
