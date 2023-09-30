@@ -9,7 +9,6 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) =>
     setIsPlaying(true);
     videoRef.current.src = src;
   };
-console.log(itemId);
   return big ? (
     <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.big} ${isDarkTheme ? styles.dark : styles.light}`}>
       {!isPlaying && (
