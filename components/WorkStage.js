@@ -3,7 +3,7 @@ import styles from "../styles/WorkStage.module.scss";
 import StagesArrowBlack from "../svgs/arrow-stages-black.svg";
 import StagesArrowLight from "../svgs/arrow-stages-light.svg";
 
-const WorkStage = ({ isDarkTheme, left, top, title, text }) => {
+const WorkStage = ({ isDarkTheme, left, top, title, text, four, text2 }) => {
   const [expand, setExpand] = useState(false);
 
   return (
@@ -14,7 +14,10 @@ const WorkStage = ({ isDarkTheme, left, top, title, text }) => {
       </div>
       {expand && (
         <section>
-          <p>{text}</p>
+          <p>
+            {text}
+            {four && <br/>}
+            {four && text2}</p>
         </section>
       )}
     </div>
