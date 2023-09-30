@@ -7,8 +7,7 @@ import { videos2d, videos3d, videosAdv, videosPortfolio, videosPresent, videosSt
 
 
 
-const Portfolio = ({ isDarkTheme }) => {
-  const [tab, setTab] = useState(6);
+const Portfolio = ({ isDarkTheme, tab, setTab }) => {
 
   const tabs = [
     { title: "ПРЕЗЕНТАЦИОННЫЕ \n РОЛИКИ", key: 0 },
@@ -16,7 +15,7 @@ const Portfolio = ({ isDarkTheme }) => {
     { title: "3D \n АНИМАЦИЯ", key: 2 },
     { title: "РЕКЛАМНЫЕ \n РОЛИКИ", key: 3 },
     { title: "ВИДЕООБЗОРЫ \n ПРОДУКЦИИ", key: 4 },
-    { title: "СТОРИТЕЙЛИНГ \n ВИДЕО", key: 5 },
+    { title: "СТОРИТЕЛЛИНГ \n ВИДЕО", key: 5 },
   ];
 
   return (

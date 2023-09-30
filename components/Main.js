@@ -44,7 +44,7 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
 
             <div className={`${styles.actions} ${isDarkTheme ? styles.dark : styles.light}`}>
               <div>
-                <Link to="order" spy={true} smooth={true} offset={-50} duration={500}>
+                <Link to="order" spy={true} smooth={true} offset={-100} duration={500}>
                   <button style={isDarkTheme ? {} : { background: "linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%)" }}>
                     ОСТАВИТЬ ЗАЯВКУ
                   </button>

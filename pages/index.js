@@ -18,6 +18,7 @@ import Modal from "../components/Modal";
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
   const [openModal, setOpenModal] = useState(false);
+  const [tab, setTab] = useState(6);
 
   const onCloseModal = () => setOpenModal(false);
 
@@ -28,14 +29,14 @@ const Index = () => {
         <HeaderNavMenu isDarkTheme={isDarkTheme} setOpenModal={setOpenModal}/>
         <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
         <VideoMaking isDarkTheme={isDarkTheme} />
-        <Portfolio isDarkTheme={isDarkTheme} />
+        <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} />
         <Services isDarkTheme={isDarkTheme} />
         <Consultation isDarkTheme={isDarkTheme} />
         <Reasons isDarkTheme={isDarkTheme} />
         <WithUs isDarkTheme={isDarkTheme} />
         <Clients isDarkTheme={isDarkTheme} />
         <WorkStages isDarkTheme={isDarkTheme} />
-        <Footer isDarkTheme={isDarkTheme} />
+        <Footer isDarkTheme={isDarkTheme} setTab={setTab}/>
         {openModal && <Modal onCloseModal={onCloseModal}/>}
       </div>
     </>

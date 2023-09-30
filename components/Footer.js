@@ -5,7 +5,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import CopyIcon from "../svgs/copy.svg";
 import Telegram from "../svgs/telegram.svg";
 
-const Footer = ({ isDarkTheme }) => {
+const Footer = ({ isDarkTheme, setTab }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 1000);
@@ -31,11 +31,11 @@ const Footer = ({ isDarkTheme }) => {
             О нас
           </Link>
 
-          <Link to="services" spy={true} smooth={true} offset={-50} duration={500}>
+          <Link to="services" spy={true} smooth={true} offset={50} duration={500}>
             Услуги
           </Link>
 
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500}>
             Портфолио
           </Link>
 
@@ -49,20 +49,20 @@ const Footer = ({ isDarkTheme }) => {
         </div>
         <div className={styles.services}>
           <h4>Услуги</h4>
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500} onClick={() => setTab(1)}>
             2D анимация
           </Link>
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500} onClick={() => setTab(2)}>
             3D анимация
           </Link>
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500} onClick={() => setTab(3)}>
             Рекламные ролики
           </Link>
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500} onClick={() => setTab(4)}>
             Видеообзоры продукции
           </Link>
-          <Link to="portfolio" spy={true} smooth={true} offset={0} duration={500}>
-            Cторитейл видео
+          <Link to="portfolio" spy={true} smooth={true} offset={-50} duration={500} onClick={() => setTab(5)}>
+            Cторителлинг видео
           </Link>
         </div>
         <div className={styles.contacts}>
@@ -109,7 +109,7 @@ const Footer = ({ isDarkTheme }) => {
           <div className={styles.address}>Москва, Крутицкая набережная, 1</div>
           <div className={`${styles.actions} ${isDarkTheme ? styles.dark : styles.light}`}>
             <div>
-            <Link to="order" spy={true} smooth={true} offset={-50} duration={500}>
+            <Link to="order" spy={true} smooth={true} offset={-100} duration={500}>
               <button>ОСТАВИТЬ ЗАЯВКУ</button>
             </Link>
             </div>
