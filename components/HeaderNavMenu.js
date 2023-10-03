@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/HeaderNavMenu.module.scss";
 import LogoBlack from "../svgs/logo-black.svg";
 import Telegram from "../svgs/telegram.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import CopyIcon from "../svgs/copy.svg";
 
 const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  useEffect(() => {
+    let timer = setTimeout(() => setIsPopoverOpen(false), 1000);
+    return () => clearTimeout(timer);
+  }, [isPopoverOpen]);
+
   return (
     <div className={`${styles.headerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.content}>
@@ -44,8 +52,18 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
           </div>
           <div className={styles.contacts}>
             <p>+7 (495) 127-01-34</p>
-            <p>WELCOME@PLAN-BIG.COM</p>
+            <a href="mailto:WELCOME@PLAN-BIG.COM">WELCOME@PLAN-BIG.COM</a>
           </div>
+          <div
+              className={styles.copy}
+              onClick={() => {
+                navigator.clipboard.writeText("WELCOME@PLAN-BIG.COM");
+                setIsPopoverOpen(true);
+              }}
+            >
+              {isPopoverOpen && <span>Скопировано</span>}
+              <CopyIcon />
+            </div>
         </div>
         <div className={styles.messengers}>
           <a

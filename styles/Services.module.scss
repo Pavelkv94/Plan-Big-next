@@ -145,12 +145,14 @@
 
         .gameButton {
           position: relative;
+          
           &.active {
             p {
               font-weight: 700;
             }
           }
           p {
+            cursor: pointer;
             font-family: "Montserrat", sans-serif;
             font-size: 18px;
             font-weight: 500;
@@ -158,8 +160,10 @@
             letter-spacing: 0em;
             text-align: center;
             color: #383838;
-            cursor: pointer;
             margin: 0;
+            position: relative;
+            z-index: 3;
+
           }
 
           .eclipse0 {

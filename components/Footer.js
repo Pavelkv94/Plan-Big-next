@@ -7,6 +7,7 @@ import Telegram from "../svgs/telegram.svg";
 
 const Footer = ({ isDarkTheme, setTab }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 1000);
     return () => clearTimeout(timer);
@@ -76,7 +77,7 @@ const Footer = ({ isDarkTheme, setTab }) => {
                 setIsPopoverOpen(true);
               }}
             >
-              {isPopoverOpen && <span>Copied!</span>}
+              {isPopoverOpen && <span>Скопировано</span>}
               <CopyIcon />
             </div>
             <div className={styles.whats}>
@@ -102,7 +103,7 @@ const Footer = ({ isDarkTheme, setTab }) => {
                 setIsPopoverOpen2(true);
               }}
             >
-              {isPopoverOpen2 && <span>Copied!</span>}
+              {isPopoverOpen2 && <span>Скопировано</span>}
               <CopyIcon />
             </div>
           </div>

@@ -8,10 +8,10 @@ import { gameButtons, gameContents } from "./contants";
 const Services = ({ isDarkTheme }) => {
   const iframeRef = useRef(null);
 
-
   const [activeButton, setActiveButton] = useState(0);
   const [autoChange, setAutoChange] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showEllipse, setShowEllipse] = useState(null);
 
   useEffect(() => {
     let interval =
@@ -26,7 +26,14 @@ const Services = ({ isDarkTheme }) => {
     setAutoChange(false);
   };
 
- 
+  const handleMouseEnter = (i) => () => {
+    setShowEllipse(i);
+  };
+
+  const handleMouseLeave = (i) => () => {
+    setShowEllipse(null);
+  };
+
   return (
     <div className={`${styles.servicesWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="services">
       <div className={styles.servicesContent}>
@@ -36,22 +43,31 @@ const Services = ({ isDarkTheme }) => {
 
         <div className={`${styles.gamepad} ${isDarkTheme ? styles.dark : styles.light}`}>
           {gameButtons.map((el, i) => (
-            <div className={`${styles.gameButton} ${activeButton === i ? styles.active : {}}`} key={i}>
+            <div className={`${styles.gameButton} ${activeButton === i ? styles.active : {}}`} key={i} onMouseEnter={handleMouseEnter(i)} onMouseLeave={handleMouseLeave(i)}>
               {activeButton === i && <div className={styles[`eclipse${i}`]}></div>}
+              {showEllipse === i && activeButton !== i && <div className={styles[`eclipse${i}`]}></div>}
+
               <p
                 className={styles.gameTitle}
                 onClick={() => {
                   setActiveButton(i);
                   setAutoChange(false);
-                  setIsPlaying(false)
-                  iframeRef.current.src = ""
+                  setIsPlaying(false);
+                  iframeRef.current.src = "";
                 }}
               >
                 {el.title}
               </p>
             </div>
           ))}
-          <ContentServices iframeRef={iframeRef} service={gameContents[activeButton]} isDarkTheme={isDarkTheme} isPlaying={isPlaying} setIsPlaying={setIsPlaying} withPlay={withPlay}/>
+          <ContentServices
+            iframeRef={iframeRef}
+            service={gameContents[activeButton]}
+            isDarkTheme={isDarkTheme}
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            withPlay={withPlay}
+          />
         </div>
       </div>
     </div>
@@ -61,10 +77,9 @@ const Services = ({ isDarkTheme }) => {
 export default Services;
 
 const ContentServices = ({ service, isDarkTheme, isPlaying, setIsPlaying, withPlay, iframeRef }) => {
-
   const playVideo = () => {
     setIsPlaying(true);
-    withPlay()
+    withPlay();
     iframeRef.current.src = service.videoUrl;
   };
 
@@ -75,7 +90,7 @@ const ContentServices = ({ service, isDarkTheme, isPlaying, setIsPlaying, withPl
           <h3>ОПИСАНИЕ УСЛУГИ</h3>
           {service.descr.map((el, i) => (
             <div key={i} className={styles.descrItem}>
-             {isDarkTheme ? <ArrowBlack /> : <ArrowLight />}
+              {isDarkTheme ? <ArrowBlack /> : <ArrowLight />}
               <p>{el}</p>
             </div>
           ))}

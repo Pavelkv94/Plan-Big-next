@@ -29,6 +29,22 @@
       display: flex;
       align-items: center;
       height: 100%;
+
+
+      .copy {
+        margin-left: 8px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          position: absolute;
+          top: 30px;
+          left: -10px;
+          font-size: 14px;
+          transition: 1s;
+        }
+      }
+
       .menu {
         height: 100%;
         max-width: 600px;
@@ -71,11 +87,17 @@
       .contacts {
         font-size: 11px;
 
-        p {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        p, a {
           font-family: "Montserrat", sans-serif;
           font-weight: 600;
-          margin: 0 40px;
+          margin: 0 0 0 20px;
         }
+
+        
       }
 
       .calculate {

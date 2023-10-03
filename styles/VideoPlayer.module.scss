@@ -1,6 +1,15 @@
 .videoPlayer {
   position: relative;
 
+
+  iframe {
+    html
+   { border: 2px solid red;}
+  }
+
+
+
+
   &.big {
     background-size: cover;
     background-repeat: no-repeat;

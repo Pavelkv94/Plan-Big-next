@@ -27,6 +27,7 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) =>
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
+        clipboard-write encrypted-media gyroscope picture-in-picture web-share
       ></iframe>
     </div>
   ) : (
