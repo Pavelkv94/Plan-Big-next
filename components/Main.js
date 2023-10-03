@@ -65,7 +65,7 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
               style={{ position: "absolute", right: 0, bottom: 0 }}
               isDarkTheme={isDarkTheme}
               big
-              src={"https://www.youtube.com/embed/P1kYDn62P2s?si=ylA-2JiBeS20lwL5&modestbranding=1&autoplay=1&showinfo=0"}
+              src={"https://www.youtube.com/embed/2ZQtDSz6j8Y?si=n_6gajAlx3KyVIHo&modestbranding=1&autoplay=1&showinfo=0"}
             />
           </div>
         </div>
