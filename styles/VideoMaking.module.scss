@@ -89,6 +89,7 @@
             }
             &:last-child {
               color: white;
+              margin-right: 20px;
             }
           }
         }
@@ -97,6 +98,10 @@
           background-image: url("../pngs/video-making-circle-light.webp");
           .circleText p {
             color: #383838;
+
+            &:last-child {
+              margin-right: 20px;
+            }
           }
         }
 
