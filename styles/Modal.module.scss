@@ -88,16 +88,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
 
-        &:hover {
-          background-image: url("../pngs/Button-hover.webp");
+        &:active {
+          cursor: pointer;
 
-          span {
-            color: white;
+          &:hover {
+            background-image: url("../pngs/Button-hover.webp");
+  
+            span {
+              color: white;
+            }
           }
         }
+        
+
+       
         span {
+          user-select: none;
           font-family: "Tektur", cursive;
           font-size: 15px;
           font-weight: 500;

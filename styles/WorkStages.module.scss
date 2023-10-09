@@ -1,6 +1,6 @@
 .workStagesWrapper {
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   min-width: 1560px;
 
   &.dark {
@@ -17,7 +17,7 @@
     flex-direction: column;
 
     .title {
-      margin-top: 40px;
+      margin-top: 20px;
       margin-bottom: 20px;
     }
 

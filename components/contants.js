@@ -68,7 +68,7 @@ export const feedbacks = [
     text: "Выражаем благодарность творческому коллективу компании за создание презентационного видеоролика.",
     urgent: 0.8,
     money: 0.7,
-    difficult: 0,
+    difficult: 0.8,
     imgUrl: "/jpgs/8.jpg",
   },
   {

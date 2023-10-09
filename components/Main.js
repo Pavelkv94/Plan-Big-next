@@ -4,11 +4,11 @@ import VideoPlayer from "./VideoPlayer";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Main = ({ isDarkTheme, toggleTheme }) => {
-  const [position, setPosition] = useState(194); // Initial position
+  const [position, setPosition] = useState(180); // Initial position
 
   const switchTheme = () => {
     toggleTheme();
-    setPosition((prevPosition) => (prevPosition === 0 ? 194 : 0));
+    setPosition((prevPosition) => (prevPosition === 0 ? 180 : 0));
   };
 
   return (

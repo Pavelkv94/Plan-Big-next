@@ -1,10 +1,11 @@
 .withUsWrapper {
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   min-width: 1560px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
 
   &.dark {
     background-image: url("../pngs/withUs-back-black.webp");

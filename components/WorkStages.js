@@ -20,8 +20,8 @@ const WorkStages = ({ isDarkTheme }) => {
             text={"3.1 Анимационные видео: создание сценария и раскадровки. Согласовывание. 3.2 Видео на основе видеосъемки: создание сценария. Согласование. Подготовка к съемке."}
           />
           <WorkStage isDarkTheme={isDarkTheme} left={isDarkTheme ? "906px" : "930px"} top={"50px"} title={"КОРРЕКТИВЫ"} text={"5. Внесение корректив и создание финальной версии видео."} />
-          <WorkStage  isDarkTheme={isDarkTheme}left={isDarkTheme ? "180px" : "200px"} top={"666px"} title={"ПРОЕКТИРОВАНИЕ ПРОЕКТА. ПОДГОТОВКА КП"} text={"2. Подготовка концепции и сметы. Согласование. Подписание договора."} />
-          <WorkStage isDarkTheme={isDarkTheme}
+          <WorkStage  topArr isDarkTheme={isDarkTheme} left={isDarkTheme ? "180px" : "200px"} top={"666px"} title={"ПРОЕКТИРОВАНИЕ ПРОЕКТА. ПОДГОТОВКА КП"} text={"2. Подготовка концепции и сметы. Согласование. Подписание договора."} />
+          <WorkStage topArr isDarkTheme={isDarkTheme}
             left={isDarkTheme ? "660px" : "680px"}
             top={"666px"}
             title={"ПРОДАКШН"}
@@ -31,7 +31,7 @@ const WorkStages = ({ isDarkTheme }) => {
             four
             text2={"4.2 видео на основе видеосъемки: проведение постановчной видеосъемки. Монтаж. Оформление 2d/3d графикой. Согласование."}
           />
-          <WorkStage isDarkTheme={isDarkTheme} left={isDarkTheme ? "1150px" : "1170px"} top={"666px"} title={"ИТОГ"} text={"6. Сдача готового видеоролика. Подписание акта выполненных работ."} />
+          <WorkStage topArr isDarkTheme={isDarkTheme} left={isDarkTheme ? "1150px" : "1170px"} top={"666px"} title={"ИТОГ"} text={"6. Сдача готового видеоролика. Подписание акта выполненных работ."} />
         </div>
       </div>
     </div>

@@ -56,8 +56,6 @@ const Modal = ({ onCloseModal }) => {
     },
   ];
 
-  console.log(answers);
-
   const modalContent = (data) => (
     <div className={styles.modalContent}>
       <p>{data.question}</p>
@@ -77,7 +75,7 @@ const Modal = ({ onCloseModal }) => {
         <input placeholder="Ссылка на пример видео" value={answers.contacts.url} onChange={e => setAnswers({...answers, contacts: {...answers.contacts, url: e.target.value}})}/>
 
         </div>}
-      <div className={styles.btn} onClick={() => state === 4 ? closeModal() : setState((prev) => prev + 1)}>
+      <div className={`${styles.btn} ${answers[data.id] === "" ? "disabled" : "active"}`} onClick={() => state === 4 ? closeModal() : answers[data.id] === "" ? {} : setState((prev) => prev + 1)}>
         <span>{state === 4 ? "ОТПРАВИТЬ" : "СЛЕДУЮЩИЙ ШАГ"}</span>
       </div>
     </div>

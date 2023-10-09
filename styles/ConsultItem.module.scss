@@ -1,6 +1,6 @@
 .consultItem {
-  width: 400px;
-  height: 64px;
+  width: 340px;
+  height: 54px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -10,15 +10,15 @@
 
   p {
     margin: 0 0 0 22px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     color: rgba(144, 163, 171, 1);
   }
 
   .check {
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
     border: 1px solid black;
     margin-right: 16px;
 

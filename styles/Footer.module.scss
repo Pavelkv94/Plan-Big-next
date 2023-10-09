@@ -8,7 +8,7 @@
   background-position: center;
 
   &.dark {
-    background-image: url("../pngs/footer-black.webp");
+    background-image: url("../pngs/footer-black.png");
   }
 
   &.light {
@@ -87,18 +87,7 @@
         .teleg {
           cursor: pointer;
         }
-        .copy {
-          margin-left: 8px;
-          position: relative;
-
-          span {
-            position: absolute;
-            top: -30px;
-            left: -10px;
-            font-size: 14px;
-            transition: 1s;
-          }
-        }
+       
         .whats {
           margin: 0 10px 0 20px;
         }
@@ -114,6 +103,7 @@
         }
         .copy {
           margin-left: 8px;
+          margin-top: -2px;
           cursor: pointer;
           position: relative;
 
@@ -127,11 +117,20 @@
         }
       }
       .address {
+        margin-top: 14px;
         font-size: 18px;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 0em;
         text-align: left;
+
+        p {
+          margin-top: 8px;
+          margin-bottom: 0;
+        }
+      }
+      .policy {
+        margin-top: 12px;
       }
 
 

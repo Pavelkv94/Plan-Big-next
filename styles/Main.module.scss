@@ -1,10 +1,10 @@
 .mainWrapper {
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   min-width: 1560px;
 
   &.dark {
-    background-image: url("../pngs/main-back-black2.webp");
+    background-image: url("../pngs/main-back-black2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,13 +22,13 @@
 
     .themeSwitcherWrapper {
       width: 100%;
-      height: 50px;
-      margin-top: 100px;
+      height: 30px;
+      margin-top: 110px;
       margin-bottom: 72px;
 
       .pulse {
-        width: 120px;
-        height: 48px;
+        width: 76px;
+        height: 30px;
         position: absolute;
 
         &::after,
@@ -65,8 +65,8 @@
       }
       .themeSwitcher {
         float: right;
-        width: 120px;
-        height: 48px;
+        width: 76px;
+        height: 30px;
         border-radius: 8px;
         position: relative;
 
@@ -120,19 +120,19 @@
         }
 
         .toggler {
-          width: 34px;
-          height: 32px;
-          border-radius: 5px;
-          margin: 7px;
+          width: 21px;
+          height: 20px;
+          border-radius: 4px;
+          margin: 4px 3px 3px 6px;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
 
           .togglerBox {
-            width: 20px;
-            height: 20px;
-            border-radius: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
           }
         }
       }
@@ -142,7 +142,7 @@
   .mainInfo {
     display: flex;
     .textInfo {
-      margin-top: 80px;
+      margin-top: 10px;
 
       &.dark {
         .preTitle,
@@ -219,6 +219,7 @@
         width: 414px;
         align-items: center;
         justify-content: space-between;
+        margin-top: 104px;
 
         &.dark {
           div {
