@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  
   &.dark {
     background-image: url("../pngs/Services-back-black.webp");
   }
@@ -63,79 +64,79 @@
 
           .eclipse0 {
             position: absolute;
-            width: 700px;
+            width: 670px;
             height: 180px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game0-black.webp");
-            top: -70px;
+            background-image: url("../pngs/eclipse-game0-black.png");
+            top: -47px;
             left: -140px;
           }
           .eclipse1 {
             position: absolute;
-            width: 235px;
+            width: 200px;
             height: 306px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game1-black.webp");
-            top: -160px;
-            left: -50px;
+            background-image: url("../pngs/eclipse-game1-black.png");
+            top: -130px;
+            left: -73px;
           }
 
           .eclipse2 {
             position: absolute;
-            width: 258px;
+            width: 200px;
             height: 324px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game2-black.webp");
-            top: -160px;
-            left: -40px;
+            background-image: url("../pngs/eclipse-game2-black.png");
+            top: -170px;
+            left: -67px;
           }
 
           .eclipse3 {
             position: absolute;
-            width: 700px;
+            width: 640px;
             height: 180px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game0-black.webp");
-            top: -70px;
-            left: -230px;
+            background-image: url("../pngs/eclipse-game3-black.png");
+            top: -86px;
+            left: -210px;
           }
 
           .eclipse4 {
             position: absolute;
-            width: 258px;
+            width: 200px;
             height: 324px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game4-black.webp");
+            background-image: url("../pngs/eclipse-game4-black.png");
             top: -160px;
-            left: -86px;
+            left: 0px;
           }
 
           .eclipse5 {
             position: absolute;
-            width: 235px;
+            width: 200px;
             height: 306px;
             z-index: 1;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url("../pngs/eclipse-game5-black.webp");
-            top: -148px;
-            left: -36px;
+            background-image: url("../pngs/eclipse-game5-black.png");
+            top: -128px;
+            left: 24px;
           }
         }
       }
@@ -201,7 +202,7 @@
             background-position: center;
             background-image: url("../pngs/eclipse-game2-light.webp");
             top: -160px;
-            left: -90px;
+            left: -100px;
           }
 
           .eclipse3 {
