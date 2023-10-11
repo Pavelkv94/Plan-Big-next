@@ -6,7 +6,6 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) =>
   const videoRef = useRef(null);
   const [playerWidth, setPlayerWidth] = useState(0);
   const [playerHeight, setPlayerHeight] = useState(0);
-  const [scrollbarHidden, setScrollbarHidden] = useState(false);
 
   const updatePlayerDimensions = () => {
     const windowWidth = window.innerWidth;
@@ -40,47 +39,40 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) =>
     if (isPlaying) {
       if (videoRef.current) {
         videoRef.current.src = src;
-        setScrollbarHidden(true);
       }
     }
   }, [isPlaying, src]);
 
-  useEffect(() => {
-    if (scrollbarHidden) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [scrollbarHidden]);
 
   const playVideo = () => {
     setIsPlaying(true);
   };
   return big ? (
     <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.big} ${isDarkTheme ? styles.dark : styles.light}`}>
-      {!isPlaying && (
-        <div className={styles.screen}>
-          <div className={styles.pulse}></div>
-          <div className={styles.playBtn} onClick={playVideo}>
-            <div className={styles.triangle}></div>
-          </div>
+      <div className={styles.screen}>
+        <div className={styles.pulse}></div>
+        <div className={styles.playBtn} onClick={playVideo}>
+          <div className={styles.triangle}></div>
+        </div>
+      </div>
+
+      {isPlaying && (
+        <div
+          className={styles.videoWrapper}
+          onClick={() => {
+            setIsPlaying(false);
+          }}
+        >
+          <iframe
+            ref={videoRef}
+            width={playerWidth}
+            height={playerHeight}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       )}
-
-      <iframe
-        ref={videoRef}
-        width={isDarkTheme ? "598" : "628"}
-        height={isDarkTheme ? "296" : "332"}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        clipboard-write
-        encrypted-media
-        gyroscope
-        picture-in-picture
-        web-share
-      ></iframe>
     </div>
   ) : (
     <div style={{ ...style, width, height }} className={`${styles.videoPlayer} ${styles.little} ${isDarkTheme ? styles.dark : styles.light}`}>
@@ -94,7 +86,6 @@ const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) =>
           className={styles.videoWrapper}
           onClick={() => {
             setIsPlaying(false);
-            setScrollbarHidden(false);
           }}
         >
           <iframe

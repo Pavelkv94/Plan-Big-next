@@ -15,6 +15,7 @@ const VideoMaking = ({ isDarkTheme }) => {
           </div>
         </div>
 
+        <div className={`${styles.videoEllipse} ${isDarkTheme ? styles.dark : styles.light}`}></div>
         <div className={`${styles.digits} ${isDarkTheme ? styles.dark : styles.light}`}>
           <div className={`${styles.circle} ${isDarkTheme ? styles.dark : styles.light}`}>
               <div className={styles.circleText}>
@@ -40,10 +41,16 @@ const VideoMaking = ({ isDarkTheme }) => {
         <div className={`${styles.playButton} ${isDarkTheme ? styles.dark : styles.light}`}>
           { isDarkTheme ? <PlaySvg /> : <img src="/png/playLight.webp" width={310} height={295}/> }
         </div>
-        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 2D анимации</p>
-        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Видео на основе 3D анимации</p>
-        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Рекламные <br />видео</p>
-        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light}`}>Презентационные <br />видео</p>
+        <div className={`${styles.centerElem} ${isDarkTheme ? styles.dark : styles.light}`}></div>
+        <div className={`${styles.partFullEl} ${isDarkTheme ? styles.dark : styles.light} ${styles.first}`}></div>
+        <div className={`${styles.partFullEl} ${isDarkTheme ? styles.dark : styles.light} ${styles.second}`}></div>
+        <div className={`${styles.partEl} ${isDarkTheme ? styles.dark : styles.light} ${styles.first}`}></div>
+        <div className={`${styles.partEl} ${isDarkTheme ? styles.dark : styles.light} ${styles.second}`}></div>
+
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light} ${styles.one}`}>Видео на основе 2D анимации</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light} ${styles.two}`}>Видео на основе 3D анимации</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light} ${styles.three}`}>Рекламные <br />видео</p>
+        <p className={`${styles.playDescript} ${isDarkTheme ? styles.dark : styles.light} ${styles.four}`}>Презентационные <br />видео</p>
         </div>
        
       </div>
