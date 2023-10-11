@@ -32,7 +32,7 @@ const Footer = ({ isDarkTheme, setTab }) => {
             О нас
           </Link>
 
-          <Link to="services" spy={true} smooth={true} offset={50} duration={500}>
+          <Link to="services" spy={true} smooth={true} offset={0} duration={500}>
             Услуги
           </Link>
 

@@ -205,6 +205,7 @@ export const gameButtons = [
 export const gameContents = [
   {
     id: 0,
+    "0": 0,
     videoUrl: "https://www.youtube.com/embed/BIiffcdLp7Y?si=w1DtQXWpUGceuQ-b&modestbranding=1&autoplay=1&showinfo=0",
     descr: ["Рассказать и показать компанию", "Сформировать имидж в глазах ЦА", "Донести ключевые сообщения и преимущества", "Представить компанию на мероприятиях"],
     price: ["Оптимальная подача – от 200 000 до 1 000 000 рублей", "Эффектная/премиум подача – от 1 000 000 до 5 000 000 рублей"],
@@ -212,12 +213,14 @@ export const gameContents = [
   },
   {
     id: 1,
+    "1": 1,
     videoUrl: "https://www.youtube.com/embed/8PbRLS0rRtI?si=FafGI4sVXi-fO4v6&modestbranding=1&autoplay=1&showinfo=0",
     descr: ["Провести Digital- или ТВ-рекламную кампанию", "Увеличить продажи", "Составить впечатление", "Донести ключевую информацию", "Вызвать доверие у покупателя"],
     price: ["Упрощённая подача и реализация – от 200 000 до 900 000рублей", "Рекламная постановочная съемка - от 1 500 000 до 10 000 000 рублей"],
   },
   {
     id: 2,
+    "2": 2,
     videoUrl: "https://www.youtube.com/embed/KsWESMsdecI?si=y2G6ChtXOLlN8A7V&modestbranding=1&autoplay=1&showinfo=0",
     descr: [
       "Рассказать эмоционально о компании, продукте или услуге",
@@ -229,12 +232,14 @@ export const gameContents = [
   },
   {
     id: 3,
+    "3": 3,
     videoUrl: "https://www.youtube.com/embed/j-3GIuCHf6I?si=u9lYxKRVufyeuyR7&modestbranding=1&autoplay=1&showinfo=0",
     descr: ["Рассказать доходчиво о товаре/услуге", "Показать товар информативно, понятно и красиво", "Донести ключевые преимущества", "Раскрыть потенциал продукта"],
     price: ["От 150 000 до 600 000 рублей", "от 50 000 рублей (за одно видео при производстве серии видео)"],
   },
   {
     id: 4,
+    "4": 4,
     videoUrl: "https://www.youtube.com/embed/ZUxSfgqQVF8?si=87LYbTnFWHgHN9Ri&modestbranding=1&autoplay=1&showinfo=0",
     descr: [
       "Рассказать эффектно о компании, продукте или услуге",
@@ -247,6 +252,7 @@ export const gameContents = [
   },
   {
     id: 5,
+    "5": 5,
     videoUrl: "https://www.youtube.com/embed/sECp7CTmT-4?si=hMUzJHm0gRPSF0Qv&modestbranding=1&autoplay=1&showinfo=0",
     descr: [
       "Рассказать о бренде, услуге или продукте",
