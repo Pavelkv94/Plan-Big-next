@@ -43,6 +43,7 @@
       margin-top: 60px;
 
       .videoMakingTitleBlock {
+        margin-left: 50px;
         width: 1460px;
         height: 120px;
         background-repeat: no-repeat;
@@ -59,7 +60,7 @@
           background-image: url("../pngs/video-title-light.webp");
         }
         .divider {
-          margin: 0 75px;
+          margin: 0 75px 0 30px;
 
           &.dark {
             height: 37px;
