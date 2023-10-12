@@ -28,7 +28,7 @@
 
       .pulse {
         width: 76px;
-        height: 30px;
+        height: 24px;
         position: absolute;
 
         &::after,
@@ -39,9 +39,9 @@
           left: -20px;
           opacity: 0;
           right: -20px;
-          top: -20px;
+          top: -14px;
           bottom: -20px;
-          border-radius: 8px;
+          border-radius: 15px;
           animation: pulse 2.5s linear infinite;
         }
 
@@ -96,7 +96,7 @@
           background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%), linear-gradient(116.7deg, #9cbcf9 19.98%, #00edff 91.97%);
 
           .toggler {
-            border: 1px solid black;
+            border: 1px solid #383838;
             background-color: white;
 
             .togglerBox {
@@ -241,7 +241,7 @@
 
         &.light {
           button {
-            border: 1px solid black;
+            border: 1px solid #383838;
             background: #efefef;
             font-weight: 500;
             color: #383838;

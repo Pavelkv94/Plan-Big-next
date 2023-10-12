@@ -352,6 +352,10 @@
         &.light {
           color: #383838;
           text-shadow: none;
+
+          &:hover {
+            color: #49A7FF;
+          }
         }
       }
     }
