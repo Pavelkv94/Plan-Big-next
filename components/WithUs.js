@@ -52,23 +52,23 @@ const Slider = ({ array, isDarkTheme }) => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
 
-  const handlePrev = () => {
-    if (activePageIndex === 0) {
-      // If at the beginning, go to the last item for infinite loop effect
-      goTo(array.length - 1);
-    } else {
-      prev();
-    }
-  };
+  // const handlePrev = () => {
+  //   if (activePageIndex === 0) {
+  //     // If at the beginning, go to the last item for infinite loop effect
+  //     goTo(array.length - 1);
+  //   } else {
+  //     prev();
+  //   }
+  // };
 
-  const handleNext = () => {
-    if (activePageIndex === array.length - 1) {
-      // If at the end, go to the first item for infinite loop effect
-      goTo(0);
-    } else {
-      next();
-    }
-  };
+  // const handleNext = () => {
+  //   if (activePageIndex === array.length - 1) {
+  //     // If at the end, go to the first item for infinite loop effect
+  //     goTo(0);
+  //   } else {
+  //     next();
+  //   }
+  // };
 
   return (
     <>
@@ -80,15 +80,15 @@ const Slider = ({ array, isDarkTheme }) => {
         ))}
       </ul>
       <div className={styles.controlls}>
-        <div onClick={handlePrev} className={`${styles.arrow} ${styles.left}`}>
-          { (isDarkTheme ? <LeftArrow /> : <LeftArrowLight />)}
+      <div onClick={() => prev()} className={`${styles.arrow} ${styles.left}`}>
+          {activePageIndex !== 0 && (isDarkTheme ? <LeftArrow /> : <LeftArrowLight />)}
         </div>
-        {isDarkTheme && <div className={styles.test1}></div>}
+        {activePageIndex !== 0 && isDarkTheme && <div className={styles.test1}></div>}
 
-        <div onClick={handleNext} className={`${styles.arrow} ${styles.right}`}>
-          {(isDarkTheme ? <RightArrow /> : <RightArrowLight />)}
+        <div onClick={() => next()} className={`${styles.arrow} ${styles.right}`}>
+          {activePageIndex !== pages.length - 1 && (isDarkTheme ? <RightArrow /> : <RightArrowLight />)}
         </div>
-        {isDarkTheme && <div className={styles.test2}></div>}
+        {activePageIndex !== pages.length - 1 && isDarkTheme && <div className={styles.test2}></div>}
 
       </div>
     </>
