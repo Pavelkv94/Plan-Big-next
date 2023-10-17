@@ -35,7 +35,7 @@ const WithUs = ({ isDarkTheme }) => {
     <div className={`${styles.withUsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="feedback">
       <div className={styles.withUsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ОТЗЫВЫ НАШИХ КЛИЕНТОВ" mainTitle width={"860px"} left={"50px"} />
+          <Title isDarkTheme={isDarkTheme} text="ОТЗЫВЫ НАШИХ КЛИЕНТОВ" mainTitle width={"750px"} left={"50px"} />
         </div>
         <div className={styles.slider}>
           <Slider array={items} isDarkTheme={isDarkTheme} />

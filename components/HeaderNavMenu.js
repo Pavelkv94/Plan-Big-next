@@ -9,6 +9,7 @@ import CopyIcon from "../svgs/copy.svg";
 
 const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [isPopoverHover, setIsPopoverHover] = useState(false);
 
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 1000);
@@ -57,13 +58,17 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
             <a href="mailto:WELCOME@PLAN-BIG.COM">WELCOME@PLAN-BIG.COM</a>
           </div>
           <div
-              className={styles.copy}
+              className={`${styles.copy} ${isDarkTheme ? styles.dark : styles.light}`}
               onClick={() => {
                 navigator.clipboard.writeText("WELCOME@PLAN-BIG.COM");
                 setIsPopoverOpen(true);
+                setIsPopoverHover(false);
               }}
+              onMouseEnter={() => setIsPopoverHover(true)}
+              onMouseLeave={() => setIsPopoverHover(false)}
             >
               {isPopoverOpen && <span>Скопировано</span>}
+              {isPopoverHover && <span className={styles.hover}>Скопировать E-mail</span>}
               <CopyIcon />
             </div>
         </div>

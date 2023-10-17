@@ -68,7 +68,10 @@
       }
     }
     .contacts {
-      width: 280px;
+      h4 {
+        margin: 0 0 26px 0;
+      }
+      width: 304px;
       color: white;
       display: flex;
       flex-direction: column;
@@ -81,19 +84,20 @@
         line-height: 19px;
         letter-spacing: 1.1427342891693115px;
         text-align: left;
+        margin-bottom: 14px;
 
         .copy,
         .whats,
         .teleg {
           cursor: pointer;
         }
-       
+
         .whats {
           margin: 0 10px 0 20px;
         }
       }
       .email {
-        margin-top: 14px;
+        // margin-top: 14px;
         display: flex;
         span {
           font-size: 17px;
@@ -117,7 +121,7 @@
         }
       }
       .address {
-        margin-top: 14px;
+        margin-top: 16px;
         font-size: 18px;
         font-weight: 400;
         line-height: 20px;
@@ -130,9 +134,9 @@
         }
       }
       .policy {
-        margin-top: 12px;
+        margin-top: 22px;
+        font-size: 18px;
       }
-
 
       .actions {
         display: flex;
@@ -168,7 +172,7 @@
         }
 
         div {
-          margin: 40px 0 0 0;
+          margin: 14px 0 0 0;
           width: 192px;
           height: 50px;
 

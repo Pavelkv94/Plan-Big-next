@@ -38,12 +38,25 @@
         cursor: pointer;
         align-self: flex-end;
 
+        &.dark {
+          color: white;
+        }
+      
+        &.light {
+          color: #383838;
+        }
+
+        
         span {
           position: absolute;
           top: 30px;
           left: -10px;
           font-size: 14px;
           transition: 1s;
+          
+          &.hover {
+            width: 150px;
+          }
         }
       }
 
