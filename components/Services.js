@@ -37,7 +37,7 @@ const Services = ({ isDarkTheme }) => {
     <div className={`${styles.servicesWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="services">
       <div className={styles.servicesContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ВИДЫ УСЛУГ" mainTitle width={"340px"} />
+          <Title isDarkTheme={isDarkTheme} text="ВИДЫ УСЛУГ" mainTitle width={"368px"} />
         </div>
 
         <div className={`${styles.gamepad} ${isDarkTheme ? styles.dark : styles.light}`}>

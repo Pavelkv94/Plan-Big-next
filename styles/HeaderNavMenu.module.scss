@@ -3,6 +3,7 @@
   height: 50px;
   position: fixed;
   z-index: 99;
+  font-family: "Montserrat", sans-serif;
 
   &.dark {
     background: #26467d;
@@ -22,7 +23,7 @@
     justify-content: space-between;
 
     .logo {
-      margin-right: 80px;
+      margin-right: 60px;
       width: 134px;
     }
 
@@ -62,7 +63,7 @@
 
       .menu {
         height: 100%;
-        max-width: 600px;
+        max-width: 650px;
 
         nav {
           list-style: none;
@@ -87,6 +88,7 @@
 
 
           div.li {
+            min-width: 55px;
             margin: 0 12px;
             display: flex;
             align-items: center;
@@ -148,7 +150,7 @@
     }
     .messengers {
       width: 55px;
-      margin-left: 34px;
+      margin-left: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;

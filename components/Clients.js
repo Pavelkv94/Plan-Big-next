@@ -85,7 +85,7 @@ const Clients = ({ isDarkTheme }) => {
     <div className={`${styles.clientsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.clientsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="НАМ ДОВЕРЯЮТ" mainTitle width={"430px"} left={"30px"} />
+          <Title isDarkTheme={isDarkTheme} text="НАМ ДОВЕРЯЮТ" mainTitle width={"464px"} left={"30px"} />
         </div>
         <div className={styles.carousel}>
           <Carousel array={[firstSlide, secondSlide, thirdSlide]} isDarkTheme={isDarkTheme} />

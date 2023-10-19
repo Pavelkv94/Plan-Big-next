@@ -37,15 +37,15 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
                 <div className={styles.li}>ПОРТФОЛИО </div>
               </Link>
 
-              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="services" spy={true} smooth={true} offset={0} duration={500}>
+              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="services" spy={true} smooth={true} offset={-50} duration={500}>
                 <div className={styles.li}>УСЛУГИ</div>
               </Link>
 
-              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="adv" spy={true} smooth={true} offset={0} duration={500}>
+              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="adv" spy={true} smooth={true} offset={-50} duration={500}>
                 <div className={styles.li}>ПРЕИМУЩЕСТВА</div>
               </Link>
 
-              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="feedback" spy={true} smooth={true} offset={0} duration={500}>
+              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="feedback" spy={true} smooth={true} offset={-50} duration={500}>
                 <div className={styles.li}> ОТЗЫВЫ</div>
               </Link>
             </nav>

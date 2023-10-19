@@ -10,7 +10,7 @@ const Reasons = ({ isDarkTheme }) => {
     <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="adv">
       <div className={styles.reasonsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"690px"} left={"36px"}/>
+          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"746px"} left={"36px"}/>
         </div>
         <section className={styles.reasonsWrap}>
           <div className={styles.leftContent}>

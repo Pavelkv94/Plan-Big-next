@@ -200,10 +200,11 @@
 
           p {
             margin: 0;
-            top: 4px;
-            right: 12px;
+            top: 6px;
+            right: 14px;
             position: absolute;
-            font-size: 14px;
+            font-size: 13px;
+            font-family: "Rubik", sans-serif;
           }
 
           &:nth-child(2) p,
@@ -227,6 +228,8 @@
           }
 
           button {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
             border: 1px solid rgba(0, 237, 255, 0.7);
             background: rgba(1, 44, 113, 1);
             color: white;
@@ -241,6 +244,8 @@
 
         &.light {
           button {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
             border: 1px solid #383838;
             background: #efefef;
             font-weight: 500;

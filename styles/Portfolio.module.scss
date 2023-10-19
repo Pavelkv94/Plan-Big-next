@@ -32,7 +32,7 @@
 
 
       .underline {
-        width: 290px;
+        width: 310px;
         height: 4px;
         position: absolute;
 
@@ -46,7 +46,7 @@
         &.light {
           background-color: black;
           bottom: 10px;
-          left: 105px;
+          left: 94px;
         }
       }
     }
@@ -100,6 +100,7 @@
           height: 100%;
           width: 100%;
           font-size: 18px;
+          font-family: "Montserrat", sans-serif;
           font-weight: 400;
           cursor: pointer;
           z-index: 2;
