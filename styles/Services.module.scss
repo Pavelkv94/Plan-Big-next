@@ -6,7 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  
+  @media screen and (max-width: 1560px) {
+    min-width: 1200px;
+  }
   
   &.dark {
     background-image: url("../pngs/Services-back-black.webp");

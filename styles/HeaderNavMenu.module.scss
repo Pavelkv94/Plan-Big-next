@@ -22,9 +22,17 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 1560px) {
+      width: 1280px;
+    }
+
     .logo {
       margin-right: 60px;
       width: 134px;
+
+      @media screen and (max-width: 1560px) {
+        margin-right: 20px;
+      }
     }
 
     .menuWrapper {
@@ -97,6 +105,10 @@
             cursor: pointer;
             font-size: 14px;
             letter-spacing: 0.07em;
+
+            @media screen and (max-width: 1560px) {
+              font-size: 13px;
+            }
 
           }
         }

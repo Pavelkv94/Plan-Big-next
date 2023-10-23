@@ -4,6 +4,10 @@
   min-width: 1560px;
   min-height: 980px;
 
+  @media screen and (max-width: 1560px) {
+    min-width: 1200px;
+  }
+  
 
   &.dark {
     background-color: #001137;

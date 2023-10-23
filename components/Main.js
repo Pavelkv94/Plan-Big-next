@@ -3,7 +3,7 @@ import styles from "../styles/Main.module.scss";
 import VideoPlayer from "./VideoPlayer";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const Main = ({ isDarkTheme, toggleTheme }) => {
+const Main = ({ isDarkTheme, toggleTheme, screenSize }) => {
   const [position, setPosition] = useState(180); // Initial position
 
   const switchTheme = () => {
@@ -60,12 +60,13 @@ const Main = ({ isDarkTheme, toggleTheme }) => {
           <div className={styles.showInfo}>
             {isDarkTheme && <p className={styles.showreelP}>SHOWREEL</p>}
             <VideoPlayer
-              width={"745px"}
-              height={"475px"}
+              width={screenSize < 1560 ? "600px" : "745px"}
+              height={screenSize < 1560 ? "383px" : "475px"}
               style={{ position: "absolute", right: 0, bottom: 0 }}
               isDarkTheme={isDarkTheme}
               big
               src={"https://www.youtube.com/embed/2ZQtDSz6j8Y?si=n_6gajAlx3KyVIHo&modestbranding=1&autoplay=1&showinfo=0"}
+              screenSize={screenSize}
             />
           </div>
         </div>

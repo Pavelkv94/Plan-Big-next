@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/VideoPlayer.module.scss";
 
-const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId }) => {
+const VideoPlayer = ({ width, height, src, style, big, isDarkTheme, itemId, screenSize }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
   const [playerWidth, setPlayerWidth] = useState(0);
