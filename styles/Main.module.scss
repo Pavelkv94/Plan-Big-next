@@ -5,6 +5,7 @@
 
   @media screen and (max-width: 1560px) {
     min-width: 1280px;
+    max-height: 768px;
   }
 
   &.dark {
@@ -32,6 +33,11 @@
       height: 30px;
       margin-top: 110px;
       margin-bottom: 72px;
+      @media screen and (max-width: 1560px) {
+        margin-top: 90px;
+        margin-bottom: 50px;
+
+      }
 
       .pulse {
         width: 76px;
@@ -151,6 +157,10 @@
     .textInfo {
       margin-top: 10px;
 
+      @media screen and (max-width: 1560px) {
+        margin-top: 0;
+      }
+
       &.dark {
         .preTitle,
         h1 {
@@ -252,7 +262,6 @@
           width: 370px;
         }
 
-
         &.dark {
           div {
             box-shadow: 0px 4.3917107582092285px 2.1958553791046143px 0px rgba(0, 0, 0, 0.25);
@@ -271,11 +280,11 @@
             }
 
             &:hover {
-            font-size: 13px;
+              font-size: 13px;
 
-            @media screen and (max-width: 1560px) {
-              font-size: 12px;
-            }
+              @media screen and (max-width: 1560px) {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -333,10 +342,10 @@
 
       @media screen and (max-width: 1560px) {
         width: 600px;
-        height: 383px;     
+        height: 383px;
         left: -40px;
-      top: -50px;
-       }
+        top: -10px;
+      }
 
       .showreelP {
         position: absolute;
