@@ -67,10 +67,10 @@
         justify-content: center;
 
         @media screen and (max-width: 1560px) {
-          width: 505px;
-          height: 266px;
-          top: 73px;
-        left: 50px;
+          width: 572px;
+          height: 301px;
+          top: 81px;
+          left: 41px;
         }
       }
     }
@@ -92,6 +92,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width: 1560px) {
+          width: 572px;
+          height: 303px;
+          top: 66px;
+          left: 42px;
+        }
       }
     }
 
