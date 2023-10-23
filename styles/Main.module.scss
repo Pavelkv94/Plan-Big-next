@@ -297,9 +297,17 @@
             background: #efefef;
             font-weight: 500;
             color: #383838;
+            @media screen and (max-width: 1560px) {
+              font-size: 11px;
+            }
 
             &:hover {
               background: linear-gradient(137.83deg, #0076e4 -38%, #7abfff 21.36%, #c1fdfe 80.72%, #98fcfe 140.08%);
+              font-size: 14px;
+
+              @media screen and (max-width: 1560px) {
+                font-size: 12px;
+              }
             }
           }
         }
