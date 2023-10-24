@@ -7,7 +7,7 @@ import { videos2d, videos3d, videosAdv, videosPortfolio, videosPresent, videosSt
 
 
 
-const Portfolio = ({ isDarkTheme, tab, setTab }) => {
+const Portfolio = ({ isDarkTheme, tab, setTab, screenSize }) => {
 
   const tabs = [
     { title: "ПРЕЗЕНТАЦИОННЫЕ \n РОЛИКИ", key: 0 },
@@ -35,13 +35,13 @@ const Portfolio = ({ isDarkTheme, tab, setTab }) => {
               </div>
             ))}
           </div>
-          {tab === 0 && <TabContent videos={videosPresent} isDarkTheme={isDarkTheme}/>}
-          {tab === 1 && <TabContent videos={videos2d} isDarkTheme={isDarkTheme}/>}
-          {tab === 2 && <TabContent videos={videos3d} isDarkTheme={isDarkTheme}/>}
-          {tab === 3 && <TabContent videos={videosViews} isDarkTheme={isDarkTheme}/>}
-          {tab === 4 && <TabContent videos={videosAdv} isDarkTheme={isDarkTheme}/>}
-          {tab === 5 && <TabContent videos={videosStory} isDarkTheme={isDarkTheme}/>}
-          {tab === 6 && <TabContent videos={videosPortfolio} isDarkTheme={isDarkTheme}/>}
+          {tab === 0 && <TabContent videos={videosPresent} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 1 && <TabContent videos={videos2d} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 2 && <TabContent videos={videos3d} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 3 && <TabContent videos={videosViews} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 4 && <TabContent videos={videosAdv} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 5 && <TabContent videos={videosStory} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
+          {tab === 6 && <TabContent videos={videosPortfolio} isDarkTheme={isDarkTheme} screenSize={screenSize}/>}
 
           
         </section>
@@ -54,14 +54,14 @@ export default Portfolio;
 
 
 
-const TabContent = ({videos, isDarkTheme}) => {
+const TabContent = ({videos, isDarkTheme, screenSize}) => {
   const slides = videos.map((el, i) => (
     <div className={styles.tabsContent} key={i}>
       {el.elements.map((el, i) => (
         <VideoPlayer
           key={i}
-          width={isDarkTheme ? "500px" : "500px"}
-          height={isDarkTheme ? "280px" : "300px"}
+          width={screenSize > 1560 ? "500px" : "400px"}
+          height={isDarkTheme && screenSize > 1560 ? "280px" : !isDarkTheme && screenSize > 1560 ? "300px" : isDarkTheme && screenSize < 1560 ? "228px" : "240px"}
           isDarkTheme={isDarkTheme}
           src={el.src}
           itemId={el.id}
@@ -71,8 +71,8 @@ const TabContent = ({videos, isDarkTheme}) => {
   ));
 
   return (
-    <div style={{ width: "1560px" }}>
-      <Carousel array={slides} isDarkTheme={isDarkTheme} portfolio/>
+    <div style={screenSize > 1560 ? { width: "1560px"} : { width: "1280px"}}>
+      <Carousel array={slides} isDarkTheme={isDarkTheme} portfolio screenSize={screenSize}/>
     </div>
   );
 };

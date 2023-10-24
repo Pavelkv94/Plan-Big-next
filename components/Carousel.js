@@ -7,7 +7,7 @@ import RightArrowLight from "../svgs/arrow-client-right-light.svg";
 import styles from "../styles/Carousel.module.scss";
 import { useState } from "react";
 
-const Carousel = ({ array, isDarkTheme, portfolio }) => {
+const Carousel = ({ array, isDarkTheme, portfolio, screenSize }) => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
   // const handlePrev = () => {
@@ -41,7 +41,7 @@ const Carousel = ({ array, isDarkTheme, portfolio }) => {
         <div onClick={() => prev()} className={`${styles.arrow} ${styles.left}`}>
           {isDarkTheme ? <LeftArrow /> : <LeftArrowLight />}
         </div>
-        {isDarkTheme && <div className={styles.test1} style={portfolio ? {left: "790px"} : {}}></div>}
+        {isDarkTheme && <div className={styles.test1} style={portfolio ? {left: screenSize < 1560 ? "645px" : "790px"} : {}}></div>}
 
         <div className={styles.dots}>
           {array.map((_, i) => (
@@ -51,7 +51,7 @@ const Carousel = ({ array, isDarkTheme, portfolio }) => {
         <div onClick={() => next()} className={`${styles.arrow} ${styles.right}`}>
           {isDarkTheme ? <RightArrow /> : <RightArrowLight />}
         </div>
-        {isDarkTheme && <div className={styles.test2} style={portfolio ? {left: "600px"} : {}}></div>}
+        {isDarkTheme && <div className={styles.test2} style={portfolio ? {left: screenSize < 1560 ? "450px" : "600px"} : {}}></div>}
       </div>
     </>
   );
