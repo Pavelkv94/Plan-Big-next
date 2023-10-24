@@ -1,51 +1,69 @@
 .clientsWrapper {
-    width: 100%;
-    height: 100%;
-    min-width: 1560px;    
+  width: 100%;
+  height: 100%;
+  min-width: 1560px;
+
+  @media screen and (max-width: 1560px) {
+    min-width: 1200px;
+    max-height: 768px;
+  }
+
+  ul {
+    margin-bottom: 100px;
 
     @media screen and (max-width: 1560px) {
-      min-width: 1200px;
+      margin-bottom: 50px;
     }
-    
-    ul {
-      margin-bottom: 100px;
-    }
-    &.dark {
-        background-image: url("../pngs/clients-back-black.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #001137;
+  }
+  &.dark {
+    background-image: url("../pngs/clients-back-black.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #001137;
+  }
 
+  &.light {
+    background-color: white;
+  }
+
+  .clientsContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+
+    @media screen and (max-width: 1560px) {
+      margin-bottom: 80px;
+    }
+
+    .title {
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      @media screen and (max-width: 1560px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
-    
-      &.light {
-        background-color: white;
-      }
-
-    .clientsContent {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 90px;
-
-        .title {
-            margin-top: 70px;
-            margin-bottom: 70px;
-          }
-
-          .sliderWindow {
-            display: grid;
-            grid-template-columns: 230px 230px 230px 230px 230px;
-            row-gap: 10px;
-            margin: o auto;
-          }
-
-          .carousel {
-          width: 1150px;
-
-          }
-
-
     }
+
+    .sliderWindow {
+      display: grid;
+      grid-template-columns: 230px 230px 230px 230px 230px;
+      row-gap: 10px;
+      margin: o auto;
+
+      @media screen and (max-width: 1560px) {
+        row-gap: 14px;
+      }
+    }
+
+    .carousel {
+      width: 1150px;
+
+      @media screen and (max-width: 1560px) {
+        width: 1150px;
+      }
+    }
+  }
 }

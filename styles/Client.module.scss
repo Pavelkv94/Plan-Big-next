@@ -1,26 +1,29 @@
 .clientWrapper {
-    width: 230px;
+  width: 230px;
+  height: 140px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 1560px) {
+    min-width: 210px;
     height: 140px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
 
-    &.dark {
-        background-image: url("../pngs/client-black.webp");
+  &.dark {
+    background-image: url("../pngs/client-black.webp");
+  }
 
-      }
-    
-      &.light {
-        background-image: url("../pngs/client-light.webp");
-      }
+  &.light {
+    background-image: url("../pngs/client-light.webp");
+  }
 
-
-      img {
-        max-height: 100px;
-        max-width: 170px;
-        width: max-content !important;
-      }
+  img {
+    max-height: 100px;
+    max-width: 170px;
+    width: max-content !important;
+  }
 }

@@ -4,7 +4,7 @@ import Title from "./Title";
 import Client from "./Client";
 import Carousel from "./Carousel";
 
-const Clients = ({ isDarkTheme }) => {
+const Clients = ({ isDarkTheme, screenSize }) => {
   const clients1 = [
     { img: "/png/clients/1. Сбер-PhotoRoom 2.webp" },
     { img: "/png/clients/4. undp-PhotoRoom 2.webp" },
@@ -85,7 +85,7 @@ const Clients = ({ isDarkTheme }) => {
     <div className={`${styles.clientsWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.clientsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="НАМ ДОВЕРЯЮТ" mainTitle width={"464px"} left={"30px"} />
+          <Title isDarkTheme={isDarkTheme} text="НАМ ДОВЕРЯЮТ" mainTitle width={screenSize > 1560 ? "464px" : "272px"} left={screenSize > 1560 ? "30px" : "15px"} />
         </div>
         <div className={styles.carousel}>
           <Carousel array={[firstSlide, secondSlide, thirdSlide]} isDarkTheme={isDarkTheme} />
