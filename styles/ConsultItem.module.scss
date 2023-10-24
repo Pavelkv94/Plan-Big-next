@@ -8,12 +8,19 @@
   background-color: white;
   cursor: pointer;
 
+  @media screen and (max-width: 1560px) {
+    width: 300px;
+  }
   p {
     margin: 0 0 0 22px;
     font-size: 15px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     color: rgba(144, 163, 171, 1);
+
+    @media screen and (max-width: 1560px) {
+      font-size: 14px;
+    }
   }
 
   .check {
