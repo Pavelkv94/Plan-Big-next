@@ -3,7 +3,11 @@
   min-width: 400px;
   position: relative;
 
+  @media screen and (max-width: 1560px) {
+    min-width: 300px;
+    height: 70px;
 
+  }
   .titleMain {
     position: absolute;
     font-size: 48px;
@@ -26,11 +30,21 @@
       }
       &.right {
         left: 10px;
+
+        @media screen and (max-width: 1560px) {
+          top: 6px;
+
+        }
       }
 
       &.left {
         top: 0px;
         left: 0px;
+
+        @media screen and (max-width: 1560px) {
+          top: 6px;
+          left: 36px;
+        }
       }
     }
 
@@ -79,7 +93,6 @@
   @media screen and (max-width: 1560px) {
     height: 48px;
     min-width: 210px;
-
   }
 
   p {

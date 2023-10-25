@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import styles from "../styles/VideoMaking.module.scss";
 import PlaySvg from "../svgs/play.svg";
+import PlaySvgmd from "../svgs/play-md.svg";
+
 import Title from "./Title";
 
-const VideoMaking = ({ isDarkTheme }) => {
+const VideoMaking = ({ isDarkTheme, screenSize }) => {
+
+  const playBtn = screenSize > 1560 ? <PlaySvg /> : <PlaySvgmd />;
   return (
     <div className={`${styles.videoMakingWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="onas">
       <div className={styles.videoMakingContent}>
         <div className={styles.videoMakingTitleBlockWrap}>
           <div className={`${styles.videoMakingTitleBlock} ${isDarkTheme ? styles.dark : styles.light}`}>
-            <Title isDarkTheme={isDarkTheme} text="ВИДЕОСЪЁМКА" />
+            <Title isDarkTheme={isDarkTheme} text="ВИДЕОСЪЁМКА" screenSize={screenSize}/>
             <div className={`${styles.divider} ${isDarkTheme ? styles.dark : styles.light}`}></div>
-            <Title isDarkTheme={isDarkTheme} text="АНИМАЦИЯ" right />
+            <Title isDarkTheme={isDarkTheme} text="АНИМАЦИЯ" right screenSize={screenSize}/>
           </div>
         </div>
 
@@ -39,7 +43,7 @@ const VideoMaking = ({ isDarkTheme }) => {
 
         <div className={`${styles.playBlock} ${isDarkTheme ? styles.dark : styles.light}`}>
         <div className={`${styles.playButton} ${isDarkTheme ? styles.dark : styles.light}`}>
-          { isDarkTheme ? <PlaySvg /> : <img src="/png/playLight.webp" width={310} height={295}/> }
+          { isDarkTheme ? playBtn : <img src="/png/playLight.webp" width={screenSize > 1560 ? 310 : 190} height={screenSize > 1560 ? 295 : 180}/> }
         </div>
         <div className={`${styles.centerElem} ${isDarkTheme ? styles.dark : styles.light}`}></div>
         <div className={`${styles.partFullEl} ${isDarkTheme ? styles.dark : styles.light} ${styles.first}`}></div>

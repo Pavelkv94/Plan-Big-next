@@ -8,8 +8,10 @@
 
   @media screen and (max-width: 1560px) {
     min-width: 1200px;
+    min-height: 750px;
+    max-height: 100vh;
   }
-  
+
   &.dark {
     background-image: url("../pngs/videomaking-backg-dark2.png");
   }
@@ -20,22 +22,46 @@
     flex-direction: column;
     align-items: center;
 
+    @media screen and (max-width: 1560px) {
+      height: 100%;
+    }
+
     .videoEllipse {
-     
       // border: 1px solid red;
       position: absolute;
       top: 400px;
+
+      @media screen and (max-width: 1560px) {
+        top: 325px;
+      }
 
       &.dark {
         background-image: url("../pngs/videomaking-ellipse-dark.png");
         width: 1227px;
         height: 190px;
+
+        @media screen and (max-width: 1560px) {
+          width: 1000px;
+          height: 150px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
       }
       &.light {
         background-image: url("../pngs/videomaking-ellipse-light.png");
         width: 892px;
         height: 177px;
         z-index: 1;
+
+        @media screen and (max-width: 1560px) {
+          top: 270px;
+          width: 700px;
+          height: 157px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
       }
     }
 
@@ -57,6 +83,11 @@
         align-items: center;
         justify-content: center;
 
+        @media screen and (max-width: 1560px) {
+          width: 980px;
+          margin-left: 30px;
+        }
+
         &.dark {
           background-image: url("../pngs/video-title-dark.webp");
         }
@@ -66,17 +97,27 @@
         .divider {
           margin: 0 75px 0 30px;
 
+          @media screen and (max-width: 1560px) {
+            margin: 0 45px 0 30px;
+          }
+
           &.dark {
             height: 37px;
             width: 2.7px;
             background-color: #00edff;
             box-shadow: 0px 0px 8px #00edff;
+            @media screen and (max-width: 1560px) {
+              height: 27px;
+            }
           }
 
           &.light {
             height: 34px;
             width: 2.7px;
-            background-color: black;
+            background-color: #383838;
+            @media screen and (max-width: 1560px) {
+              height: 27px;
+            }
           }
         }
       }
@@ -90,12 +131,27 @@
       justify-content: space-between;
       margin-top: 10px;
 
+      @media screen and (max-width: 1560px) {
+        height: 290px;
+        width: 880px;
+      }
+
       &.dark {
         margin-bottom: 50px;
         height: 354px;
+
+        @media screen and (max-width: 1560px) {
+          margin-bottom: 50px;
+          height: 290px;
+        }
       }
       &.light {
         height: 364px;
+
+        @media screen and (max-width: 1560px) {
+          margin-bottom: 10px;
+          height: 290px;
+        }
       }
       .circle {
         width: 270px;
@@ -106,6 +162,11 @@
         align-items: center;
         justify-content: center;
         z-index: 2;
+
+        @media screen and (max-width: 1560px) {
+          width: 210px;
+          height: 240px;
+        }
 
         &.dark {
           background-image: url("../pngs/video-making-circle.webp");
@@ -125,7 +186,10 @@
               width: 170px;
               margin-bottom: 30px;
               margin-left: 0px;
-
+              @media screen and (max-width: 1560px) {
+                width: 110px;
+                margin-left: 6px;
+              }
               p {
                 margin: 0;
                 text-align: center;
@@ -134,12 +198,20 @@
                   font-size: 55px;
                   font-weight: 600;
                   line-height: 31.52px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 40px;
+                  }
                 }
                 &:last-child {
                   font-size: 16px;
                   font-weight: 500;
                   line-height: 15px;
                   margin-top: 20px;
+
+                  @media screen and (max-width: 1560px) {
+                    font-size: 12px;
+                    margin-top: 10px;
+                  }
                 }
               }
             }
@@ -149,7 +221,9 @@
               width: 170px;
               margin-bottom: 30px;
               margin-left: 10px;
-
+              @media screen and (max-width: 1560px) {
+                width: 110px;
+              }
               p {
                 margin: 0;
                 text-align: center;
@@ -158,12 +232,20 @@
                   font-size: 55px;
                   font-weight: 600;
                   line-height: 31.52px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 40px;
+                  }
                 }
                 &:last-child {
                   font-size: 16px;
                   font-weight: 500;
                   line-height: 15px;
                   margin-top: 20px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 12px;
+                    margin-top: 10px;
+                    margin-right: 14px;
+                  }
                 }
               }
             }
@@ -187,6 +269,12 @@
               margin-bottom: 10px;
               margin-left: 14px;
 
+              @media screen and (max-width: 1560px) {
+                width: 110px;
+                margin-bottom: 20px;
+                margin-left: 14px;
+              }
+
               p {
                 margin: 0;
                 text-align: center;
@@ -195,6 +283,9 @@
                   font-size: 55px;
                   font-weight: 600;
                   line-height: 31.52px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 40px;
+                  }
                 }
                 &:last-child {
                   font-size: 16px;
@@ -202,6 +293,10 @@
                   line-height: 15px;
                   margin-top: 20px;
                   margin-right: 10px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 12px;
+                    margin-top: 10px;
+                  }
                 }
               }
             }
@@ -212,6 +307,12 @@
               margin-bottom: 10px;
               margin-left: 10px;
 
+              @media screen and (max-width: 1560px) {
+                width: 110px;
+                margin-bottom: 20px;
+                margin-left: 14px;
+              }
+
               p {
                 margin: 0;
                 text-align: center;
@@ -220,6 +321,9 @@
                   font-size: 55px;
                   font-weight: 600;
                   line-height: 31.52px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 40px;
+                  }
                 }
                 &:last-child {
                   font-size: 16px;
@@ -227,6 +331,10 @@
                   line-height: 15px;
                   margin-top: 20px;
                   margin-right: 20px;
+                  @media screen and (max-width: 1560px) {
+                    font-size: 12px;
+                    margin-top: 10px;
+                  }
                 }
               }
             }
@@ -238,6 +346,11 @@
           align-self: flex-end;
           width: 270px;
           height: 280px;
+
+          @media screen and (max-width: 1560px) {
+            width: 210px;
+            height: 240px;
+          }
         }
       }
     }
@@ -248,12 +361,25 @@
       height: 376px;
       margin: 0 auto;
 
+      @media screen and (max-width: 1560px) {
+        width: 1200px;
+        height: 240px;
+        margin-top: auto;
+      }
+
       .centerElem {
         width: 605px;
         height: 435px;
         position: absolute;
         bottom: 0;
-        left: 440px;
+        left: 400px;
+
+        @media screen and (max-width: 1560px) {
+          width: 385px;
+          height: 277px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
 
         &.dark {
           background-image: url("../pngs/videomaking-center-black.png");
@@ -269,6 +395,13 @@
         position: absolute;
         bottom: 0;
 
+        @media screen and (max-width: 1560px) {
+          width: 160px;
+          height: 113px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
         &.dark {
           background-image: url("../pngs/videomaking-part-part-black.png");
         }
@@ -278,15 +411,28 @@
 
         &.first {
           left: 150px;
+          @media screen and (max-width: 1560px) {
+            left: 150px;
+          }
         }
         &.second {
           left: 1080px;
+          @media screen and (max-width: 1560px) {
+            left: 900px;
+          }
         }
       }
       .partFullEl {
         width: 254px;
         height: 228px;
         position: absolute;
+
+        @media screen and (max-width: 1560px) {
+          width: 160px;
+          height: 144px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
 
         &.dark {
           background-image: url("../pngs/videomaking-part-full-black1.png");
@@ -297,9 +443,15 @@
 
         &.first {
           left: 350px;
+          @media screen and (max-width: 1560px) {
+            left: 330px;
+          }
         }
         &.second {
           left: 880px;
+          @media screen and (max-width: 1560px) {
+            left: 700px;
+          }
         }
       }
 
@@ -311,11 +463,18 @@
         animation: spin 1.4s infinite ease-in-out;
 
         &.dark {
-          left: 46%;
+          left: 630px;
+          @media screen and (max-width: 1560px) {
+            left: 550px;
+          }
         }
 
         &.light {
-          left: 42%;
+          left: 570px;
+
+          @media screen and (max-width: 1560px) {
+            left: 510px;
+          }
         }
       }
 
@@ -329,25 +488,48 @@
         position: absolute;
         transition: 0.5s;
         z-index: 3;
+        @media screen and (max-width: 1560px) {
+          font-size: 16px;
+          width: 200px;
+        }
 
         &:hover {
           font-size: 28px;
+          @media screen and (max-width: 1560px) {
+            font-size: 18px;
+          }
         }
         &.one {
           bottom: 120px;
           left: 140px;
+          @media screen and (max-width: 1560px) {
+            bottom: 90px;
+            left: 130px;
+          }
         }
         &.two {
           top: 0px;
           left: 340px;
+          @media screen and (max-width: 1560px) {
+            top: -20px;
+            left: 310px;
+          }
         }
         &.three {
           top: 0px;
           left: 865px;
+          @media screen and (max-width: 1560px) {
+            top: -20px;
+            left: 680px;
+          }
         }
         &.four {
           bottom: 120px;
           left: 1070px;
+          @media screen and (max-width: 1560px) {
+            bottom: 90px;
+            left: 880px;
+          }
         }
         &.dark {
           color: rgba(0, 237, 255, 1);
@@ -358,7 +540,7 @@
           text-shadow: none;
 
           &:hover {
-            color: #49A7FF;
+            color: #49a7ff;
           }
         }
       }

@@ -38,8 +38,8 @@ const Index = () => {
       <div className="app-wrapper">
         <HeaderNavMenu isDarkTheme={isDarkTheme} setOpenModal={setOpenModal}/>
         <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} screenSize={screenSize}/>
-        {/* <VideoMaking isDarkTheme={isDarkTheme} /> */}
-        {/* <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} screenSize={screenSize}/> */}
+        <VideoMaking isDarkTheme={isDarkTheme} screenSize={screenSize}/>
+        <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} screenSize={screenSize}/>
         {/* <Services isDarkTheme={isDarkTheme} /> */}
         {/* <Consultation isDarkTheme={isDarkTheme} /> */}
         {/* <Reasons isDarkTheme={isDarkTheme} /> */}
