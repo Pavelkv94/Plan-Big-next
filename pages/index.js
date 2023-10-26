@@ -40,7 +40,7 @@ const Index = () => {
         <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} screenSize={screenSize}/>
         <VideoMaking isDarkTheme={isDarkTheme} screenSize={screenSize}/>
         <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} screenSize={screenSize}/>
-        {/* <Services isDarkTheme={isDarkTheme} /> */}
+        {/* <Services isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
         {/* <Consultation isDarkTheme={isDarkTheme} /> */}
         {/* <Reasons isDarkTheme={isDarkTheme} /> */}
         {/* <WithUs isDarkTheme={isDarkTheme} /> */}

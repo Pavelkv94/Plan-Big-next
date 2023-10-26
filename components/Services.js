@@ -6,7 +6,7 @@ import ArrowLight from "../svgs/gamepad-arrow-light.svg";
 import { gameButtons, gameContents } from "./contants";
 import VideoPlayerSmall from "./VideoPlayerSmall";
 
-const Services = ({ isDarkTheme }) => {
+const Services = ({ isDarkTheme, screenSize }) => {
 
   const [activeButton, setActiveButton] = useState(0);
   const [autoChange, setAutoChange] = useState(true);
@@ -37,7 +37,7 @@ const Services = ({ isDarkTheme }) => {
     <div className={`${styles.servicesWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="services">
       <div className={styles.servicesContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ВИДЫ УСЛУГ" mainTitle width={"368px"} />
+          <Title isDarkTheme={isDarkTheme} text="ВИДЫ УСЛУГ" mainTitle width={screenSize > 1560 ? "368px" : "214px"} />
         </div>
 
         <div className={`${styles.gamepad} ${isDarkTheme ? styles.dark : styles.light}`}>

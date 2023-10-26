@@ -3,6 +3,11 @@
     height: 147px;
     position: relative;
 
+    @media screen and (max-width: 1560px) {
+      width: 212px;
+      height: 117px;
+    }
+
     .videoWrapperBack {
         position: fixed;
         top: 0;
@@ -32,6 +37,11 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+
+      @media screen and (max-width: 1560px) {
+        width: 212px;
+        height: 117px;
+      }
     
       &.screen0 {
         background-image: url("../pngs/present screen.webp");
