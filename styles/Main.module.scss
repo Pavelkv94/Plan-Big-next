@@ -354,6 +354,11 @@
         left: 0px;
         top: -20px;
       }
+      &.light {
+        @media screen and (max-width: 1560px) {
+          top: -24px;
+        }
+      }
 
       .showreelP {
         position: absolute;

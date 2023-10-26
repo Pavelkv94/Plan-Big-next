@@ -2,6 +2,10 @@
   position: absolute;
   width: 280px;
   height: 300px;
+  @media screen and (max-width: 1560px) {
+    width: 190px;
+
+  }
 
   &.dark {
     h4 {
@@ -44,6 +48,11 @@
     letter-spacing: 0em;
     text-align: left;
     margin: 0;
+
+    @media screen and (max-width: 1560px) {
+      font-size: 14px;
+      line-height: 13px;
+    }
   }
 
   .arrowIcon {
@@ -51,7 +60,12 @@
     position: absolute;
     top: 4px;
     left: 150px;
+
+    @media screen and (max-width: 1560px) {
+      left: 120px;
+    }
   }
+
 
   section {
     position: absolute;
@@ -64,6 +78,11 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: 1560px) {
+      height: 150px;
+
+      }
+
     p {
       margin: 24px;
       font-family: "Montserrat", sans-serif;
@@ -72,6 +91,12 @@
       line-height: 18px;
       letter-spacing: 0em;
       text-align: left;
+
+      @media screen and (max-width: 1560px) {
+        margin: 8px;
+        font-size: 12px;
+        line-height: 13px;
+        }
     }
   }
 }

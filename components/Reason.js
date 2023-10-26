@@ -7,10 +7,11 @@ import ArrowLight1 from "../svgs/arrow-light-1.svg";
 import ArrowLight2 from "../svgs/arrow-light-2.svg";
 import ArrowLight3 from "../svgs/arrow-light-3.svg";
 
-const Reason = ({ isDarkTheme, title, text }) => {
-    const [height, setHeight] = useState("108px");
+const Reason = ({ isDarkTheme, title, text, screenSize }) => {
+  const initHeight = screenSize > 1560 ? "108px" : "82px"
+    const [height, setHeight] = useState(initHeight);
 
-    const handleClick = () => setHeight(height === "200px" ? "108px" : "200px");
+    const handleClick = () => setHeight(height === "200px" ? initHeight : "200px");
 
     const [arrowAnim, setArrowAnim] = useState(1);
 

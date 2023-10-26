@@ -5,16 +5,17 @@ import LogoBlack from "../svgs/reasons-logo-black.svg";
 
 import Reason from "./Reason";
 
-const Reasons = ({ isDarkTheme }) => {
+const Reasons = ({ isDarkTheme, screenSize }) => {
   return (
     <div className={`${styles.reasonsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="adv">
       <div className={styles.reasonsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={"746px"} left={"36px"}/>
+          <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={screenSize > 1560 ? "746px" : "434px"} left={"36px"}/>
         </div>
         <section className={styles.reasonsWrap}>
           <div className={styles.leftContent}>
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Практический опыт"}
               text={
@@ -22,6 +23,7 @@ const Reasons = ({ isDarkTheme }) => {
               }
             />
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Работа в рамках бюджета"}
               text={
@@ -29,6 +31,7 @@ const Reasons = ({ isDarkTheme }) => {
               }
             />
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Решение бизнес задач"}
               text={
@@ -48,6 +51,7 @@ const Reasons = ({ isDarkTheme }) => {
 
           <div className={styles.rightContent}>
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Комплексное решение"}
               text={
@@ -55,6 +59,7 @@ const Reasons = ({ isDarkTheme }) => {
               }
             />
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Доверие крупных брендов"}
               text={
@@ -62,6 +67,7 @@ const Reasons = ({ isDarkTheme }) => {
               }
             />
             <Reason
+            screenSize={screenSize}
               isDarkTheme={isDarkTheme}
               title={"Современные тенденции видео"}
               text={

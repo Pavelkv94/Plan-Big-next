@@ -8,7 +8,9 @@
   background-position: center;
 
   @media screen and (max-width: 1560px) {
-    min-width: 1200px;
+    min-width: 1280px;
+    min-height: 760px;
+    max-height: 800px;
   }
   
   &.dark {
@@ -27,14 +29,24 @@
    
     .title {
       margin-top: 60px;
+
+      @media screen and (max-width: 1560px) {
+        margin-top: 30px;
+      }
     }
 
     section.reasonsWrap {
       width: 1533px;
       min-height: 585px;
-      margin-top: 110px;
+      margin-top: 70px;
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 1560px) {
+        width: 1200px;
+        min-height: 585px;
+        margin-top: 110px;
+      }
 
       .leftContent {
         width: 636px;

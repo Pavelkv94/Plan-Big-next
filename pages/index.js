@@ -14,7 +14,6 @@ import WorkStages from "../components/WorkStages";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 
-
 const Index = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
   const [openModal, setOpenModal] = useState(false);
@@ -34,20 +33,22 @@ const Index = () => {
 
   return (
     <>
-      
       <div className="app-wrapper">
-        <HeaderNavMenu isDarkTheme={isDarkTheme} setOpenModal={setOpenModal}/>
-        <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} screenSize={screenSize}/>
-        <VideoMaking isDarkTheme={isDarkTheme} screenSize={screenSize}/>
-        <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} screenSize={screenSize}/>
-        {/* <Services isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
-        {/* <Consultation isDarkTheme={isDarkTheme} /> */}
-        {/* <Reasons isDarkTheme={isDarkTheme} /> */}
+        <HeaderNavMenu isDarkTheme={isDarkTheme} setOpenModal={setOpenModal} />
+        <Main isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} screenSize={screenSize} />
+        <VideoMaking isDarkTheme={isDarkTheme} screenSize={screenSize} />
+        <Portfolio isDarkTheme={isDarkTheme} tab={tab} setTab={setTab} screenSize={screenSize} />
+        {!isDarkTheme && <div className="light-underline"></div>}
+        <Services isDarkTheme={isDarkTheme} screenSize={screenSize} />
+        <Consultation isDarkTheme={isDarkTheme} />
+        {/* <Reasons isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
         {/* <WithUs isDarkTheme={isDarkTheme} /> */}
+        {/* {!isDarkTheme && <div className="light-underline"></div>} */}
         {/* <Clients isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
-        {/* <WorkStages isDarkTheme={isDarkTheme} /> */}
+        {/* {!isDarkTheme && <div className="light-underline"></div>} */}
+        {/* <WorkStages isDarkTheme={isDarkTheme} screenSize={screenSize} /> */}
         {/* <Footer isDarkTheme={isDarkTheme} setTab={setTab}/> */}
-        {openModal && <Modal onCloseModal={onCloseModal}/>}
+        {openModal && <Modal onCloseModal={onCloseModal} />}
       </div>
     </>
   );

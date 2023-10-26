@@ -57,7 +57,7 @@ const Main = ({ isDarkTheme, toggleTheme, screenSize }) => {
               </div>
             </div>
           </div>
-          <div className={styles.showInfo}>
+          <div className={`${styles.showInfo} ${isDarkTheme ? styles.dark : styles.light}`}>
             {isDarkTheme && <p className={styles.showreelP}>SHOWREEL</p>}
             <VideoPlayer
               width={screenSize < 1560 ? "650px" : "745px"}
