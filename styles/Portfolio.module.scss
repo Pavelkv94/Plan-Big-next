@@ -1,13 +1,13 @@
 .portfolioWrapper {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 50px);
   min-height: 940px;
   min-width: 1560px;
 
   @media screen and (max-width: 1560px) {
     min-width: 1280px;
-    max-height: 780px;
-    min-height: 700px;
+    max-height: 800px;
+    min-height: 600px;
   }
 
   &.dark {
@@ -89,7 +89,9 @@
         padding-bottom: 1px;
 
         @media screen and (max-width: 1560px) {
-          width: 1200px;
+          width: 900px;
+          min-width: 900px;
+
           height: 40px;
         }
 
@@ -161,9 +163,9 @@
         grid-template-columns: 1fr 1fr 1fr;
 
         @media screen and (max-width: 1560px) {
-          width: 1280px;
+          width: 1000px;
           padding-top: 0px;
-          height: 500px;
+          height: 400px;
         }
       }
     }

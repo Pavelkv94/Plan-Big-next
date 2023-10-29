@@ -43,11 +43,11 @@ const Index = () => {
         <Consultation isDarkTheme={isDarkTheme} />
         {/* <Reasons isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
         {/* <WithUs isDarkTheme={isDarkTheme} /> */}
-        {/* {!isDarkTheme && <div className="light-underline"></div>} */}
-        {/* <Clients isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
-        {/* {!isDarkTheme && <div className="light-underline"></div>} */}
-        {/* <WorkStages isDarkTheme={isDarkTheme} screenSize={screenSize} /> */}
-        {/* <Footer isDarkTheme={isDarkTheme} setTab={setTab}/> */}
+        {!isDarkTheme && <div className="light-underline"></div>}
+        <Clients isDarkTheme={isDarkTheme} screenSize={screenSize}/>
+        {!isDarkTheme && <div className="light-underline"></div>}
+        <WorkStages isDarkTheme={isDarkTheme} screenSize={screenSize} />
+        <Footer isDarkTheme={isDarkTheme} setTab={setTab}/>
         {openModal && <Modal onCloseModal={onCloseModal} />}
       </div>
     </>

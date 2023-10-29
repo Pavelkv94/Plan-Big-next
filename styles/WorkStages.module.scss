@@ -6,7 +6,7 @@
 
   @media screen and (max-width: 1560px) {
     min-width: 1280px;
-    min-height: 760px;
+    min-height: 650px;
     max-height: 900px;
   }
   
@@ -29,7 +29,9 @@
       margin-bottom: 20px;
 
       @media screen and (max-width: 1560px) {
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+
       }
     }
 
@@ -45,8 +47,8 @@
         background-image: url("../pngs/workStages-black.webp");
 
         @media screen and (max-width: 1560px) {
-          width: 1000px;
-          height: 558px;
+          width: 960px;
+          height: 536px;
         }
 
       }
@@ -57,8 +59,8 @@
         background-image: url("../pngs/workStages-light.webp");
 
         @media screen and (max-width: 1560px) {
-          width: 1000px;
-          height: 548px;
+          width: 960px;
+          height: 526px;
         }
 
       }

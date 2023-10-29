@@ -7,22 +7,22 @@ const WorkStages = ({ isDarkTheme, screenSize }) => {
 
   const largeScreen = screenSize > 1560;
 
-  const firstItemLeft = isDarkTheme && largeScreen ? "10px" : !isDarkTheme && largeScreen ? "20px" : isDarkTheme && !largeScreen ? "4px" : "18px"
-  const secondItemLeft = isDarkTheme && largeScreen ? "436px" : !isDarkTheme && largeScreen ? "460px" : isDarkTheme && !largeScreen ? "326px" : "336px"
-  const secondItemTop = isDarkTheme && largeScreen ? "50px" : !isDarkTheme && largeScreen ? "60px" : isDarkTheme && !largeScreen ? "30px" : "36px"
-  const thirdItemLeft = isDarkTheme && largeScreen ? "906px" : !isDarkTheme && largeScreen ? "930px" : isDarkTheme && !largeScreen ? "680px" : "686px"
-  const fourthItemLeft = isDarkTheme && largeScreen ? "180px" : !isDarkTheme && largeScreen ? "200px" : isDarkTheme && !largeScreen ? "130px" : "1446x"
-  const fourthItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "500px" : "486px"
-  const fivethItemLeft = isDarkTheme && largeScreen ? "660px" : !isDarkTheme && largeScreen ? "680px" : isDarkTheme && !largeScreen ? "496px" : "500px"
-  const fivethItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "500px" : "486px"
-  const sixthItemLeft = isDarkTheme && largeScreen ? "1150px" : !isDarkTheme && largeScreen ? "1170px" : isDarkTheme && !largeScreen ? "864px" : "864px"
-  const sixthItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "500px" : "486px"
+  const firstItemLeft = isDarkTheme && largeScreen ? "10px" : !isDarkTheme && largeScreen ? "20px" : isDarkTheme && !largeScreen ? "4px" : "8px"
+  const secondItemLeft = isDarkTheme && largeScreen ? "436px" : !isDarkTheme && largeScreen ? "460px" : isDarkTheme && !largeScreen ? "314px" : "320px"
+  const secondItemTop = isDarkTheme && largeScreen ? "50px" : !isDarkTheme && largeScreen ? "60px" : isDarkTheme && !largeScreen ? "30px" : "32px"
+  const thirdItemLeft = isDarkTheme && largeScreen ? "906px" : !isDarkTheme && largeScreen ? "930px" : isDarkTheme && !largeScreen ? "652px" : "658px"
+  const fourthItemLeft = isDarkTheme && largeScreen ? "180px" : !isDarkTheme && largeScreen ? "200px" : isDarkTheme && !largeScreen ? "120px" : "136px"
+  const fourthItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "476px" : "466px"
+  const fivethItemLeft = isDarkTheme && largeScreen ? "660px" : !isDarkTheme && largeScreen ? "680px" : isDarkTheme && !largeScreen ? "472px" : "480px"
+  const fivethItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "478px" : "466px"
+  const sixthItemLeft = isDarkTheme && largeScreen ? "1150px" : !isDarkTheme && largeScreen ? "1170px" : isDarkTheme && !largeScreen ? "830px" : "830px"
+  const sixthItemTop = isDarkTheme && largeScreen ? "666px" : !isDarkTheme && largeScreen ? "666px" : isDarkTheme && !largeScreen ? "476px" : "466px"
 
   return (
     <div className={`${styles.workStagesWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={styles.workStagesContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ЭТАПЫ РАБОТЫ" mainTitle width={largeScreen ? "454px" : "264"} left={largeScreen ? "26px" : "14px"} />
+          <Title isDarkTheme={isDarkTheme} text="ЭТАПЫ РАБОТЫ" mainTitle width={largeScreen ? "454px" : "264px"} left={largeScreen ? "26px" : "14px"} />
         </div>
 
         <div className={`${styles.stages}  ${isDarkTheme ? styles.dark : styles.light}`}>

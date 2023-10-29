@@ -60,8 +60,8 @@ const TabContent = ({videos, isDarkTheme, screenSize}) => {
       {el.elements.map((el, i) => (
         <VideoPlayer
           key={i}
-          width={screenSize > 1560 ? "500px" : "400px"}
-          height={isDarkTheme && screenSize > 1560 ? "280px" : !isDarkTheme && screenSize > 1560 ? "300px" : isDarkTheme && screenSize < 1560 ? "228px" : "240px"}
+          width={screenSize > 1560 ? "500px" : "330px"}
+          height={isDarkTheme && screenSize > 1560 ? "280px" : !isDarkTheme && screenSize > 1560 ? "300px" : isDarkTheme && screenSize < 1560 ? "188px" : "198px"}
           isDarkTheme={isDarkTheme}
           src={el.src}
           itemId={el.id}
@@ -71,7 +71,7 @@ const TabContent = ({videos, isDarkTheme, screenSize}) => {
   ));
 
   return (
-    <div style={screenSize > 1560 ? { width: "1560px"} : { width: "1280px"}}>
+    <div style={screenSize > 1560 ? { width: "1560px"} : { width: "1000px"}}>
       <Carousel array={slides} isDarkTheme={isDarkTheme} portfolio screenSize={screenSize}/>
     </div>
   );

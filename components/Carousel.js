@@ -41,7 +41,7 @@ const Carousel = ({ array, isDarkTheme, portfolio, screenSize }) => {
         <div onClick={() => prev()} className={`${styles.arrow} ${styles.left}`}>
           {isDarkTheme ? <LeftArrow /> : <LeftArrowLight />}
         </div>
-        {isDarkTheme && <div className={styles.test1} style={portfolio ? {left: screenSize < 1560 ? "645px" : "790px"} : {}}></div>}
+        {isDarkTheme && <div className={styles.test1} style={portfolio ? {left: screenSize < 1560 ? "500px" : "790px"} : {}}></div>}
 
         <div className={styles.dots}>
           {array.map((_, i) => (
@@ -51,7 +51,7 @@ const Carousel = ({ array, isDarkTheme, portfolio, screenSize }) => {
         <div onClick={() => next()} className={`${styles.arrow} ${styles.right}`}>
           {isDarkTheme ? <RightArrow /> : <RightArrowLight />}
         </div>
-        {isDarkTheme && <div className={styles.test2} style={portfolio ? {left: screenSize < 1560 ? "450px" : "600px"} : {}}></div>}
+        {isDarkTheme && <div className={styles.test2} style={portfolio ? {left: screenSize < 1560 ? "316px" : "600px"} : {}}></div>}
       </div>
     </>
   );

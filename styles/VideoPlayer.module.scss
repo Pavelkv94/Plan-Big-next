@@ -19,7 +19,6 @@
       opacity: 1;
       border: none;
     }
-    
   }
 
   &.big {
@@ -48,8 +47,6 @@
 
     &.dark {
       background-image: url("../pngs/videoPlayer-big-black.png");
-
-
 
       .screen {
         position: absolute;
@@ -549,10 +546,10 @@
         justify-content: center;
 
         @media screen and (max-width: 1560px) {
-          top: 42px;
-        left: 41px;
-        width: 321px;
-        height: 160px;
+          top: 35px;
+          left: 34px;
+          width: 265px;
+          height: 131px;
         }
       }
     }
@@ -574,10 +571,10 @@
         justify-content: center;
 
         @media screen and (max-width: 1560px) {
-          top: 32px;
-        left: 34px;
-        width: 335px;
-        height: 177px;
+          top: 26px;
+          left: 28px;
+          width: 277px;
+          height: 146px;
         }
       }
     }

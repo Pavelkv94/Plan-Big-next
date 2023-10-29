@@ -67,7 +67,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
               onMouseEnter={() => setIsPopoverHover(true)}
               onMouseLeave={() => setIsPopoverHover(false)}
             >
-              {isPopoverOpen && <span>Скопировано</span>}
+              {isPopoverOpen && <span style={{left: "-30px"}}>Скопировано</span>}
               {isPopoverHover && <span className={styles.hover}>Скопировать E-mail</span>}
               <CopyIcon />
             </div>
