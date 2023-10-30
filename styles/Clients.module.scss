@@ -5,7 +5,7 @@
 
   @media screen and (max-width: 1560px) {
     min-width: 1280px;
-    max-height: 604px;
+    min-height: 640px;
   }
 
   ul {
@@ -42,7 +42,7 @@
       margin-bottom: 70px;
 
       @media screen and (max-width: 1560px) {
-        margin-top: 20px;
+        margin-top: 40px;
         margin-bottom: 00px;
       }
     }
