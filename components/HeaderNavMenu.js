@@ -45,7 +45,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
                 <div className={styles.li}>ПРЕИМУЩЕСТВА</div>
               </Link>
 
-              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="feedback" spy={true} smooth={true} offset={-100} duration={500}>
+              <Link activeClass={`${styles.active} ${isDarkTheme ? styles.dark : styles.light}`} to="feedback" spy={true} smooth={true} offset={-50} duration={500}>
                 <div className={styles.li}> ОТЗЫВЫ</div>
               </Link>
             </nav>

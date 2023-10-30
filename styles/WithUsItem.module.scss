@@ -11,6 +11,10 @@
     line-height: 17px;
     letter-spacing: 0em;
     text-align: center;
+
+    @media screen and (max-width: 1560px) {
+      font-size: 30px;
+    }
   }
 
   .description {
@@ -23,6 +27,12 @@
     width: 576px;
     position: absolute;
     font-family: "Montserrat", sans-serif;
+
+    @media screen and (max-width: 1560px) {
+      line-height: 18px;
+      width: 470px;
+
+    }
 
   }
   .job {
@@ -41,6 +51,10 @@
       line-height: 17px;
       letter-spacing: 0em;
       text-align: center;
+
+      @media screen and (max-width: 1560px) {
+        font-size: 20px;
+      }
     }
 
     p:last-child {
@@ -51,6 +65,10 @@
       line-height: 17px;
       letter-spacing: 0em;
       text-align: left;
+
+      @media screen and (max-width: 1560px) {
+        font-size: 17px;
+      }
     }
   }
   .photo {
@@ -128,6 +146,11 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 2px;
+
+    @media screen and (max-width: 1560px) {
+      width: 98px;
+      height: 140px;
+    }
 
     .shadow {
       position: absolute;
@@ -211,6 +234,11 @@
     width: 1400px;
     height: 574px;
 
+    @media screen and (max-width: 1560px) {
+      width: 1000px;
+      height: 500px;
+    }
+
     .photo {
       top: 98px;
       left: 238px;
@@ -218,11 +246,24 @@
       width: 220px;
       height: 220px;
       border-radius: 50%;
+
+      @media screen and (max-width: 1560px) {
+        top: 93px;
+        left: 112px;
+        width: 180px;
+        height: 180px;
+      }
     }
 
     .approv {
       top: 350px;
       left: 1140px;
+
+
+      @media screen and (max-width: 1560px) {
+        top: 290px;
+        left: 870px;
+      }
     }
 
     h3 {
@@ -230,16 +271,31 @@
       color: white;
       left: 570px;
       top: 130px;
+
+      @media screen and (max-width: 1560px) {
+        left: 386px;
+        top: 100px;
+      }
     }
 
     .description {
       color: white;
       left: 570px;
       top: 230px;
+
+      @media screen and (max-width: 1560px) {
+        left: 386px;
+        top: 180px;
+      }
     }
     .job {
       left: 280px;
       top: 380px;
+
+      @media screen and (max-width: 1560px) {
+        left: 140px;
+        top: 330px;
+      }
 
       p {
         margin: 8px 0;
@@ -259,6 +315,11 @@
     width: 1375px;
     height: 574px;
 
+    @media screen and (max-width: 1560px) {
+      width: 1000px;
+      height: 500px;
+    }
+
     .photo {
       top: 79px;
       left: 220px;
@@ -266,11 +327,23 @@
       width: 220px;
       height: 220px;
       border-radius: 50%;
+
+      @media screen and (max-width: 1560px) {
+        top: 79px;
+        left: 118px;
+        width: 180px;
+        height: 180px;
+      }
     }
 
     .approv {
       top: 340px;
       left: 1140px;
+
+      @media screen and (max-width: 1560px) {
+        top: 260px;
+        left: 860px;
+      }
     }
 
     h3 {
@@ -278,18 +351,30 @@
       color: rgba(56, 56, 56, 1);
       left: 556px;
       top: 110px;
+
+      @media screen and (max-width: 1560px) {
+        left: 386px;
+        top: 100px;
+      }
     }
 
     .description {
       color: rgba(95, 95, 95, 1);
-
       left: 556px;
       top: 200px;
+
+      @media screen and (max-width: 1560px) {
+        left: 386px;
+        top: 164px;
+      }
     }
     .job {
       left: 280px;
       top: 380px;
-
+      @media screen and (max-width: 1560px) {
+        left: 150px;
+        top: 314px;
+      }
       p {
         margin: 8px 0;
       }
@@ -308,9 +393,19 @@
     height: 98px;
     position: absolute;
 
+    @media screen and (max-width: 1560px) {
+      width: 290px;
+      height: 64px;
+    }
+
     &.dark {
       top: 400px;
       left: 570px;
+
+      @media screen and (max-width: 1560px) {
+        top: 350px;
+        left: 386px;
+      }
 
       .percents {
         color: white;
@@ -332,6 +427,11 @@
     &.light {
       top: 370px;
       left: 556px;
+
+      @media screen and (max-width: 1560px) {
+        top: 330px;
+        left: 386px;
+      }
 
       .percents {
         color: rgba(56, 56, 56, 1);
@@ -360,6 +460,12 @@
       justify-content: space-between;
       margin-bottom: 4px;
       font-size: 16px;
+
+      @media screen and (max-width: 1560px) {
+        font-size: 12px;
+        width: 205px;
+      }
+
     }
 
     section {
@@ -369,15 +475,31 @@
       column-gap: 15px;
       align-items: center;
 
+      @media screen and (max-width: 1560px) {
+        grid-template-columns: 200px 70px;
+        row-gap: 8px;
+
+
+      }
+
       p {
         font-size: 16px;
         margin: 0;
         font-family: "Montserrat", sans-serif;
+
+        @media screen and (max-width: 1560px) {
+          font-size: 12px;
+        }
       }
 
       .indicator {
         width: 248px;
         height: 10px;
+
+        @media screen and (max-width: 1560px) {
+          width: 200px;
+          height: 6px;
+        }
 
         div {
           width: 100%;

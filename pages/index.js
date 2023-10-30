@@ -41,8 +41,8 @@ const Index = () => {
         {!isDarkTheme && <div className="light-underline"></div>}
         <Services isDarkTheme={isDarkTheme} screenSize={screenSize} />
         <Consultation isDarkTheme={isDarkTheme} />
-        {/* <Reasons isDarkTheme={isDarkTheme} screenSize={screenSize}/> */}
-        {/* <WithUs isDarkTheme={isDarkTheme} /> */}
+        <Reasons isDarkTheme={isDarkTheme} screenSize={screenSize}/>
+        <WithUs isDarkTheme={isDarkTheme} screenSize={screenSize}/>
         {!isDarkTheme && <div className="light-underline"></div>}
         <Clients isDarkTheme={isDarkTheme} screenSize={screenSize}/>
         {!isDarkTheme && <div className="light-underline"></div>}

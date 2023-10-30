@@ -9,9 +9,11 @@ import LeftArrowLight from "../svgs/arrow-client-left-light.svg";
 import RightArrowLight from "../svgs/arrow-client-right-light.svg";
 import { feedbacks } from "./contants";
 
-const WithUs = ({ isDarkTheme }) => {
+const WithUs = ({ isDarkTheme, screenSize }) => {
   const [open, setOpen] = useState(false);
   const [imgUrl, setImgUrl] = useState("");
+
+  const activeItemWidth = screenSize > 1560 ? 250 : 200;
 
   const items = feedbacks.map((el, i) => (
     <WithUsItem
@@ -21,13 +23,14 @@ const WithUs = ({ isDarkTheme }) => {
       description={el.text}
       jobTitle={"Ген. директор "}
       jobContact={el.director}
-      widthTime={250 * el.urgent}
-      widthMoney={250 * el.money}
-      widthDiff={250 * el.difficult}
+      widthTime={activeItemWidth * el.urgent}
+      widthMoney={activeItemWidth * el.money}
+      widthDiff={activeItemWidth * el.difficult}
       ind={i + 1}
       imgUrl={el.imgUrl}
       setOpen={setOpen}
       setImgUrl={setImgUrl}
+      screenSize={screenSize}
     />
   ));
 
@@ -35,13 +38,14 @@ const WithUs = ({ isDarkTheme }) => {
     <div className={`${styles.withUsWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="feedback">
       <div className={styles.withUsContent}>
         <div className={styles.title}>
-          <Title isDarkTheme={isDarkTheme} text="ОТЗЫВЫ НАШИХ КЛИЕНТОВ" mainTitle width={"808px"} left={"50px"} />
+          <Title isDarkTheme={isDarkTheme} text="ОТЗЫВЫ НАШИХ КЛИЕНТОВ" mainTitle width={screenSize > 1560 ? "808px" : "470px"} left={screenSize > 1560 ? "50px" : "30px"} />
+        {!isDarkTheme && <div className="white-title-underline"></div>}
         </div>
         <div className={styles.slider}>
           <Slider array={items} isDarkTheme={isDarkTheme} />
         </div>
       </div>
-      {open && <Approvement imgUrl={imgUrl} setOpen={setOpen}/>}
+      {open && <Approvement imgUrl={imgUrl} setOpen={setOpen} screenSize={screenSize}/>}
     </div>
   );
 };
@@ -95,10 +99,10 @@ const Slider = ({ array, isDarkTheme }) => {
   );
 };
 
-const Approvement = ({ imgUrl, setOpen }) => {
+const Approvement = ({ imgUrl, setOpen, screenSize }) => {
   return (
     <div className={styles.approvement} onClick={() => setOpen(false)}>
-      <img src={imgUrl} width={500} onClick={e => e.stopPropagation()}/>
+      <img src={imgUrl} width={screenSize > 1560 ? 500 : 400} onClick={e => e.stopPropagation()}/>
     </div>
   );
 };

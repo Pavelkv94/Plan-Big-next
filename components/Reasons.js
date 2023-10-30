@@ -11,6 +11,7 @@ const Reasons = ({ isDarkTheme, screenSize }) => {
       <div className={styles.reasonsContent}>
         <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="ПОЧЕМУ ВЫБИРАЮТ НАС?" mainTitle width={screenSize > 1560 ? "746px" : "434px"} left={"36px"}/>
+          {!isDarkTheme && <div className="white-title-underline"></div>}
         </div>
         <section className={styles.reasonsWrap}>
           <div className={styles.leftContent}>

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import styles from "../styles/WithUsItem.module.scss";
 import Lupa from "../svgs/lupa.svg";
 
-const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, widthTime, widthMoney, widthDiff, ind, setOpen, setImgUrl, imgUrl }) => {
+const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, widthTime, widthMoney, widthDiff, ind, setOpen, setImgUrl, imgUrl, screenSize }) => {
+  const titleSize = screenSize > 1560 ? "36px" : "30px";
+
   return (
     <div className={`${styles.withUssliderItem} ${isDarkTheme ? styles.dark : styles.light}`}>
       <div className={`${styles.photo} ${styles[`photo-item${ind}`]}`}></div>
-      <h3 style={{fontSize: ind === 9 ? "30px" : "36px"}}>{title}</h3>
+      <h3 style={{fontSize: ind === 9 ? "30px" : titleSize}}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <div className={styles.job}>
         <p>{jobTitle}</p>
@@ -38,7 +40,6 @@ const WithUsItem = ({ isDarkTheme, title, description, jobTitle, jobContact, wid
         setImgUrl(imgUrl); setOpen(true);
       }}>
         <div className={styles.shadow}>
-          {" "}
           <Lupa />
         </div>
       </div>
