@@ -40,7 +40,6 @@
       align-items: center;
       height: 100%;
 
-
       .copy {
         margin-left: 4px;
         position: relative;
@@ -50,21 +49,21 @@
         &.dark {
           color: white;
         }
-      
+
         &.light {
           color: #383838;
         }
 
-        
         span {
           position: absolute;
           top: 30px;
           left: -10px;
           font-size: 14px;
           transition: 1s;
-          
+
           @media screen and (max-width: 1560px) {
-            left: -60px;          }
+            left: -60px;
+          }
 
           &.hover {
             width: 150px;
@@ -85,6 +84,44 @@
           height: 100%;
           width: 100%;
 
+          a {
+            &:nth-child(1) {
+              width: 101px;
+              @media screen and (max-width: 1560px) {
+                width: 97px;
+              }
+            }
+            &:nth-child(2) {
+              width: 79px;
+              @media screen and (max-width: 1560px) {
+                width: 79px;
+              }
+            }
+            &:nth-child(3) {
+              width: 133px;
+              @media screen and (max-width: 1560px) {
+                width: 125px;
+              }
+            }
+            &:nth-child(4) {
+              width: 88px;
+              @media screen and (max-width: 1560px) {
+                width: 84px;
+              }
+            }
+            &:nth-child(5) {
+              width: 167px;
+              @media screen and (max-width: 1560px) {
+                width: 154px;
+              }
+            }
+            &:nth-child(6) {
+              width: 99px;
+              @media screen and (max-width: 1560px) {
+                width: 92px;
+              }
+            }
+          }
           .active {
             font-weight: 700;
 
@@ -96,7 +133,6 @@
               color: #ffffff;
             }
           }
-
 
           div.li {
             min-width: 55px;
@@ -112,7 +148,6 @@
             @media screen and (max-width: 1560px) {
               font-size: 13px;
             }
-
           }
         }
       }
@@ -125,14 +160,13 @@
           color: white;
           user-select: none;
         }
-        p, a {
+        p,
+        a {
           font-family: "Montserrat", sans-serif;
           font-weight: 600;
           margin: 0 0 0 20px;
           letter-spacing: 0.05em;
         }
-
-        
       }
 
       .calculate {
@@ -159,7 +193,6 @@
           font-weight: 700;
           font-size: 12px;
           cursor: pointer;
-
         }
       }
     }

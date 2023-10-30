@@ -8,10 +8,15 @@ import ArrowLight2 from "../svgs/arrow-light-2.svg";
 import ArrowLight3 from "../svgs/arrow-light-3.svg";
 
 const Reason = ({ isDarkTheme, title, text, screenSize }) => {
-  const initHeight = screenSize > 1560 ? "108px" : "82px"
-    const [height, setHeight] = useState(initHeight);
 
-    const handleClick = () => setHeight(height === "200px" ? initHeight : "200px");
+  const largeScreen = screenSize > 1560;
+
+  const dynamicHeight = largeScreen ? "210px" : "162px";
+  const initHeight = largeScreen ? "94px" : "75px"
+
+  const [height, setHeight] = useState(initHeight);
+
+    const handleClick = () => setHeight(height === dynamicHeight ? initHeight : dynamicHeight);
 
     const [arrowAnim, setArrowAnim] = useState(1);
 
@@ -37,7 +42,7 @@ const Reason = ({ isDarkTheme, title, text, screenSize }) => {
         <div className={styles.arrows} onClick={handleClick}>
         {handleSetArrow()}
         </div>
-        <p style={{opacity: height === "200px" ? 1 : 0, }} className={styles[height === "200px" ? "full" : "notFull"]}>
+        <p style={{opacity: height === dynamicHeight ? 1 : 0, }} className={styles[height === dynamicHeight ? "full" : "notFull"]}>
             {text}
         </p>
     </section>

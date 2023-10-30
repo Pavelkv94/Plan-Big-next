@@ -44,7 +44,7 @@ const Footer = ({ isDarkTheme, setTab }) => {
             Преимущества
           </Link>
 
-          <Link to="feedback" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link to="feedback" spy={true} smooth={true} offset={-50} duration={500}>
             Отзывы
           </Link>
         </div>
