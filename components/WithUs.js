@@ -102,7 +102,7 @@ const Slider = ({ array, isDarkTheme }) => {
 const Approvement = ({ imgUrl, setOpen, screenSize }) => {
   return (
     <div className={styles.approvement} onClick={() => setOpen(false)}>
-      <img src={imgUrl} width={screenSize > 1560 ? 500 : 400} onClick={e => e.stopPropagation()}/>
+      <img src={imgUrl} width={screenSize > 1560 ? 500 : 460} onClick={e => e.stopPropagation()}/>
     </div>
   );
 };

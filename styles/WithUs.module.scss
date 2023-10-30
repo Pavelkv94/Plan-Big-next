@@ -8,7 +8,7 @@
 
   @media screen and (max-width: 1560px) {
     min-width: 1200px;
-    min-height: 650px;
+    min-height: 600px;
   }
 
   &.dark {
@@ -24,7 +24,10 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 100px;
+    @media screen and (max-width: 1560px) {
+      margin-bottom: 0px;
 
+    }
     .title {
       margin-top: 70px;
       margin-bottom: 10px;

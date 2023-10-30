@@ -12,7 +12,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
   const [isPopoverHover, setIsPopoverHover] = useState(false);
 
   useEffect(() => {
-    let timer = setTimeout(() => setIsPopoverOpen(false), 1000);
+    let timer = setTimeout(() => setIsPopoverOpen(false), 300);
     return () => clearTimeout(timer);
   }, [isPopoverOpen]);
 
@@ -54,7 +54,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
             <p>РАССЧИТАТЬ КП</p>
           </div>
           <div className={styles.contacts}>
-            <p>+7 (495) 127-01-34</p>
+            <p>+7 (495) 128-60-30</p>
             <a href="mailto:WELCOME@PLAN-BIG.COM">WELCOME@PLAN-BIG.COM</a>
           </div>
           <div
@@ -74,7 +74,7 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
         </div>
         <div className={styles.messengers}>
           <a
-            href="https://api.whatsapp.com/send?phone=79660132196&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D1%81%D0%B5%D1%82%D0%B8%D0%BB(%D0%B0)%20%D0%92%D0%B0%D1%88%20%D1%81%D0%B0%D0%B9%D1%82%20plan-big.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+            href="https://api.whatsapp.com/send?phone=79660132196&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D1%81%D0%B5%D1%82%D0%B8%D0%BB(%D0%B0)%20%D0%92%D0%B0%D1%88%20%D1%81%D0%B0%D0%B9%D1%82%20plan-big.space%0A%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
             target="_blank"
           >
             <img src="/png/whatsapp.webp" width={28} height={28} />
