@@ -4,6 +4,7 @@ import LogoBlack from "../svgs/footer-logo-black.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 import CopyIcon from "../svgs/copy.svg";
 import Telegram from "../svgs/telegram.svg";
+import NextLink from "next/link";
 
 const Footer = ({ isDarkTheme, setTab }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -99,7 +100,7 @@ const Footer = ({ isDarkTheme, setTab }) => {
             </div>
           </div>
           <div className={styles.address}>Москва, Крутицкая <p>набережная, 1</p></div>
-          <div className={styles.policy}>Политика конфиденциальности</div>
+          <div className={styles.policy}><NextLink href="../docs/Pocily plan-big.space.pdf" target="_blank">Политика конфиденциальности</NextLink></div>
           <div className={`${styles.actions} ${isDarkTheme ? styles.dark : styles.light}`}>
             <div>
             <Link to="order" spy={true} smooth={true} offset={-100} duration={500}>

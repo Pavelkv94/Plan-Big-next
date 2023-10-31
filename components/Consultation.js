@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Consultation.module.scss";
 import ConsultItem from "./ConsultItem";
+import Link from "next/link";
 
 const Consultation = ({ isDarkTheme }) => {
   const consultItems = [
@@ -49,7 +50,7 @@ const Consultation = ({ isDarkTheme }) => {
             </div>
           </div>
           <div className={styles.policy}>
-            <p> Нажимая кнопку «Оставить заявку», вы подтверждаете свое согласие на <a href="#" target="_blank">обработку пользовательских данных</a></p>
+            <p> Нажимая кнопку «Оставить заявку», вы подтверждаете свое согласие на <Link href="../docs/compliance plan-big.space.pdf" target="_blank">обработку пользовательских данных</Link></p>
           </div>
         </section>
       </div>
