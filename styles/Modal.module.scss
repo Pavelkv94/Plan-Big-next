@@ -89,20 +89,23 @@
         align-items: center;
         justify-content: center;
 
-        &:active {
+        &.active {
           cursor: pointer;
 
           &:hover {
+            span {
+              font-weight: 700;
+            }
+          }
+          &:active {
             background-image: url("../pngs/Button-hover.webp");
-  
+
             span {
               color: white;
             }
           }
         }
-        
 
-       
         span {
           user-select: none;
           font-family: "Tektur", cursive;
@@ -120,16 +123,15 @@
         flex-direction: column;
 
         input {
-            width: 308px;
-            height: 54px;
-            outline: none;
-            border-radius: 7px;
-            border: 1px solid black;
-            font-size: 16px;
-            padding-left: 16px;
-            padding-right: 16px;
-            margin-bottom: 15px;
-
+          width: 308px;
+          height: 54px;
+          outline: none;
+          border-radius: 7px;
+          border: 1px solid black;
+          font-size: 16px;
+          padding-left: 16px;
+          padding-right: 16px;
+          margin-bottom: 15px;
         }
       }
     }

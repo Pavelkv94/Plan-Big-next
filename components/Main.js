@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Main.module.scss";
 import VideoPlayer from "./VideoPlayer";
 import { Link, animateScroll as scroll } from "react-scroll";
+import NextLink from "next/link";
 
 const Main = ({ isDarkTheme, toggleTheme, screenSize }) => {
   const [position, setPosition] = useState(180); // Initial position
@@ -11,16 +12,20 @@ const Main = ({ isDarkTheme, toggleTheme, screenSize }) => {
     setPosition((prevPosition) => (prevPosition === 0 ? 180 : 0));
   };
 
+  useEffect(() => {
+    setPosition(isDarkTheme ? 0 : 180);
+  }, [isDarkTheme])
+
   return (
     <div className={`${styles.mainWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="main">
       <div className={styles.mainContent}>
         <div className={styles.themeSwitcherWrapper}>
-        <a href="https://main--inspiring-starburst-70d656.netlify.app"><div className={`${styles.themeSwitcher} ${isDarkTheme ? styles.dark : styles.light}`}>
+        <NextLink href={isDarkTheme ? "/white" : "/"}><div className={`${styles.themeSwitcher} ${isDarkTheme ? styles.dark : styles.light}`}>
             <div className={styles.pulse}></div>
             <div  className={styles.toggler} style={{ transform: `translateX(${position}%)`, transition: "transform 0.3s ease" }}>
               <div className={styles.togglerBox}></div>
             </div>
-          </div></a>
+          </div></NextLink>
         </div>
 
         <div className={styles.mainInfo}>

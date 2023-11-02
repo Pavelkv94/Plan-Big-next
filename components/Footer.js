@@ -8,17 +8,13 @@ import NextLink from "next/link";
 
 const Footer = ({ isDarkTheme, setTab }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [isPopoverHover, setIsPopoverHover] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
   
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 300);
     return () => clearTimeout(timer);
   }, [isPopoverOpen]);
-
-  const [isPopoverOpen2, setIsPopoverOpen2] = useState(false);
-  useEffect(() => {
-    let timer2 = setTimeout(() => setIsPopoverOpen2(false), 300);
-    return () => clearTimeout(timer2);
-  }, [isPopoverOpen2]);
 
   return (
     <div className={`${styles.footerWrapper} ${isDarkTheme ? styles.dark : styles.light}`}>
@@ -90,13 +86,20 @@ const Footer = ({ isDarkTheme, setTab }) => {
             <div
               className={styles.copy}
               onClick={() => {
+                if(!isCopied) {
                 navigator.clipboard.writeText("WELCOME@PLAN-BIG.COM");
-                setIsPopoverOpen2(true);
+                setIsPopoverOpen(true);
+                setIsPopoverHover(false);
+                setIsCopied(true);
+              }
               }}
+              onMouseEnter={() => setIsPopoverHover(true)}
+              onMouseLeave={() => setIsPopoverHover(false)}
               
             >
-              {isPopoverOpen2 && <span>Скопировано</span>}
-              <CopyIcon />
+              {isPopoverOpen &&  <span style={{left: "-30px"}}>Скопировано</span>}
+              {isCopied && isPopoverHover &&  <span style={{left: "-30px"}}>Скопировано</span>}
+              {isPopoverHover && !isCopied && <span className={styles.hover}>Скопировать E-mail</span>}<CopyIcon />
             </div>
           </div>
           <div className={styles.address}>Москва, Крутицкая <p>набережная, 1</p></div>
