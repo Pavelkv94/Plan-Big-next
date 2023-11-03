@@ -11,6 +11,8 @@ const Footer = ({ isDarkTheme, setTab }) => {
   const [isPopoverHover, setIsPopoverHover] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   
+  const email = isDarkTheme ? "Welcome@plan-big.space" : "Info@plan-big.space";
+
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 300);
     return () => clearTimeout(timer);
@@ -82,12 +84,12 @@ const Footer = ({ isDarkTheme, setTab }) => {
             </div>
           </div>
           <div className={styles.email}>
-            <span>WELCOME@PLAN-BIG.COM</span>
+            <span>{email}</span>
             <div
               className={styles.copy}
               onClick={() => {
                 if(!isCopied) {
-                navigator.clipboard.writeText("WELCOME@PLAN-BIG.COM");
+                navigator.clipboard.writeText(email);
                 setIsPopoverOpen(true);
                 setIsPopoverHover(false);
                 setIsCopied(true);

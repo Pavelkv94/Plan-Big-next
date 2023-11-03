@@ -12,6 +12,8 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
   const [isPopoverHover, setIsPopoverHover] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   
+  const email = isDarkTheme ? "Welcome@plan-big.space" : "Info@plan-big.space";
+
   useEffect(() => {
     let timer = setTimeout(() => setIsPopoverOpen(false), 300);
     return () => clearTimeout(timer);
@@ -56,13 +58,13 @@ const HeaderNavMenu = ({ isDarkTheme, setOpenModal }) => {
           </div>
           <div className={styles.contacts}>
             <p>+7 (495) 128-60-30</p>
-            <a href="mailto:WELCOME@PLAN-BIG.COM">WELCOME@PLAN-BIG.COM</a>
+            <a href={`mailto:${email}`}>{email}</a>
           </div>
           <div
               className={`${styles.copy} ${isDarkTheme ? styles.dark : styles.light}`}
               onClick={() => {
                 if(!isCopied) {
-                navigator.clipboard.writeText("WELCOME@PLAN-BIG.COM");
+                navigator.clipboard.writeText(email);
                 setIsPopoverOpen(true);
                 setIsPopoverHover(false);
                 setIsCopied(true);
