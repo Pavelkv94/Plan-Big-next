@@ -46,7 +46,7 @@ const Consultation = ({ isDarkTheme }) => {
               <input placeholder="+7 (999) 999-99-99" type="phone"/>
             </div>
             <div className={styles.sendMailItem}>
-              <button className={`${isDarkTheme ? styles.dark : styles.light}`}>ОСТАВИТЬ ЗАЯВКУ</button>
+              <Link href={isDarkTheme ? "tnx" : "wtnx"}><button className={`${isDarkTheme ? styles.dark : styles.light}`}>ОСТАВИТЬ ЗАЯВКУ</button></Link>
             </div>
           </div>
           <div className={styles.policy}>

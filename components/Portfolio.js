@@ -7,7 +7,7 @@ import { videos2d, videos3d, videosAdv, videosPortfolio, videosPresent, videosSt
 
 
 
-const Portfolio = ({ isDarkTheme, tab, setTab, screenSize }) => {
+const Portfolio = ({ isDarkTheme, tab, setTab, screenSize, tnx }) => {
 
   const tabs = [
     { title: "ПРЕЗЕНТАЦИОННЫЕ \n РОЛИКИ", key: 0 },
@@ -19,13 +19,13 @@ const Portfolio = ({ isDarkTheme, tab, setTab, screenSize }) => {
   ];
 
   return (
-    <div className={`${styles.portfolioWrapper} ${isDarkTheme ? styles.dark : styles.light}`} id="portfolio">
+    <div className={`${styles.portfolioWrapper} ${isDarkTheme ? styles.dark : styles.light} ${tnx ? styles.tnx : {}}`} id="portfolio">
       <div className={styles.portfolioContent}>
         <div className={styles.titleWrap}>
-          <div className={styles.title}>
+          {!tnx && <div className={styles.title}>
           <Title isDarkTheme={isDarkTheme} text="ПОРТФОЛИО" mainTitle onClick={() => setTab(6)}/>
           {tab === 6 && <div className={`${styles.underline} ${isDarkTheme ? styles.dark : styles.light}`}></div>}
-          </div>
+          </div>}
         </div>
         <section className={styles.tabsContentWrapper}>
           <div className={`${styles.tabs} ${isDarkTheme ? styles.dark : styles.light}`}>
