@@ -3,6 +3,7 @@ import Portfolio from "./Portfolio";
 import styles from "../styles/Thanks.module.scss";
 import LogoBlack from "../svgs/logo-black.svg";
 import LogoLight from "../svgs/logo-light.svg";
+import NextLink from "next/link";
 
 const Thanks = ({ isDarkTheme }) => {
   const [tab, setTab] = useState(0);
@@ -40,7 +41,7 @@ const Thanks = ({ isDarkTheme }) => {
             <div>+7 (495) 128-60-30</div>
             <div>{email}</div>
             <div>Москва, Крутицкая набережная, 1</div>
-            <div>Политика конфиденциальности</div>
+            <div><NextLink href="../docs/Pocily plan-big.space.pdf" target="_blank">Политика конфиденциальности</NextLink></div>
           </section>
         </div>
       </footer>
