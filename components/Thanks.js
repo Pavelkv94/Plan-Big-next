@@ -7,6 +7,7 @@ import LogoLight from "../svgs/logo-light.svg";
 const Thanks = ({ isDarkTheme }) => {
   const [tab, setTab] = useState(0);
   const [screenSize, setScreenSize] = useState(null);
+  const email = isDarkTheme ? "Welcome@plan-big.space" : "Info@plan-big.space";
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -36,8 +37,8 @@ const Thanks = ({ isDarkTheme }) => {
         <div className={styles.footerContent}>
           <h5>Контакты</h5>
           <section>
-            <div>+7 (495) 127-01-34</div>
-            <div>WELCOME@PLAN-BIG.COM</div>
+            <div>+7 (495) 128-60-30</div>
+            <div>{email}</div>
             <div>Москва, Крутицкая набережная, 1</div>
             <div>Политика конфиденциальности</div>
           </section>
